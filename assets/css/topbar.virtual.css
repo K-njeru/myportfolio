@@ -118,7 +118,8 @@ a:focus {
 }
 .logo img {
   object-fit: cover;
-  
+  max-width: 70px;
+  max-height: 70px;
 }
 .page-home .navbar.floating {
   top: 0;
