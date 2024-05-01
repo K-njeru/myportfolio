@@ -118,8 +118,19 @@ a:focus {
   background-color: #010323;
   height: 60px;
 }
-
-
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 23px;
+    margin-top: 10px;
+}
+}
 .page-home .caption-header {
   position: relative;
   display: flex;
