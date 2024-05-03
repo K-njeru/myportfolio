@@ -170,9 +170,9 @@ a:focus {
   align-content: center;
   flex-wrap: wrap;
 }
-.hero-content about-ken{
+.hero-content .about-ken{
   width: 80%
-  font-size :30px;
+  font-size:30px;
 }
 .page-home .floating-button {
   position: absolute;
