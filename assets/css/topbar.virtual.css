@@ -1,4 +1,4 @@
-a {
+oa {
   color: #313131;
   transition: .3s;
 }
@@ -164,7 +164,16 @@ a:focus {
   font-size: 16px;
   border-radius: 40px;
 }
-
+.page-home .hero-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.hero-content about-ken{
+  width: 80%
+  font-size :30px;
+}
 .page-home .floating-button {
   position: absolute;
   bottom: 20px;
