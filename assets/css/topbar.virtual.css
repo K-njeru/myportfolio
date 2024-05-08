@@ -191,7 +191,7 @@ a:focus {
 }
 @media (max-width: 480px) {
   .hero-img {
-    display: none;
+    display: none !important;
   }
 }
 
