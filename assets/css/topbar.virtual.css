@@ -73,11 +73,12 @@ a:focus {
   overflow: hidden;
   background: white;
 }
-@media (min-width: 992px) {
+ /* @media (min-width: 992px) {
   .page-home {  
     height: 80vh !important;
   }
-}
+} 
+*/
 .page-home {  
   padding: 25px 0;
   width: 100%;
