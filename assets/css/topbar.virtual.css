@@ -179,7 +179,22 @@ a:focus {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  height: fit-content;
 }
+.hero-content .caption-content {
+  margin-bottom: 15px;
+}
+.hero-image {
+  .rotate{
+    transform: rotate(90deg);
+  }
+}
+@media (max-width: 480px) {
+  .hero-img {
+    display: none;
+  }
+}
+
 .hero-content .about-ken{
   width: 80% ;
   font-size:30px;
