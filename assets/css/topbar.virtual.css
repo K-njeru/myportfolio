@@ -168,6 +168,10 @@ a:focus {
   font-size: 16px;
   border-radius: 40px;
 }
+.page-home .hero {
+  position: relative;
+  top: 150px;
+}
 .page-home .hero-content {
   display: flex;
   justify-content: center;
