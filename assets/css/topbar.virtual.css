@@ -185,9 +185,9 @@ a:focus {
   margin-bottom: 15px;
 }
 .hero-image {
-  .rotate{
-    transform: rotate(90deg);
-  }
+  height: auto;
+  width: auto;
+  rotate: 150deg;
 }
 @media (max-width: 480px) {
   .hero-img {
