@@ -193,13 +193,10 @@ a:focus {
   .hero-img {
     display: none !important;
   }
-  .hero-content .about-ken{
-    width: 100% !important ;
-  }
 }
 
 .hero-content .about-ken{
-  width: 80% ;
+  width: 100% ;
   font-size:30px;
 }
 .page-home .floating-button {
