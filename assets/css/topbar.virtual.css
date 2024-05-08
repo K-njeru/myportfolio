@@ -193,6 +193,9 @@ a:focus {
   .hero-img {
     display: none !important;
   }
+  .hero-content .about-ken{
+    width: 100% !important ;
+  }
 }
 
 .hero-content .about-ken{
