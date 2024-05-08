@@ -75,7 +75,7 @@ a:focus {
 }
 @media (min-width: 992px) {
   .page-home {  
-    height: 80vh;
+    height: 80vh !important;
   }
 }
 .page-home {  
