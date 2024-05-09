@@ -218,11 +218,12 @@ a:focus {
   align-content: center;
   flex-wrap: wrap;
   margin-left: 20px;
+  cursor: pointer;
 }
 .social-icons i{
   color: white;
   font-size: 30px;
-  cursor: pointer;
+
 }
 .page-home .floating-button {
   position: absolute;
