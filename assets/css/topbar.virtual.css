@@ -192,7 +192,7 @@ a:focus {
 @media (max-width: 480px) {
   .page-home h1{
     font-size: 30px;
-    margin: 0px !important;
+    text-align: start;
   }
   .hero-img {
     display: none !important;
