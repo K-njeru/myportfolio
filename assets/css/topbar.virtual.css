@@ -190,11 +190,14 @@ a:focus {
   rotate: 150deg;
 }
 @media (max-width: 480px) {
+  .page-home h1{
+    font-size: 30px;
+  }
   .hero-img {
     display: none !important;
   }
-  .about-ken{
-    margin-left: 0px !important;
+  .about-ken , .hero-foot{
+    margin: 0px !important;
   }
 }
 .hero-content .about-ken{
