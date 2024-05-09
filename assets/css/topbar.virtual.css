@@ -190,6 +190,10 @@ a:focus {
   rotate: 150deg;
 }
 @media (max-width: 480px) {
+  .fw-normal {
+    text-align: start;
+    font-size: 30px;
+  }
   .page-home h1{
     font-size: 30px;
     text-align: start;
