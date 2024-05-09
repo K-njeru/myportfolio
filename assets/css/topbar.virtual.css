@@ -194,7 +194,6 @@ a:focus {
     display: none !important;
   }
 }
-
 .hero-content .about-ken{
   text-align: start;
   margin-left: 60px;
@@ -205,6 +204,12 @@ a:focus {
   margin-left: 60px;
   font-size: 30px;
   color: cornflowerblue;
+}
+.socials .social-icons {
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  border: cornflowerblue;
 }
 .page-home .floating-button {
   position: absolute;
