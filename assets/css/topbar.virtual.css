@@ -193,6 +193,9 @@ a:focus {
   .hero-img {
     display: none !important;
   }
+  .about-ken{
+    margin-left: 0px !important;
+  }
 }
 .hero-content .about-ken{
   text-align: start;
