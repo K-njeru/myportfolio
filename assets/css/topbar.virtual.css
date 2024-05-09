@@ -196,8 +196,15 @@ a:focus {
 }
 
 .hero-content .about-ken{
-  width: 100% ;
+  text-align: start;
+  margin-left: 60px;
   font-size:30px;
+}
+.hero-content .hero-foot{
+  text-align: start;
+  margin-left: 60px;
+  font-size: 30px;
+  color: cornflowerblue;
 }
 .page-home .floating-button {
   position: absolute;
