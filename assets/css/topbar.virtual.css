@@ -205,7 +205,9 @@ a:focus {
   font-size: 30px;
   color: cornflowerblue;
 }
-
+.socials {
+  display: flex;
+}
 .socials .social-icons {
   border-radius: 50%;
   border: cornflowerblue;
