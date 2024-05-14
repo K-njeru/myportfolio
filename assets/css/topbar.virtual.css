@@ -519,8 +519,8 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
 }
 
 .contact .container-fluid {
-  background: url(../img/ken.jpg) left center no-repeat;
-  background-size: contain;
+  background: cornflowerblue;
+  
 }
 
 .contact .contact-form {
