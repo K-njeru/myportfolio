@@ -174,6 +174,11 @@ a:focus {
   top: 150px;
   margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+  .page-home .hero {
+  height: 120px !important;
+}
+}
 .page-home .hero-content {
   display: flex;
   justify-content: center;
