@@ -94,7 +94,7 @@ body {
 }
 
 a:hover, a:active {
-    color: #2184f5;
+    color: cornflowerblue !important;
 }
 
 /* Image Responsive */
@@ -457,6 +457,7 @@ a:hover, a:active {
 
 .navbar-nav .nav-link {
     padding: 14px 10px;
+    color: white !important;
 }
 
 @media (min-width: 576px) {
