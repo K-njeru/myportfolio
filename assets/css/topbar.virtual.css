@@ -519,7 +519,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
 }
 
 .contact .container-fluid {
-  background: cornflowerblue;
+  background: cornflowerblue !important;
   
 }
 
