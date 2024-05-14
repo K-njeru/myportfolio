@@ -109,7 +109,7 @@ a:focus {
   z-index: 99;
 }
 .navbar .navbar-brand {
-  color: #07ff07;
+  color: cornflowerblue;
   margin: 0;
   font-size: 45px;
   line-height: 0px;
@@ -164,7 +164,7 @@ a:focus {
 .page-home .badge {
   padding: 16px 24px;
   background-color: rgba(239, 56, 36, 0.15);
-  color: #07ff07;
+  color: cornflowerblue;
   text-shadow: 0 2px 4px rgba(23, 25, 37, 0.4);
   font-size: 16px;
   border-radius: 40px;
@@ -261,7 +261,7 @@ a:focus {
 
 
 .page-about {
-  background-color: white;
+  background-color: gainsboro;
   margin-bottom :-80px;
 }
 
@@ -462,7 +462,7 @@ object-fit: cover;
 
 .card-body h1{
   font-size: 24px;
-  color: #07ff07 ;
+  color: cornflowerblue ;
   font-weight: bold;
 }
 .button-link {
@@ -472,7 +472,7 @@ object-fit: cover;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-decoration: none;
-  color:  #07ff07;
+  color:  cornflowerblue;
   font-weight: bold;
 }
 
@@ -514,7 +514,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
   position: relative;
   width: 100%;
   margin: 45px 0;
-  background: #07ff07;
+  background: cornflowerblue;
   
 }
 
@@ -526,7 +526,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
 .contact .contact-form {
   position: relative;
   padding: 90px 0 90px 45px;
-  background: #07ff07;
+  background: cornflowerblue;
 }
 
 .contact .contact-form input {
@@ -560,7 +560,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
 
 .contact .contact-form .btn {
   margin-top: 35px;
-  color: #07ff07;
+  color: cornflowerblue;
   background: #ffffff;
   box-shadow: inset 0 0 0 50px #ffffff;
 }
@@ -748,9 +748,9 @@ a:focus {
 
  .filterable-button .btn.selected,
  .filterable-button .btn:focus {
-  background-color: #07ff07;
+  background-color: cornflowerblue;
   color: #fff;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #07ff07;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px cornflowerblue;
 }
 
 
