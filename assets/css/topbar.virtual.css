@@ -6,7 +6,7 @@ oa {
 a:hover,
 a:active,
 a:focus {
-  color: #f0e3f3;
+  color: cornflowerblue;
   outline: none;
   text-decoration: none;
 }
