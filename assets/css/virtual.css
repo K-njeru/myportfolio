@@ -454,7 +454,10 @@ a:hover, a:active {
     padding-bottom: 12px;
     color: #005CFF;
 }
-.nav-item .active a{
+ 
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active
+{
     color: cornflowerblue !important; 
 }
 .navbar-nav .nav-link {
