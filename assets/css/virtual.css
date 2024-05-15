@@ -468,7 +468,7 @@ a:hover, a:active {
 .navbar ul li a:hover:after {
     content: '';
     display: block;
-    width: 40px;
+    width: 70px;
     height: 2px;
     background-color: blue; 
     position: relative;
