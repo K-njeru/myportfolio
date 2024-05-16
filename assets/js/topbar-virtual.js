@@ -260,6 +260,7 @@ const circleElements = document.querySelectorAll('.circle');
       { percentage: 85 },
       { percentage: 70 },
       { percentage: 80 },
+      { percentage: 40 },
       { percentage: 80 },
       // Add more objects as needed for additional circles
     ];

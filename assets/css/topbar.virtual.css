@@ -345,7 +345,7 @@ to {background-position: 0px;background-size:cover;}
 .circle {
   width: 200px; /* Adjust width as needed */
   height: 200px; /* Adjust height as needed */
-  border: 2px solid black;
+  border: 2px solid gray;
   margin: 10px;
   border-radius: 50%;
   background: aliceblue;
@@ -429,6 +429,8 @@ to {background-position: 0px;background-size:cover;}
 .percentage {
   font-size: 24px;
   font-weight: bold;
+  /* hide the percentage */
+  display: none;
 }
 
    /**service section*/
