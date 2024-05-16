@@ -307,8 +307,8 @@ object-fit: cover;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(180deg, #4CAF50 20%, #2196F3 40%, #4CAF50 60%); /* Adjust colors and positions */
-  background-size: 100% 200%; /* Double the height to create a wave */
+  background-image: url('../img/photo-2.jpg');
+  background-size:cover;
   -webkit-animation: slidein 100s;
   animation: slidein 100s;
 
