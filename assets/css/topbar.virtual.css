@@ -348,7 +348,7 @@ to {background-position: 0px;background-size:cover;}
   border: 2px solid black;
   margin: 10px;
   border-radius: 50%;
-  background-color: white;
+  background: url(../img/bubbles.jfif) ;
   position: relative;
   display: flex;
   flex-direction: column;
