@@ -343,17 +343,17 @@ to {background-position: -100px 0px;background-size:2750px;}
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #4CAF50, #2196F3, #4CAF50); /* Adjust gradient colors */
-  background-size: 200% 200%;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
+  background: linear-gradient(180deg, #4CAF50 20%, #2196F3 40%, #4CAF50 60%); /* Adjust colors and positions */
+  background-size: 100% 200%; /* Double the height to create a wave */
+  animation: liquidGradient 2s infinite alternate;
 }
-@keyframes wave {
+
+@keyframes liquidGradient {
   0% {
-     margin-left: 0;
+    background-position: 0% 50%;
   }
   100% {
-     margin-left: -1500px;
+    background-position: 100% 50%;
   }
 }
   
