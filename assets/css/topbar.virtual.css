@@ -307,10 +307,10 @@ object-fit: cover;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-image: url('../img/photo-2.jpg');
-  background-size: 100% 200%;
+  background-image: url('../img/water.jfif');
+  background-size: cover;
   -webkit-animation: slidein 100s;
-  animation: slidein 100s;
+  animation: slidein 25s;
 
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -325,12 +325,12 @@ object-fit: cover;
 
 @-webkit-keyframes slidein {
 from {background-position: top; background-size:cover; }
-to {background-position: -100px 0px;background-size:cover;}
+to {background-position: 0px;background-size:cover;}
 }
 
 @keyframes slidein {
 from {background-position: top;background-size:cover; }
-to {background-position: -100px 0px;background-size:cover;}
+to {background-position: 0px;background-size:cover;}
 
 }
 
