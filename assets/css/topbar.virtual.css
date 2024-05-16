@@ -361,6 +361,10 @@ to {background-position: -100px 0px;background-size:2750px;}
   }
 }
 
+/* Default circle background color */
+.circle .bottom-half {
+  background-color: #f1f1f1;
+}
 
 /* CSS for liquid effect */
 .circle::before {
