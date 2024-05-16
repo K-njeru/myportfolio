@@ -345,8 +345,31 @@ to {background-position: -100px 0px;background-size:2750px;}
   width: 100%;
   background: linear-gradient(90deg, #4CAF50, #2196F3, #4CAF50); /* Adjust gradient colors */
   background-size: 200% 200%;
-  animation: liquidGradient 2s infinite alternate;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
 }
+@keyframes wave {
+  0% {
+     margin-left: 0;
+  }
+  100% {
+     margin-left: -1500px;
+  }
+}
+  
+/*animation: liquidGradient 2s infinite alternate;
+@keyframes liquidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
 
 .circle-content {
   width: 200px; /* Adjust width as needed */
@@ -361,19 +384,6 @@ to {background-position: -100px 0px;background-size:2750px;}
   overflow: hidden;
   z-index: 1;
 }
-
-@keyframes liquidGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 
 
 
