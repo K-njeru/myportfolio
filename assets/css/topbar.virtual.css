@@ -71,7 +71,7 @@ a:focus {
   padding: 80px 0;
   width: 100%;
   overflow: hidden;
-  background: white;
+  background: #3a3e3f1f;
 }
  /* @media (min-width: 992px) {
   .page-home {  
@@ -345,7 +345,7 @@ to {background-position: 0px;background-size:cover;}
 .circle {
   width: 200px; /* Adjust width as needed */
   height: 200px; /* Adjust height as needed */
-  border: 2px solid gray;
+  border: 2px solid cornflowerblue;
   margin: 10px;
   border-radius: 50%;
   background: aliceblue;
