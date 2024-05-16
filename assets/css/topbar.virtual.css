@@ -345,7 +345,7 @@ to {background-position: -100px 0px;background-size:2750px;}
   width: 100%;
   background: linear-gradient(90deg, #4CAF50, #2196F3, #4CAF50); /* Adjust gradient colors */
   background-size: 200% 200%;
-  animation: liquidGradient 2s infinite;
+  animation: liquidGradient 2s infinite alternate;
 }
 
 .circle-content {
@@ -354,7 +354,6 @@ to {background-position: -100px 0px;background-size:2750px;}
   border: 2px solid black;
   margin: 10px;
   border-radius: 50%;
-  background-color: white;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -401,7 +400,6 @@ to {background-position: -100px 0px;background-size:2750px;}
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
 }
 .bottom-half h1{
  color: black; 
