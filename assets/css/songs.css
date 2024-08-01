@@ -68,7 +68,10 @@
     border: 1px solid #888;
     width: 50%;
 } 
-
+.modal-content p {
+    margin-bottom: 40px;
+    font-family: monospace;
+}
 .close {
     color: #007bff;
     font-size: 28px;
