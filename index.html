@@ -47,14 +47,21 @@
     <span class="ti-arrow-up"></span>
   </div>
 
-  <!-- Modal Structure -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Hey, wanna listen to my turn caffeine into code playlist while at it?</p>
-            <button id="playButton" class="icon-button">
-                <i class="fas fa-play"></i>
-            </button>
+   <!-- Modal Structure -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Playlist</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Hey, wanna listen to my turn caffeine into code playlist while at it?</p>
+                    <button id="playButton" class="btn btn-primary">
+                        <i class="fas fa-play"></i> 
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
