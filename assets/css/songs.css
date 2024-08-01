@@ -1,9 +1,9 @@
 /* Icon Button Styles */
 .play-button-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
-
 #playButton {
     background: none;
     border: none;
