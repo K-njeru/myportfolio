@@ -44,7 +44,34 @@
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
   </div>
-  
+
+  <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Hey, wanna listen to my turn caffeine into code playlist while at it?</p>
+            <button id="playButton" class="icon-button">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+    </div>
+
+  <!-- Audio Player -->
+    <div id="audioPlayer" class="audio-player">
+        <button id="prevButton" class="icon-button">
+            <i class="fas fa-backward"></i>
+        </button>
+        <button id="playPauseButton" class="icon-button">
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="stopButton" class="icon-button">
+            <i class="fas fa-stop"></i>
+        </button>
+        <button id="nextButton" class="icon-button">
+            <i class="fas fa-forward"></i>
+        </button>
+        <audio id="audio" controls></audio>
+    </div>
   
   <div class="vg-page page-home" id="home" style="background: linear-gradient(#0237f9, #00000030), url(assets/img/bg_image_1.jpg);">
     <!-- Navbar -->
@@ -599,6 +626,8 @@
   <script src="assets/js/google-maps.js"></script>
     
   <script src="assets/js/topbar-virtual.js"></script>
+
+  <script src="assets/js/songs.js"></script>
 
   
      
