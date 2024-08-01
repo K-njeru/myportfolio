@@ -1,18 +1,4 @@
 
-
-const button = document.querySelector(".play-button")
-const backdrop = document.querySelector(".play-backdrop")
-const close = document.querySelector(".play-close")
-
-button.addEventListener("mouseover", () => rotateTL.play())
-button.addEventListener("mouseleave", () => rotateTL.reverse())
-button.addEventListener("click", () => openTL.play())
-backdrop.addEventListener("click", () => openTL.reverse())
-close.addEventListener("click", e => {
-  e.stopPropagation()
-  openTL.reverse()
-})
-
 // Modal functionality
 window.onload = function() {
     setTimeout(function() {
