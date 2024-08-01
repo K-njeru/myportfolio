@@ -1,72 +1,51 @@
-
-.play-button {
-  width: 152px;
-  height: 152px;
-  position: relative;
-  cursor: pointer;
+/* Icon Button Styles */
+.play-button-container {
+    position: relative;
+    display: inline-block;
 }
 
-.play-backdrop {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: #000;
-  opacity: 0;
-  visibility: hidden;
+#playButton {
+    background: none;
+    border: none;
+    font-size: 24px; /* Adjust size as needed */
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
-.play-close {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 0;
-  bottom: calc(100% + 15px);
-  border: none;
-  outline: none;
-  background: none;
-  opacity: 0;
-  cursor: pointer;
+.circle-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    background: rgba(0, 123, 255, 0.3); /* Customize color as needed */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+    z-index: 0;
 }
 
-.play-close::before,
-.play-close::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: rotate(45deg);
-  background-color: #fff;
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
 }
 
-.play-close::after {
-  transform: rotate(-45deg);
+/* Icon Color */
+.fas {
+    color: #007bff; /* Customize color as needed */
 }
 
-.play-circles {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.play-perspective {
-  width: 600px;
-  height: 400px;
-  position: absolute;
-  left: -230px;
-  top: -125px;
-}
-
-.play-triangle {
-  width: 600px;
-  height: 400px;
-  background-color: #fff;
-  cursor: pointer;
-}
 
 /* Modal Styles */
 .modal {
