@@ -27,7 +27,7 @@ audioElement.src = songs[currentSongIndex];
 playButton.onclick = function() {
     // Hide the modal and show the audio player
     document.getElementById('myModal').style.display = 'none';
-    audioPlayer.style.display = 'block';
+    audioPlayer.style.display = 'flex';
 
     // Start playing the first song
     audioElement.src = songs[currentSongIndex];
