@@ -133,6 +133,8 @@ audio::-ms-media-controls {
 
 .icon-button:hover {
     transform: scale(1.1);
+    border: none;
+    color: cornflowerblue;
 }
 
 /* Icon Color */
@@ -149,5 +151,5 @@ audio::-ms-media-controls {
     margin: 0 10px;
 }
 .audio-close:hover {
-    color: #fff;
+    color: darkorange;
 }
