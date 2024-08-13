@@ -74,3 +74,10 @@ audioElement.onended = function() {
     playPauseButton.querySelector('i').classList.remove('fa-pause');
     playPauseButton.querySelector('i').classList.add('fa-play');
 };
+
+// Close audio player functionality
+audioCloseButton.onclick = function() {
+    audioPlayer.style.display = 'none';
+    audioElement.pause();
+    audioElement.currentTime = 0;
+};
