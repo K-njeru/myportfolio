@@ -139,3 +139,13 @@ audio::-ms-media-controls {
 .fas {
     color: #007bff; /* Customize color as needed */
 }
+.audio-close {
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+    float: right;
+    margin: 0 10px;
+}
+.audio-close:hover {
+    color: #fff;
+}
