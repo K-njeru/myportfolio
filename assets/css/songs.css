@@ -102,6 +102,24 @@
     gap: 10px;
     z-index: 999;
 }
+/* Hide the default play/pause button */
+audio::-webkit-media-controls-play-button {
+    display: none;
+}
+
+audio::-webkit-media-controls-pause-button {
+    display: none;
+}
+
+/* Hide play/pause controls for Firefox and other browsers */
+audio::-moz-media-controls {
+    display: none;
+}
+
+/* Hide play/pause controls for Edge */
+audio::-ms-media-controls {
+    display: none;
+}
 
 /* Icon Button Styles */
 .icon-button {
