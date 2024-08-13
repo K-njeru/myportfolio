@@ -140,10 +140,12 @@ audio::-ms-media-controls {
     color: #007bff; /* Customize color as needed */
 }
 .audio-close {
-    font-size: 28px;
-    color: #aaa;
+       font-size: 40px;
+    color: red;
+    font-family: fantasy;
+    font-weight: 500;
     cursor: pointer;
-    float: right;
+    float: left;
     margin: 0 10px;
 }
 .audio-close:hover {
