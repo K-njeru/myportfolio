@@ -24,44 +24,43 @@
 }
 
 .image-grid {
-    display: grid;
-    grid-template-areas:
-        "sq1 sq2"
-        "sq3 sq4";
-    gap: 10px;
     position: relative;
     width: 300px;
     height: 300px;
 }
 
 .grid-square {
-    position: relative;
+    position: absolute;
     border: 3px solid blue;
     background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc'); /* Replace with your image URL */
-    background-size: 300% 300%; /* Ensures the image covers all squares without replication */
+    background-size: 600px 600px; /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }
 
 .grid-square-1 {
-    grid-area: sq1;
-    background-position: top left; /* Position for the first part of the image */
+    top: 0;
+    left: 0;
+    background-position: top left;
 }
 
 .grid-square-2 {
-    grid-area: sq2;
-    background-position: top right; /* Position for the second part of the image */
+    top: 25%;
+    left: 25%;
+    background-position: top right;
 }
 
 .grid-square-3 {
-    grid-area: sq3;
-    background-position: bottom left; /* Position for the third part of the image */
+    top: 50%;
+    left: 50%;
+    background-position: bottom left;
 }
 
 .grid-square-4 {
-    grid-area: sq4;
-    background-position: bottom right; /* Position for the fourth part of the image */
+    top: 75%;
+    left: 75%;
+    background-position: bottom right;
 }
 
 .fade-in {
