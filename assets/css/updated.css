@@ -3,6 +3,7 @@
     color: #ecf0f1;
     border-radius: 10px;
     padding: 40px;
+    position: relative;
 }
 
 .image-grid {
@@ -11,40 +12,35 @@
     grid-template-rows: 1fr 1fr;
     gap: 10px;
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
 }
 
 .grid-square {
     overflow: hidden;
     position: relative;
-}
-
-.grid-square::before {
-    content: "";
-    position: absolute;
-   background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc'); /* Replace with your image URL */
-    background-size: 200%; /* Adjusts the image to cover 4 squares */
+    border: 3px solid blue; /* Blue border for visibility */
+    background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc'); /* Replace with your image URL */
+    background-size: 200%; /* Scale the image to fit four squares */
     background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
 }
 
-.grid-square-1::before {
+.grid-square-1 {
     background-position: top left; /* Top-left corner of the image */
 }
 
-.grid-square-2::before {
+.grid-square-2 {
     background-position: top right; /* Top-right corner of the image */
 }
 
-.grid-square-3::before {
+.grid-square-3 {
     background-position: bottom left; /* Bottom-left corner of the image */
 }
 
-.grid-square-4::before {
+.grid-square-4 {
     background-position: bottom right; /* Bottom-right corner of the image */
 }
 
