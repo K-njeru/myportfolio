@@ -23,7 +23,7 @@
 .grid-square::before {
     content: "";
     position: absolute;
-    background-image: url('https://i.imgur.com/YOUR_IMAGE.jpg'); /* Replace with your image URL */
+   background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc'); /* Replace with your image URL */
     background-size: 200%; /* Adjusts the image to cover 4 squares */
     background-repeat: no-repeat;
     width: 100%;
