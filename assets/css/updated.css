@@ -1,5 +1,5 @@
 .about-section {
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
+       background: linear-gradient(to right, aliceblue, #232829);
     border-radius: 20px;
     padding: 40px;
     position: relative;
@@ -31,8 +31,8 @@
 
 .grid-square {
     position: absolute;
-    border: 3px solid blue;
-    background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc'); /* Replace with your image URL */
+    border: 3px solid transparent;
+    background-image: url('img/'); /* Replace with your image URL */
     background-size: 600px 600px; /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
     width: 50%;
