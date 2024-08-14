@@ -32,7 +32,7 @@
 .grid-square {
     position: absolute;
     border: 3px solid transparent;
-    background-image: url('img/'); /* Replace with your image URL */
+    background-image: url('img/ken.jpg'); /* Replace with your image URL */
     background-size: 600px 600px; /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
     width: 50%;
