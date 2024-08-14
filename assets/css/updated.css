@@ -1,58 +1,93 @@
 .about-section {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    border-radius: 10px;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    border-radius: 20px;
     padding: 40px;
     position: relative;
+    overflow: hidden;
+}
+
+.about-paragraph {
+    font-size: 1.3rem;
+    color: #ffffff;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .about-section .row {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "sq1 sq2"
+        "sq3 sq4";
     gap: 10px;
     position: relative;
-    width: 300px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
+    width: 300px;
+    height: 300px;
 }
 
 .grid-square {
-    overflow: hidden;
     position: relative;
-    border: 3px solid blue; /* Blue border for visibility */
+    border: 3px solid blue;
     background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc'); /* Replace with your image URL */
-    background-size: 200%; /* Scale the image to fit four squares */
+    background-size: 300% 300%; /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
-    background-position: center;
     width: 100%;
     height: 100%;
 }
 
 .grid-square-1 {
-    background-position: top left; /* Top-left corner of the image */
+    grid-area: sq1;
+    background-position: top left; /* Position for the first part of the image */
 }
 
 .grid-square-2 {
-    background-position: top right; /* Top-right corner of the image */
+    grid-area: sq2;
+    background-position: top right; /* Position for the second part of the image */
 }
 
 .grid-square-3 {
-    background-position: bottom left; /* Bottom-left corner of the image */
+    grid-area: sq3;
+    background-position: bottom left; /* Position for the third part of the image */
 }
 
 .grid-square-4 {
-    background-position: bottom right; /* Bottom-right corner of the image */
+    grid-area: sq4;
+    background-position: bottom right; /* Position for the fourth part of the image */
 }
 
 .fade-in {
-    animation: fadeIn 2s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: pulsate 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes pulsate {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
 }
