@@ -12,7 +12,7 @@
     line-height: 1.8;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #010323;
     border-radius: 15px;
 }
 
@@ -31,8 +31,8 @@
 
 .grid-square {
     position: absolute;
-    border: 3px solid transparent;
-    background-image: url('img/ken1.jpg'); /* Replace with your image URL */
+    border: 3px solid darkgray;
+    background-image: url('../img/ken.jpg'); /* Replace with your image URL */
     background-size: 600px 600px; /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
     width: 50%;
