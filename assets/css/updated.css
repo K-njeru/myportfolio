@@ -1,63 +1,62 @@
 .about-section {
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    border-radius: 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-radius: 10px;
     padding: 40px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
     position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-square {
     overflow: hidden;
+    position: relative;
 }
 
-.about-paragraph {
-    font-size: 1.3rem;
-    color: #ffffff;
-    line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+.grid-square::before {
+    content: "";
+    position: absolute;
+    background-image: url('https://i.imgur.com/YOUR_IMAGE.jpg'); /* Replace with your image URL */
+    background-size: 200%; /* Adjusts the image to cover 4 squares */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-@media (min-width: 768px) {
-    .about-section .row {
-        display: flex;
-        align-items: center;
-    }
+.grid-square-1::before {
+    background-position: top left; /* Top-left corner of the image */
 }
 
-.coffee-animation {
-    max-width: 80%;
-    height: auto;
-    animation: float 6s ease-in-out infinite;
+.grid-square-2::before {
+    background-position: top right; /* Top-right corner of the image */
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+.grid-square-3::before {
+    background-position: bottom left; /* Bottom-left corner of the image */
+}
+
+.grid-square-4::before {
+    background-position: bottom right; /* Bottom-right corner of the image */
 }
 
 .fade-in {
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
+    animation: fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.about-section::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: pulsate 6s ease-in-out infinite;
-    z-index: 1;
-}
-
-@keyframes pulsate {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 0.8; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
