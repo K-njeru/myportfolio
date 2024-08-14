@@ -1,8 +1,9 @@
 .about-section {
-       background: linear-gradient(to right, aliceblue, #232829);
+   background: linear-gradient(to right, aliceblue, #dae1e2);
     border-radius: 20px;
     padding: 40px;
     position: relative;
+    top: -48px;
     overflow: hidden;
 }
 
@@ -32,7 +33,7 @@
 .grid-square {
     position: absolute;
     border: 3px solid darkgray;
-    background-image: url('../img/ken.jpg'); /* Replace with your image URL */
+   background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
     background-size: 600px 600px; /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
     width: 50%;
