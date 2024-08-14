@@ -1,0 +1,60 @@
+.about-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+}
+
+.about-intro {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.about-fun-facts, .about-not-so-good {
+    margin-top: 35px;
+}
+
+.about-fun-facts ul, .about-not-so-good ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-fun-facts li, .about-not-so-good li {
+    font-size: 1.3rem;
+    margin: 12px 0;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+.plant-image {
+    width: 120px;
+    margin-top: 40px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.cta-button {
+    margin-top: 35px;
+    padding: 12px 24px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #2980b9;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
