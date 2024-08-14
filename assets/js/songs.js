@@ -47,14 +47,6 @@ playPauseButton.onclick = function() {
     }
 };
 
-stopButton.onclick = function() {
-    console.log('Stop button clicked'); // Debugging
-    audioElement.pause();
-    audioElement.currentTime = 0;
-    playPauseButton.querySelector('i').classList.remove('fa-pause');
-    playPauseButton.querySelector('i').classList.add('fa-play');
-};
-
 nextButton.onclick = function() {
     console.log('Next button clicked'); // Debugging
     currentSongIndex = (currentSongIndex + 1) % songs.length;
@@ -85,3 +77,12 @@ audioCloseButton.onclick = function() {
     audioElement.pause();
     audioElement.currentTime = 0;
 };
+
+/* stopButton.onclick = function() {
+    console.log('Stop button clicked'); // Debugging
+    audioElement.pause();
+    audioElement.currentTime = 0;
+    playPauseButton.querySelector('i').classList.remove('fa-pause');
+    playPauseButton.querySelector('i').classList.add('fa-play');
+}; */
+
