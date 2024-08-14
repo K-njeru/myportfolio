@@ -1,3 +1,24 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+    const typedText = "Hello! I'm Kennedy, a code wizard by day and a plant whisperer by night.";
+    const introElement = document.getElementById('typedIntro');
+    let index = 0;
+
+    function type() {
+        if (index < typedText.length) {
+            introElement.innerHTML += typedText.charAt(index);
+            index++;
+            setTimeout(type, 60);
+        }
+    }
+
+    type();
+});
+
+function scrollToContact() {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
 $(function() {
   var $grid = $('.gridder').isotope({
     itemSelector: '.grid-item',
