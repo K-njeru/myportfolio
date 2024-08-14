@@ -26,16 +26,16 @@ let currentSongIndex = 0;
 audioElement.src = songs[currentSongIndex];
 
 playButton.onclick = function() {
-    // Hide the modal and show the audio player
+    console.log('Play button clicked'); // Debugging
     document.getElementById('myModal').style.display = 'none';
     audioPlayer.style.display = 'flex';
 
-    // Start playing the first song
     audioElement.src = songs[currentSongIndex];
     audioElement.play();
 };
 
 playPauseButton.onclick = function() {
+    console.log('Play/Pause button clicked'); // Debugging
     if (audioElement.paused) {
         audioElement.play();
         playPauseButton.querySelector('i').classList.remove('fa-play');
@@ -48,6 +48,7 @@ playPauseButton.onclick = function() {
 };
 
 stopButton.onclick = function() {
+    console.log('Stop button clicked'); // Debugging
     audioElement.pause();
     audioElement.currentTime = 0;
     playPauseButton.querySelector('i').classList.remove('fa-pause');
@@ -55,6 +56,7 @@ stopButton.onclick = function() {
 };
 
 nextButton.onclick = function() {
+    console.log('Next button clicked'); // Debugging
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     audioElement.src = songs[currentSongIndex];
     audioElement.play();
@@ -63,6 +65,7 @@ nextButton.onclick = function() {
 };
 
 prevButton.onclick = function() {
+    console.log('Previous button clicked'); // Debugging
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
     audioElement.src = songs[currentSongIndex];
     audioElement.play();
@@ -70,14 +73,14 @@ prevButton.onclick = function() {
     playPauseButton.querySelector('i').classList.add('fa-pause');
 };
 
-// Update button state when song ends
 audioElement.onended = function() {
+    console.log('Audio ended'); // Debugging
     playPauseButton.querySelector('i').classList.remove('fa-pause');
     playPauseButton.querySelector('i').classList.add('fa-play');
 };
 
-// Close audio player functionality
 audioCloseButton.onclick = function() {
+    console.log('Audio close button clicked'); // Debugging
     audioPlayer.style.display = 'none';
     audioElement.pause();
     audioElement.currentTime = 0;
