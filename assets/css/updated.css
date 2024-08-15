@@ -95,7 +95,8 @@
 
 /* STACK */
 .stack {
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    /* background: linear-gradient(to right, #2c3e50, #4ca1af); */
+    background: white;
     border-radius: 20px;
     padding: 40px;
     color: white;
@@ -104,10 +105,13 @@
 }
 
 .accordion-button {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
+    color: #010323;
     position: relative;
     transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 30px;
+    background: aliceblue;
+    font-family: monospace;
 }
 
 .accordion-button:not(.collapsed) {
