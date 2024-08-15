@@ -269,20 +269,22 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         const accordion = button.closest('.accordion-item').querySelector('.accordion-collapse');
         const isOpen = accordion.classList.contains('show');
 
+        // Close all accordions except the one being clicked
         document.querySelectorAll('.accordion-collapse').forEach(collapse => {
             if (collapse !== accordion) {
-                collapse.classList.remove('show');
+                collapse.classList.remove('show', 'fade-in');
                 collapse.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
                 collapse.previousElementSibling.classList.add('collapsed');
             }
         });
 
+        // Toggle the accordion content visibility and icon
         if (!isOpen) {
-            accordion.classList.add('show');
+            accordion.classList.add('show', 'fade-in');
             button.classList.remove('collapsed');
             button.querySelector('.accordion-icon').textContent = '×';
         } else {
-            accordion.classList.remove('show');
+            accordion.classList.remove('show', 'fade-in');
             button.classList.add('collapsed');
             button.querySelector('.accordion-icon').textContent = '+';
         }
@@ -304,7 +306,7 @@ document.querySelectorAll('.accordion-button').forEach(button => {
     
 
     <div class="circle-container">
-      <!-- Repeat the following code block for each circle -->
+       Repeat the following code block for each circle 
       <div class="circle">
         <div class="liquid " style="height: 120%;"></div>
         <div class="circle-content">
@@ -382,7 +384,7 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         </div>
         </div>
       </div>
-      <!-- End of code block -->
+       End of code block 
     </div>
     </div>
   </div>
