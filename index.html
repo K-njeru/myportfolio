@@ -242,6 +242,10 @@
                     alt="Java Logo" class="tool-logo"> <span>Java</span>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg"
                     alt="Spring Boot Logo" class="tool-logo"> <span>Spring Boot</span>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/1280px-MySQL_logo.svg.png"
+                    alt="MySQL Logo" class="tool-logo"> <span>MySQL</span>
+
 
                 </div>
               </div>
@@ -260,40 +264,47 @@
             <div id="collapseMobileDev" class="accordion-collapse collapse" aria-labelledby="headingMobileDev"
               data-bs-parent="#devAccordion">
               <div class="accordion-body fade-in">
-                <p>I’m diving into the world of mobile development, learning to create Android and IOS apps that are as smooth
-                  as my favorite tunes. The journey is just beginning, but  I'm
+                <p>I’m diving into the world of mobile development, learning to create Android and IOS apps that are as
+                  smooth
+                  as my favorite tunes. The journey is just beginning, but I'm
                   ready to groove through every challenge.</p>
                 <div class="tools">
                   <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
-                    alt="Java Logo" class="tool-logo"> <span>Java</span> 
+                    alt="Java Logo" class="tool-logo"> <span>Java</span>
                 </div>
               </div>
             </div>
           </div>
 
-
-
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSupport">
+            <h2 class="accordion-header" id="headingManagement">
               <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button"
-                data-bs-toggle="collapse" data-bs-target="#collapseSupport" aria-expanded="false"
-                aria-controls="collapseSupport">
-                <span class="accordion-title">Website Support</span>
+                data-bs-toggle="collapse" data-bs-target="#collapseManagement" aria-expanded="false"
+                aria-controls="collapseManagement">
+                <span class="accordion-title">Project Management & Version Control</span>
                 <span class="accordion-icon">+</span>
               </button>
             </h2>
-            <div id="collapseSupport" class="accordion-collapse collapse" aria-labelledby="headingSupport"
+            <div id="collapseManagement" class="accordion-collapse collapse" aria-labelledby="headingManagement"
               data-bs-parent="#devAccordion">
               <div class="accordion-body fade-in">
-                <p>Ensuring websites run smoothly and stay up-to-date is like tuning a guitar—precision and care make
-                  all the difference. I’m here to keep the rhythm steady.</p>
+                <p>Balancing project timelines and code versions is like conducting an orchestra—every piece must play
+                  in
+                  harmony to create a masterpiece. With these tools, I ensure the melody is always on point.</p>
                 <div class="tools">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Support.svg/512px-Support.svg.png"
-                    alt="Support Logo" class="tool-logo"> Support Tools
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/512px-Git_icon.svg.png"
+                    alt="Git Logo" class="tool-logo"> <span>Git (GitHub)</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Jira_logo.svg" alt="JIRA Logo"
+                    class="tool-logo"> <span>JIRA</span>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Zendesk_logo.svg/512px-Zendesk_logo.svg.png"
+                    alt="Zendesk Logo" class="tool-logo"> <span>Zendesk</span>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
         <div class="my-4 d-md-none">
           <p class="what-title">What I do </p>
@@ -312,40 +323,40 @@
   </div>
   <script>
     document.querySelectorAll('.accordion-button').forEach(button => {
-  button.addEventListener('click', () => {
-    const accordionItem = button.closest('.accordion-item');
-    const accordion = accordionItem.querySelector('.accordion-collapse');
-    const icon = button.querySelector('.accordion-icon');
-    const isOpen = accordion.classList.contains('show');
+      button.addEventListener('click', () => {
+        const accordionItem = button.closest('.accordion-item');
+        const accordion = accordionItem.querySelector('.accordion-collapse');
+        const icon = button.querySelector('.accordion-icon');
+        const isOpen = accordion.classList.contains('show');
 
-    // Close all other accordions
-    document.querySelectorAll('.accordion-item').forEach(item => {
-      const collapse = item.querySelector('.accordion-collapse');
-      const btn = item.querySelector('.accordion-button');
-      const btnIcon = btn.querySelector('.accordion-icon');
+        // Close all other accordions
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          const collapse = item.querySelector('.accordion-collapse');
+          const btn = item.querySelector('.accordion-button');
+          const btnIcon = btn.querySelector('.accordion-icon');
 
-      if (collapse !== accordion) {
-        collapse.classList.remove('show', 'fade-in');
-        btn.classList.add('collapsed');
-        btnIcon.textContent = '+';
-      }
+          if (collapse !== accordion) {
+            collapse.classList.remove('show', 'fade-in');
+            btn.classList.add('collapsed');
+            btnIcon.textContent = '+';
+          }
+        });
+
+        // Toggle the current accordion's content visibility and icon
+        if (!isOpen) {
+          accordion.classList.add('show', 'fade-in');
+          button.classList.remove('collapsed');
+          icon.textContent = '×';
+        } else {
+          accordion.classList.remove('show', 'fade-in');
+          button.classList.add('collapsed');
+          icon.textContent = '+';
+        }
+      });
     });
 
-    // Toggle the current accordion's content visibility and icon
-    if (!isOpen) {
-      accordion.classList.add('show', 'fade-in');
-      button.classList.remove('collapsed');
-      icon.textContent = '×';
-    } else {
-      accordion.classList.remove('show', 'fade-in');
-      button.classList.add('collapsed');
-      icon.textContent = '+';
-    }
-  });
-});
-
-// CSS for fade-in animation
-document.head.insertAdjacentHTML('beforeend', `
+    // CSS for fade-in animation
+    document.head.insertAdjacentHTML('beforeend', `
   <style>
     .fade-in {
       animation: fadeIn 0.5s ease-in-out forwards;
