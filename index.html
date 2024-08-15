@@ -263,7 +263,33 @@
         </div>
     </div>
 </div>
+<script>
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordion = button.closest('.accordion-item').querySelector('.accordion-collapse');
+        const isOpen = accordion.classList.contains('show');
 
+        document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+            if (collapse !== accordion) {
+                collapse.classList.remove('show');
+                collapse.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
+                collapse.previousElementSibling.classList.add('collapsed');
+            }
+        });
+
+        if (!isOpen) {
+            accordion.classList.add('show');
+            button.classList.remove('collapsed');
+            button.querySelector('.accordion-icon').textContent = '×';
+        } else {
+            accordion.classList.remove('show');
+            button.classList.add('collapsed');
+            button.querySelector('.accordion-icon').textContent = '+';
+        }
+    });
+});
+
+</script>
 
 
     <!-- 
