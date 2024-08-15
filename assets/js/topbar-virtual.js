@@ -1,19 +1,4 @@
 
-document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const isOpen = button.classList.contains('collapsed');
-        document.querySelectorAll('.accordion-button').forEach(btn => {
-            btn.classList.add('collapsed');
-            btn.setAttribute('aria-expanded', 'false');
-            btn.querySelector('.accordion-icon').textContent = '+';
-        });
-        if (isOpen) {
-            button.classList.remove('collapsed');
-            button.setAttribute('aria-expanded', 'true');
-            button.querySelector('.accordion-icon').textContent = '×';
-        }
-    });
-});
 
 $(function() {
   var $grid = $('.gridder').isotope({
