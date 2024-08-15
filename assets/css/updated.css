@@ -112,6 +112,7 @@
     font-size: 30px;
     background: aliceblue;
     font-family: monospace;
+    border-radius: 10px;
 }
 
 .accordion-button:not(.collapsed) {
@@ -123,8 +124,14 @@
     position: absolute;
     right: 20px;
     font-size: 1.5rem;
+    margin-left: auto;
     transition: transform 0.3s ease;
 }
+
+.accordion-title {
+    margin-right: auto; /* Pushes the icon to the right */
+}
+
 
 .accordion-button.collapsed .accordion-icon {
     transform: rotate(0deg);
@@ -143,6 +150,13 @@
     animation: fadeIn 0.5s ease-in-out;
     margin-bottom: 10px;
 }
+.what-p{
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+    font-family: monospace;
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
