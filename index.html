@@ -312,31 +312,51 @@
   </div>
   <script>
     document.querySelectorAll('.accordion-button').forEach(button => {
-      button.addEventListener('click', () => {
-        const accordion = button.closest('.accordion-item').querySelector('.accordion-collapse');
-        const isOpen = accordion.classList.contains('show');
+  button.addEventListener('click', () => {
+    const accordionItem = button.closest('.accordion-item');
+    const accordion = accordionItem.querySelector('.accordion-collapse');
+    const isOpen = accordion.classList.contains('show');
 
-        // Close all accordions except the one being clicked
-        document.querySelectorAll('.accordion-collapse').forEach(collapse => {
-          if (collapse !== accordion) {
-            collapse.classList.remove('show', 'fade-in');
-            collapse.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
-            collapse.previousElementSibling.classList.add('collapsed');
-          }
-        });
+    // Close all other accordions
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      const collapse = item.querySelector('.accordion-collapse');
+      const icon = item.querySelector('.accordion-icon');
+      const btn = item.querySelector('.accordion-button');
 
-        // Toggle the accordion content visibility and icon
-        if (!isOpen) {
-          accordion.classList.add('show', 'fade-in');
-          button.classList.remove('collapsed');
-          button.querySelector('.accordion-icon').textContent = '×';
-        } else {
-          accordion.classList.remove('show', 'fade-in');
-          button.classList.add('collapsed');
-          button.querySelector('.accordion-icon').textContent = '+';
-        }
-      });
+      if (collapse !== accordion) {
+        collapse.classList.remove('show', 'fade-in');
+        btn.classList.add('collapsed');
+        icon.textContent = '+';
+      }
     });
+
+    // Toggle the accordion content visibility and icon for the clicked button
+    if (!isOpen) {
+      accordion.classList.add('show', 'fade-in');
+      button.classList.remove('collapsed');
+      button.querySelector('.accordion-icon').textContent = '×';
+    } else {
+      accordion.classList.remove('show', 'fade-in');
+      button.classList.add('collapsed');
+      button.querySelector('.accordion-icon').textContent = '+';
+    }
+  });
+});
+
+// CSS for fade-in animation
+document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+`);
+
 
   </script>
 
