@@ -1,23 +1,19 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    const typedText = "Hello! I'm Kennedy, a code wizard by day and a plant whisperer by night.";
-    const introElement = document.getElementById('typedIntro');
-    let index = 0;
-
-    function type() {
-        if (index < typedText.length) {
-            introElement.innerHTML += typedText.charAt(index);
-            index++;
-            setTimeout(type, 60);
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const isOpen = button.classList.contains('collapsed');
+        document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.classList.add('collapsed');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.querySelector('.accordion-icon').textContent = '+';
+        });
+        if (isOpen) {
+            button.classList.remove('collapsed');
+            button.setAttribute('aria-expanded', 'true');
+            button.querySelector('.accordion-icon').textContent = '×';
         }
-    }
-
-    type();
+    });
 });
-
-function scrollToContact() {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-}
 
 $(function() {
   var $grid = $('.gridder').isotope({
