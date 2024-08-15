@@ -150,6 +150,12 @@
     animation: fadeIn 0.5s ease-in-out;
     margin-bottom: 10px;
 }
+.what-title {
+    font-size: 10px;
+    font-weight: 1000;
+    color: cornflowerblue;
+
+}
 .what-p{
     font-size: 15px;
     font-weight: bolder;
