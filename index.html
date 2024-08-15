@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
-  
+
   <title>Kennedy - My Portfolio</title>
 
   <!-- <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"> -->
   <link rel="shortcut icon" href="assets/img/logo1-removebg-preview.png" type="image/x-icon">
- 
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        
-  
+
+
   <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/vendor/owl-carousel/owl.carousel.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/vendor/nice-select/css/nice-select.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/vendor/fancybox/css/jquery.fancybox.min.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/css/virtual.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/css/topbar.virtual.css">
-  
+
   <link rel="stylesheet" type="text/css" href="assets/css/songs.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/updated.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/updated.css">
 
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 
-  
+
 </head>
+
 <body>
-  
+
   <!-- Back to top button -->
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
   </div>
 
-     <!-- Modal Structure -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Hey, wanna listen to my turn caffeine into code playlist while at it?</p>
-            <!-- <button id="playButton" class="icon-button">
+  <!-- Modal Structure -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Hey, wanna listen to my turn caffeine into code playlist while at it?</p>
+      <!-- <button id="playButton" class="icon-button">
                 <i class="fas fa-play"></i>
             </button> -->
 
-     <div class="play-button-container">
-                        <button id="playButton" class="btn btn-primary">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="circle-animation"></div>
-                    </div>
-          
-        </div>
+      <div class="play-button-container">
+        <button id="playButton" class="btn btn-primary">
+          <i class="fas fa-play"></i>
+        </button>
+        <div class="circle-animation"></div>
+      </div>
+
     </div>
+  </div>
 
   <!-- Audio Player -->
-    <div id="audioPlayer" class="audio-player">
-        <button id="prevButton" class="icon-button">
-            <i class="fas fa-backward"></i>
-        </button>
-        <button id="playPauseButton" class="icon-button">
-            <i class="fas fa-play"></i>
-        </button>
-        <!-- <button id="stopButton" class="icon-button">
+  <div id="audioPlayer" class="audio-player">
+    <button id="prevButton" class="icon-button">
+      <i class="fas fa-backward"></i>
+    </button>
+    <button id="playPauseButton" class="icon-button">
+      <i class="fas fa-play"></i>
+    </button>
+    <!-- <button id="stopButton" class="icon-button">
             <i class="fas fa-stop"></i>
         </button> Stop button-->
-        <button id="nextButton" class="icon-button">
-            <i class="fas fa-forward"></i>
-        </button>
-      <audio id="audio" controls></audio> <!-- with controls -->
-         <!--  <audio id="audio"></audio>  Removed controls attribute -->
-      <span id="audioClose" class="audio-close">&times;</span>
-    </div>
+    <button id="nextButton" class="icon-button">
+      <i class="fas fa-forward"></i>
+    </button>
+    <audio id="audio" controls></audio> <!-- with controls -->
+    <!--  <audio id="audio"></audio>  Removed controls attribute -->
+    <span id="audioClose" class="audio-close">&times;</span>
+  </div>
 
-  
-  <div class="vg-page page-home" id="home" style="background: linear-gradient(#0237f9, #00000030), url(assets/img/bg_image_1.jpg);">
+
+  <div class="vg-page page-home" id="home"
+    style="background: linear-gradient(#0237f9, #00000030), url(assets/img/bg_image_1.jpg);">
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
       <div class="container">
         <!-- <a href="" class="navbar-brand">Kennedy</a> -->
         <div class="logo">
-        <img src="assets/img/finallogo-removebg-preview.png" alt="">
+          <img src="assets/img/finallogo-removebg-preview.png" alt="">
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
           <span class="ti-menu"></span>
@@ -108,43 +111,47 @@
             <li class="nav-item">
               <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>
             </li>
-          
+
             <li class="nav-item">
               <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
             </li>
           </ul>
         </div>
       </div>
-    </div> 
+    </div>
     <!-- End Navbar -->
     <!-- Caption header -->
-    <div class="caption-header text-center wow zoomInDown">    
+    <div class="caption-header text-center wow zoomInDown">
       <div class="container-fluid hero">
         <div class="row">
-      <div class="col-lg-8 col-md-6 col-sm-12 hero-content">
-        <div class="caption-content">
-      <h5 class="fw-normal"><span style="color: cornflowerblue;">Hello </span><img width="48" height="48" src="assets/img/wave-removebg-preview.png" alt="so-so-skin-type-4"/>,
-      </h5>
-      <h1 class="fw-light mb-4">I am Kennedy<!--<b class="fg-theme">Kennedy</b> --> Njeru.</h1>
-      <!-- <div class="badge">Technical Support Specialist & Web Developer</div> -->
-      <p class="about-ken">I tell websites what to do.<span style= "color:cornflowerblue;"> Do they listen? </span> Well, sometimes they do, sometimes they don't, but that's where my magic comes in. 
-        I coax those unruly pixels into place and turn caffeine into code.</p>
-      <p class="hero-foot">Welcome to my digital alchemy...</p>
+          <div class="col-lg-8 col-md-6 col-sm-12 hero-content">
+            <div class="caption-content">
+              <h5 class="fw-normal"><span style="color: cornflowerblue;">Hello </span><img width="48" height="48"
+                  src="assets/img/wave-removebg-preview.png" alt="so-so-skin-type-4" />,
+              </h5>
+              <h1 class="fw-light mb-4">I am Kennedy<!--<b class="fg-theme">Kennedy</b> --> Njeru.</h1>
+              <!-- <div class="badge">Technical Support Specialist & Web Developer</div> -->
+              <p class="about-ken">I tell websites what to do.<span style="color:cornflowerblue;"> Do they listen?
+                </span> Well, sometimes they do, sometimes they don't, but that's where my magic comes in.
+                I coax those unruly pixels into place and turn caffeine into code.</p>
+              <p class="hero-foot">Welcome to my digital alchemy...</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 hero-content hero-img">
+            <img class="hero-image" src="assets/img/hero-removebg-preview.png" alt="kennedy" />
+          </div>
+        </div>
       </div>
-    </div> 
-    <div class="col-lg-4 col-md-6 col-sm-12 hero-content hero-img">
-      <img class="hero-image" src="assets/img/hero-removebg-preview.png" alt="kennedy"/>
+      <div class="socials">
+        <div class="social-icons"><a href="https://www.linkedin.com/in/kennedy-njeru-2004a7211/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a></div>
+        <div class="social-icons"><a href="mailto:knjeru519@gmail.com"><i class="fas fa-envelope"></i></a></div>
+        <div class="social-icons"><a href="tel:+254794298696"><i class="fas fa-phone"></i></a></div>
+        <div class="social-icons"><a href=" https://github.com/K-njeru" target="_blank"><i
+              class="icon brands alt fab fa-github"></i></a></div>
+      </div>
     </div>
-    </div>
-    </div>
-    <div class="socials">
-      <div class="social-icons"><a href="https://www.linkedin.com/in/kennedy-njeru-2004a7211/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
-      <div class="social-icons"><a href="mailto:knjeru519@gmail.com"><i class="fas fa-envelope"></i></a></div>
-      <div class="social-icons"><a href="tel:+254794298696"><i class="fas fa-phone"></i></a></div>
-      <div class="social-icons"><a href=" https://github.com/K-njeru" target="_blank"><i class="icon brands alt fab fa-github"></i></a></div>
-    </div>
-  </div>
-  <!-- End Caption header -->
+    <!-- End Caption header -->
   </div>
   <!-- 
   <div class="vg-page page-about" id="about">
@@ -170,133 +177,171 @@
       </div>
     </div> -->
 
-<section id="about" class="about-section container-fluid my-5 py-5">
+  <section id="about" class="about-section container-fluid my-5 py-5">
     <div class="row align-items-center fade-in">
-        <div class="col-lg-4 col-md-5 d-none d-md-block">
-            <div class="image-grid">
-                <div class="grid-square grid-square-1"></div>
-                <div class="grid-square grid-square-2"></div>
-                <div class="grid-square grid-square-3"></div>
-                <div class="grid-square grid-square-4"></div>
-            </div>
+      <div class="col-lg-4 col-md-5 d-none d-md-block">
+        <div class="image-grid">
+          <div class="grid-square grid-square-1"></div>
+          <div class="grid-square grid-square-2"></div>
+          <div class="grid-square grid-square-3"></div>
+          <div class="grid-square grid-square-4"></div>
         </div>
-        <div class="col-lg-8 col-md-7 text-light">
-            <p class="about-paragraph">
-                My life is a playlist of quirky tunes, a football match with unpredictable twists, and a dance floor where, well, 
-              let’s just say my coding skills outshine my rhythm. I code like a maestro conducts an orchestra—except my music taste is 
-              as weird as it gets, and my code is as clean as a well-organized playlist. My passion for football rivals my passion for debugging,
-              but my moves on the pitch (and the dance floor) are more “debugging in progress.” While I don’t have any plants yet,
-              I’m still nurturing the idea—right after I figure out how to make my favorite tracks the soundtrack of my next coding session. 
-              But honestly, you should meet me in person—this portfolio doesn’t quite capture the bugs and dance moves that come with the real deal!
-            </p>
-        </div>
+      </div>
+      <div class="col-lg-8 col-md-7 text-light">
+        <p class="about-paragraph">
+          My life is a playlist of quirky tunes, a football match with unpredictable twists, and a dance floor where,
+          well,
+          let’s just say my coding skills outshine my rhythm. I code like a maestro conducts an orchestra—except my
+          music taste is
+          as weird as it gets, and my code is as clean as a well-organized playlist. My passion for football rivals my
+          passion for debugging,
+          but my moves on the pitch (and the dance floor) are more “debugging in progress.” While I don’t have any
+          plants yet,
+          I’m still nurturing the idea—right after I figure out how to make my favorite tracks the soundtrack of my next
+          coding session.
+          But honestly, you should meet me in person—this portfolio doesn’t quite capture the bugs and dance moves that
+          come with the real deal!
+        </p>
+      </div>
     </div>
-</section>
+  </section>
 
-<div class="container my-5 stack">
+  <div class="container my-5 stack">
     <div class="row">
-        <div class="col-lg-8 col-md-8">
-            <div class="accordion" id="devAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingMobileDev">
-                        <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileDev" aria-expanded="false" aria-controls="collapseMobileDev">
-                          <span class="accordion-title">Mobile Development</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                    </h2>
-                    <div id="collapseMobileDev" class="accordion-collapse collapse" aria-labelledby="headingMobileDev" data-bs-parent="#devAccordion">
-                        <div class="accordion-body fade-in">
-                            <p>I’m diving into the world of mobile development, learning to create Android apps that are as smooth as my favorite tunes. The journey is just beginning, but with Android Studio and Java by my side, I'm ready to groove through every challenge.</p>
-                            <div class="tools">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Android_logo_2019_%28stacked%29.svg/512px-Android_logo_2019_%28stacked%29.svg.png" alt="Android Logo" class="tool-logo"> Android Studio
-                                <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" class="tool-logo"> Java
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-lg-8 col-md-8">
+        <div class="accordion" id="devAccordion">
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingWebDev">
-                      <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWebDev" aria-expanded="false" aria-controls="collapseWebDev">
-                        <span class="accordion-title">Web Development</span>
-                        <span class="accordion-icon">+</span>
-                    </button>                    
-                    </h2>
-                    <div id="collapseWebDev" class="accordion-collapse collapse" aria-labelledby="headingWebDev" data-bs-parent="#devAccordion">
-                        <div class="accordion-body fade-in">
-                            <p>Creating seamless web experiences with a blend of creativity and code. From dynamic front-ends to robust back-ends, I'm all about bringing ideas to life online.</p>
-                            <div class="tools">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" class="tool-logo"> React
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" class="tool-logo"> HTML
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="tool-logo"> CSS
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap Logo" class="tool-logo"> Bootstrap
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" class="tool-logo"> JavaScript
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" class="tool-logo"> PHP
-                            </div>
-                        </div>
-                    </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingWebDev">
+              <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseWebDev" aria-expanded="false"
+                aria-controls="collapseWebDev">
+                <span class="accordion-title">Web Development</span>
+                <span class="accordion-icon">+</span>
+              </button>
+            </h2>
+            <div id="collapseWebDev" class="accordion-collapse collapse" aria-labelledby="headingWebDev"
+              data-bs-parent="#devAccordion">
+              <div class="accordion-body fade-in">
+                <p>Creating seamless web experiences with a blend of creativity and code. From dynamic front-ends to
+                  robust back-ends, I'm all about bringing ideas to life online.</p>
+                <div class="tools">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo"
+                    class="tool-logo"> <span>React</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                    alt="HTML Logo" class="tool-logo"> <span>HTML</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                    alt="CSS Logo" class="tool-logo"> <span>CSS</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap Logo"
+                    class="tool-logo"> <span>Bootstrap</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                    alt="JavaScript Logo" class="tool-logo"> <span>JavaScript</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo"
+                    class="tool-logo"> <span>PHP</span>
+                  <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+                    alt="Java Logo" class="tool-logo"> <span>Java</span>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingSupport">
-                        <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSupport" aria-expanded="false" aria-controls="collapseSupport">
-                          <span class="accordion-title">Website Support</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                    </h2>
-                    <div id="collapseSupport" class="accordion-collapse collapse" aria-labelledby="headingSupport" data-bs-parent="#devAccordion">
-                        <div class="accordion-body fade-in">
-                            <p>Ensuring websites run smoothly and stay up-to-date is like tuning a guitar—precision and care make all the difference. I’m here to keep the rhythm steady.</p>
-                            <div class="tools">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Support.svg/512px-Support.svg.png" alt="Support Logo" class="tool-logo"> Support Tools
-                            </div>
-                        </div>
-                    </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileDev">
+              <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseMobileDev" aria-expanded="false"
+                aria-controls="collapseMobileDev">
+                <span class="accordion-title">Mobile Development</span>
+                <span class="accordion-icon">+</span>
+              </button>
+            </h2>
+            <div id="collapseMobileDev" class="accordion-collapse collapse" aria-labelledby="headingMobileDev"
+              data-bs-parent="#devAccordion">
+              <div class="accordion-body fade-in">
+                <p>I’m diving into the world of mobile development, learning to create Android apps that are as smooth
+                  as my favorite tunes. The journey is just beginning, but with Android Studio and Java by my side, I'm
+                  ready to groove through every challenge.</p>
+                <div class="tools">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Android_logo_2019_%28stacked%29.svg/512px-Android_logo_2019_%28stacked%29.svg.png"
+                    alt="Android Logo" class="tool-logo"> Android Studio
+                  <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+                    alt="Java Logo" class="tool-logo"> Java
                 </div>
+              </div>
             </div>
-            <div class="my-4 d-md-none">
-              <p class="what-title">What I do </p>
-                <p class="what-p">I create digital symphonies, turning code into experiences. Whether I’m fixing a bug or crafting a new feature, I approach it all with the same energy I bring to the dance floor—except with way more success.</p>
+          </div>
+
+
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSupport">
+              <button class="accordion-button collapsed d-flex justify-content-between align-items-center" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseSupport" aria-expanded="false"
+                aria-controls="collapseSupport">
+                <span class="accordion-title">Website Support</span>
+                <span class="accordion-icon">+</span>
+              </button>
+            </h2>
+            <div id="collapseSupport" class="accordion-collapse collapse" aria-labelledby="headingSupport"
+              data-bs-parent="#devAccordion">
+              <div class="accordion-body fade-in">
+                <p>Ensuring websites run smoothly and stay up-to-date is like tuning a guitar—precision and care make
+                  all the difference. I’m here to keep the rhythm steady.</p>
+                <div class="tools">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Support.svg/512px-Support.svg.png"
+                    alt="Support Logo" class="tool-logo"> Support Tools
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col-lg-4 col-md-4 d-none d-md-block">
+        <div class="my-4 d-md-none">
           <p class="what-title">What I do </p>
-            <p class="what-p">I create digital symphonies, turning code into experiences. Whether I’m fixing a bug or crafting a new feature, I approach it all with the same energy I bring to the dance floor—except with way more success.</p>
+          <p class="what-p">I create digital symphonies, turning code into experiences. Whether I’m fixing a bug or
+            crafting a new feature, I approach it all with the same energy I bring to the dance floor—except with way
+            more success.</p>
         </div>
+      </div>
+      <div class="col-lg-4 col-md-4 d-none d-md-block">
+        <p class="what-title">What I do </p>
+        <p class="what-p">I create digital symphonies, turning code into experiences. Whether I’m fixing a bug or
+          crafting a new feature, I approach it all with the same energy I bring to the dance floor—except with way more
+          success.</p>
+      </div>
     </div>
-</div>
-<script>
-document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
+  </div>
+  <script>
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', () => {
         const accordion = button.closest('.accordion-item').querySelector('.accordion-collapse');
         const isOpen = accordion.classList.contains('show');
 
         // Close all accordions except the one being clicked
         document.querySelectorAll('.accordion-collapse').forEach(collapse => {
-            if (collapse !== accordion) {
-                collapse.classList.remove('show', 'fade-in');
-                collapse.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
-                collapse.previousElementSibling.classList.add('collapsed');
-            }
+          if (collapse !== accordion) {
+            collapse.classList.remove('show', 'fade-in');
+            collapse.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
+            collapse.previousElementSibling.classList.add('collapsed');
+          }
         });
 
         // Toggle the accordion content visibility and icon
         if (!isOpen) {
-            accordion.classList.add('show', 'fade-in');
-            button.classList.remove('collapsed');
-            button.querySelector('.accordion-icon').textContent = '×';
+          accordion.classList.add('show', 'fade-in');
+          button.classList.remove('collapsed');
+          button.querySelector('.accordion-icon').textContent = '×';
         } else {
-            accordion.classList.remove('show', 'fade-in');
-            button.classList.add('collapsed');
-            button.querySelector('.accordion-icon').textContent = '+';
+          accordion.classList.remove('show', 'fade-in');
+          button.classList.add('collapsed');
+          button.querySelector('.accordion-icon').textContent = '+';
         }
+      });
     });
-});
 
-</script>
+  </script>
 
 
-    <!-- 
+  <!-- 
   <div class="vg-page page-skills">
       <div class="container">
         <div class="text-center wow fadeInUp">
@@ -393,9 +438,9 @@ document.querySelectorAll('.accordion-button').forEach(button => {
 </div>
 </div>
 -->
-  
-   
-  
+
+
+
   <div class="vg-page page-service">
     <div class="container">
       <div class="text-center wow fadeInUp">
@@ -411,25 +456,29 @@ document.querySelectorAll('.accordion-button').forEach(button => {
             </div>
             <div class="caption">
               <h4 class="fg-theme">Technical Support</h4>
-              <p>As a technical support professional, I excel in delivering exceptional service and resolving complex issues. 
-        With my strong problem-solving ...</p>
+              <p>As a technical support professional, I excel in delivering exceptional service and resolving complex
+                issues.
+                With my strong problem-solving ...</p>
               <button class="btn btn-primary read-more-btn" data-popup="popup1">Read More</button>
             </div>
           </div>
         </div>
-<div class="popup-overlay" id="popup1">
-  <!-- Popup content for button 3 -->
-  <div class="popup-content">
-    <div class="close-btn">X</div>
-    <div class="popup-text">
-      <p>As a technical support professional, I excel in delivering exceptional service and resolving complex issues. 
-        With my strong problem-solving skills and attention to detail, I am adept at analyzing and troubleshooting various technical challenges. 
-        I have a proven track record of actively listening to customers, providing clear instructions, and ensuring their satisfaction.
-         With a passion for technology and a customer-centric approach,
-         I am confident in my ability to deliver top-notch technical support.</p>
-    </div>
-  </div>
-</div>
+        <div class="popup-overlay" id="popup1">
+          <!-- Popup content for button 3 -->
+          <div class="popup-content">
+            <div class="close-btn">X</div>
+            <div class="popup-text">
+              <p>As a technical support professional, I excel in delivering exceptional service and resolving complex
+                issues.
+                With my strong problem-solving skills and attention to detail, I am adept at analyzing and
+                troubleshooting various technical challenges.
+                I have a proven track record of actively listening to customers, providing clear instructions, and
+                ensuring their satisfaction.
+                With a passion for technology and a customer-centric approach,
+                I am confident in my ability to deliver top-notch technical support.</p>
+            </div>
+          </div>
+        </div>
 
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="card card-service wow fadeInUp">
@@ -438,8 +487,9 @@ document.querySelectorAll('.accordion-button').forEach(button => {
             </div>
             <div class="caption">
               <h4 class="fg-theme">Digital Consultancy</h4>
-              <p>I specialize in comprehensive digital consultancy services that extend beyond technical support and website...
-              .</p>
+              <p>I specialize in comprehensive digital consultancy services that extend beyond technical support and
+                website...
+                .</p>
               <button class="btn btn-primary read-more-btn" data-popup="popup2">Read More</button>
             </div>
           </div>
@@ -450,11 +500,13 @@ document.querySelectorAll('.accordion-button').forEach(button => {
             <div class="close-btn">X</div>
             <div class="popup-text">
               <p>
-                I specialize in comprehensive digital consultancy services that extend beyond technical support and website development.
-                 I can assist in making informed software and hardware decisions based on the user's specific needs. 
-                 Additionally, I offer guidance in optimizing online presence by improving website performance.
-                  From recommending suitable software solutions to advising on hardware upgrades, I provide tailored recommendations to enhance your digital ecosystem. 
-                 I can help streamline technology choices and establish a strong online presence.</p>
+                I specialize in comprehensive digital consultancy services that extend beyond technical support and
+                website development.
+                I can assist in making informed software and hardware decisions based on the user's specific needs.
+                Additionally, I offer guidance in optimizing online presence by improving website performance.
+                From recommending suitable software solutions to advising on hardware upgrades, I provide tailored
+                recommendations to enhance your digital ecosystem.
+                I can help streamline technology choices and establish a strong online presence.</p>
             </div>
           </div>
         </div>
@@ -467,24 +519,25 @@ document.querySelectorAll('.accordion-button').forEach(button => {
             <div class="caption">
               <h4 class="fg-theme">Web Development</h4>
               <p> I can use my skills in HTML, CSS, and JavaScript to create visually appealing and responsive websites.
-                 I can also incorporate interactive features and ...</p>
-                 <button class="btn btn-primary read-more-btn" data-popup="popup3">Read More</button>
-                </div>
+                I can also incorporate interactive features and ...</p>
+              <button class="btn btn-primary read-more-btn" data-popup="popup3">Read More</button>
+            </div>
           </div>
         </div>
-  
-  <div class="popup-overlay" id="popup3">
-    <!-- Popup content for button 3 -->
-    <div class="popup-content">
-      <div class="close-btn">X</div>
-      <div class="popup-text">
-        <p> I can use my skills in HTML, CSS, and JavaScript to create visually appealing and responsive websites.
-          I can also incorporate interactive features and animations to enhance user engagement.
-           Additionally, I have experience integrating various APIs and databases to create dynamic web applications.
-          Finally, I can optimize websites for search engines and ensure they are accessible to all users</p>
-      </div>
-    </div>
-  </div>
+
+        <div class="popup-overlay" id="popup3">
+          <!-- Popup content for button 3 -->
+          <div class="popup-content">
+            <div class="close-btn">X</div>
+            <div class="popup-text">
+              <p> I can use my skills in HTML, CSS, and JavaScript to create visually appealing and responsive websites.
+                I can also incorporate interactive features and animations to enhance user engagement.
+                Additionally, I have experience integrating various APIs and databases to create dynamic web
+                applications.
+                Finally, I can optimize websites for search engines and ensure they are accessible to all users</p>
+            </div>
+          </div>
+        </div>
 
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="card card-service wow fadeInUp">
@@ -493,9 +546,10 @@ document.querySelectorAll('.accordion-button').forEach(button => {
             </div>
             <div class="caption">
               <h4 class="fg-theme">SEO</h4>
-              <p>As an SEO specialist, I can conduct keyword research and analysis to identify relevant keywords and phrases that can drive organic traffic to a website...</p>
-                 <button class="btn btn-primary read-more-btn" data-popup="popup4">Read More</button>
-                </div>
+              <p>As an SEO specialist, I can conduct keyword research and analysis to identify relevant keywords and
+                phrases that can drive organic traffic to a website...</p>
+              <button class="btn btn-primary read-more-btn" data-popup="popup4">Read More</button>
+            </div>
           </div>
         </div>
         <div class="popup-overlay" id="popup4">
@@ -503,25 +557,29 @@ document.querySelectorAll('.accordion-button').forEach(button => {
           <div class="popup-content">
             <div class="close-btn">X</div>
             <div class="popup-text">
-              <p>As an SEO specialist, I can conduct keyword research and analysis to identify relevant keywords and phrases that can drive organic traffic to a website. 
-                I can optimize various on-page and off-page elements such as title tags, meta descriptions, content, and backlinks to improve a website's ranking in search engine results pages.
-                 Additionally, I can track and analyze website traffic and search engine rankings to identify areas for improvement and implement ongoing optimization strategies to maintain and improve a website's online presence.</p>
+              <p>As an SEO specialist, I can conduct keyword research and analysis to identify relevant keywords and
+                phrases that can drive organic traffic to a website.
+                I can optimize various on-page and off-page elements such as title tags, meta descriptions, content, and
+                backlinks to improve a website's ranking in search engine results pages.
+                Additionally, I can track and analyze website traffic and search engine rankings to identify areas for
+                improvement and implement ongoing optimization strategies to maintain and improve a website's online
+                presence.</p>
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
 
-<style>
+  <style>
 
-</style>
-<script>
+  </style>
+  <script>
 
 
-</script>
-    
+  </script>
+
   <!-- Portfolio page -->
   <div class="vg-page page-portfolio" id="portfolio">
     <div class="container">
@@ -529,16 +587,16 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         <div class="badge badge-subhead">Portfolio</div>
       </div>
       <h1 class="text-center fw-normal wow fadeInUp">See my work</h1>
-      
-        
-     
-    
-        <div id="port-section" class="container">
-          <div class="row">
-             <a href="https://profitacademi.com/" target="_blank">
+
+
+
+
+      <div id="port-section" class="container">
+        <div class="row">
+          <a href="https://profitacademi.com/" target="_blank">
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="card" style=" height: 400px;  overflow-y: scroll;">
-                  <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="8000">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img src="assets/img/prof.png" class="card-img-top" alt="Image 1">
@@ -559,21 +617,24 @@ document.querySelectorAll('.accordion-button').forEach(button => {
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <div class="card-body" >
+                <div class="card-body">
                   <h1>Football Tips Website</h1>
-                  <p class="card-text">I recently developed a website catering to football enthusiasts, offering premium football tips and trading bots for a client.
-                    The platform aims to provide valuable insights and predictions to users looking to enhance their betting experience. 
-                    The inclusion of trading bots enhances the website's functionality, allowing users to automate their betting strategies for more efficient trading outcomes.</p>
-                    <a href="https://profitacademi.com/" target="_blank" class="button-link">Visit Website</a>
+                  <p class="card-text">I recently developed a website catering to football enthusiasts, offering premium
+                    football tips and trading bots for a client.
+                    The platform aims to provide valuable insights and predictions to users looking to enhance their
+                    betting experience.
+                    The inclusion of trading bots enhances the website's functionality, allowing users to automate their
+                    betting strategies for more efficient trading outcomes.</p>
+                  <a href="https://profitacademi.com/" target="_blank" class="button-link">Visit Website</a>
                 </div>
               </div>
             </div>
-             </a>
-            
-            <a href="https://kelvin-m-njoki.github.io/portfolio/" target="_blank" style="cursor: pointer;">
-              <div class="col-lg-3 col-md-6 col-sm-12">
+          </a>
+
+          <a href="https://kelvin-m-njoki.github.io/portfolio/" target="_blank" style="cursor: pointer;">
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="card" style=" height: 400px;  overflow-y: scroll;">
-                  <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="8000">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img src="assets/img/kevo.jpg" class="card-img-top" alt="Image 1">
@@ -594,21 +655,24 @@ document.querySelectorAll('.accordion-button').forEach(button => {
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <div class="card-body" >
+                <div class="card-body">
                   <h1>Portfolio Website</h1>
-                  <p class="card-text">I recently created a stunning portfolio website for a client, showcasing their work and expertise in a visually appealing manner. 
-                    This project was a valuable addition to my own portfolio, demonstrating my ability to design and develop a professional and user-friendly website. 
-                    By incorporating intuitive navigation, responsive design, and captivating visuals, 
+                  <p class="card-text">I recently created a stunning portfolio website for a client, showcasing their
+                    work and expertise in a visually appealing manner.
+                    This project was a valuable addition to my own portfolio, demonstrating my ability to design and
+                    develop a professional and user-friendly website.
+                    By incorporating intuitive navigation, responsive design, and captivating visuals,
                     I successfully highlighted the client's skills while honing my own abilities as a web developer.</p>
-                    <a href="https://kelvin-m-njoki.github.io/portfolio/" target="_blank" class="button-link">Visit Website</a>
+                  <a href="https://kelvin-m-njoki.github.io/portfolio/" target="_blank" class="button-link">Visit
+                    Website</a>
                 </div>
               </div>
             </div>
-              </a>
-            <a href="https://globalleaf.co.ke/" target="_blank" style="cursor: pointer;">
+          </a>
+          <a href="https://globalleaf.co.ke/" target="_blank" style="cursor: pointer;">
             <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="card"  style=" height: 400px;  overflow-y: scroll;">
-                  <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="5000">
+              <div class="card" style=" height: 400px;  overflow-y: scroll;">
+                <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="5000">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img src="assets/img/green.png" class="card-img-top" alt="Image 1">
@@ -629,127 +693,136 @@ document.querySelectorAll('.accordion-button').forEach(button => {
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-               <div class="card-body">
+                <div class="card-body">
                   <h1>Marketing Agency Website</h1>
                   <p class="card-text">I recently completed a website for a marketing agency client in a short period.
-                     The website effectively presents their services, expertise, and portfolio. It was designed with a user-friendly interface, responsiveness, 
-                     and search engine optimization in mind.
-                     The client is pleased with the outcome, and we are awaiting the hosting process to launch the website officially.</p>
+                    The website effectively presents their services, expertise, and portfolio. It was designed with a
+                    user-friendly interface, responsiveness,
+                    and search engine optimization in mind.
+                    The client is pleased with the outcome, and we are awaiting the hosting process to launch the
+                    website officially.</p>
                   <a href="https://globalleaf.co.ke/" target="_blank" class="button-link">Visit Website</a>
                 </div>
               </div>
             </div>
-            </a>
+          </a>
 
-           
-            
-            <!-- Repeat the above card structure for other cards -->
-          </div>
+
+
+          <!-- Repeat the above card structure for other cards -->
         </div>
-      
-        <style>
-        
-        @media (max-width: 767px) {
-    #port-section .col-lg-3,
-    #port-section .col-md-6,
-    #port-section .col-sm-12 {
-      margin-bottom: 25px; /* Add space between the cards */
-    }
-  }
+      </div>
 
-        </style>
+      <style>
+        @media (max-width: 767px) {
+
+          #port-section .col-lg-3,
+          #port-section .col-md-6,
+          #port-section .col-sm-12 {
+            margin-bottom: 25px;
+            /* Add space between the cards */
+          }
+        }
+      </style>
     </div>
   </div> <!-- End Portfolio page -->
-  
-   <!-- Contact Start -->
-   <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact" style="position: relative; width: 100%;  margin: 45px 0; background: #07ff07; margin-bottom: 0px;">
-    
+
+  <!-- Contact Start -->
+  <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact"
+    style="position: relative; width: 100%;  margin: 45px 0; background: #07ff07; margin-bottom: 0px;">
+
     <div class="container-fluid">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4"></div>
-                <div class="col-md-8">
-                    <div class="contact-form">
-                        <div id="success"></div>
-                        <form action="https://formsubmit.co/knjeru519@gmail.com" method="post" name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control" id="Email" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="Subject" name="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control" id="message" name="Message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block"></p>
-                            </div>
-                            <input type="hidden" name="_autoresponse" value="your custom message">
-                            <div>
-                                <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <div class="contact-form">
+              <div id="success"></div>
+              <form action="https://formsubmit.co/knjeru519@gmail.com" method="post" name="sentMessage" id="contactForm"
+                novalidate="novalidate">
+                <div class="control-group">
+                  <input type="text" class="form-control" id="Name" name="name" placeholder="Your Name"
+                    required="required" data-validation-required-message="Please enter your name" />
+                  <p class="help-block"></p>
                 </div>
+                <div class="control-group">
+                  <input type="email" class="form-control" id="Email" name="email" placeholder="Your Email"
+                    required="required" data-validation-required-message="Please enter your email" />
+                  <p class="help-block"></p>
+                </div>
+                <div class="control-group">
+                  <input type="text" class="form-control" id="Subject" name="subject" placeholder="Subject"
+                    required="required" data-validation-required-message="Please enter a subject" />
+                  <p class="help-block"></p>
+                </div>
+                <div class="control-group">
+                  <textarea class="form-control" id="message" name="Message" placeholder="Message" required="required"
+                    data-validation-required-message="Please enter your message"></textarea>
+                  <p class="help-block"></p>
+                </div>
+                <input type="hidden" name="_autoresponse" value="your custom message">
+                <div>
+                  <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- Contact End -->
+  </div>
+  <!-- Contact End -->
 
 
-  
-   <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s" id="footer">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Kennedy Njeru Ndwiga</h2>
-                        <h3>62000 - 00200, Nairobi, Kenya</h3>
-                        <div class="footer-menu">
-                            <p>+254794298696 </p>
-                            <p>knjeru519@gmail.com</p>
-                        </div>
-                        <div class="footer-social">
-                         
-                            <a href="https://www.linkedin.com/in/kennedy-njeru-2004a7211/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                           <a href="mailto:knjeru519@gmail.com"><i class="fas fa-envelope"></i></a>
-                           <a href="tel:+254794298696"><i class="fas fa-phone"></i></a>
-                           <a href=" https://github.com/K-njeru" target="_blank"><i class="icon brands alt fab fa-github"></i></a>
-                           
-                          
 
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <p>&copy; <a href="#">Kennedy Njeru</a>, All Right Reserved </p>
-                </div>
-            </div>
+  <!-- Footer Start -->
+  <div class="footer wow fadeIn" data-wow-delay="0.3s" id="footer">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="footer-info">
+          <h2>Kennedy Njeru Ndwiga</h2>
+          <h3>62000 - 00200, Nairobi, Kenya</h3>
+          <div class="footer-menu">
+            <p>+254794298696 </p>
+            <p>knjeru519@gmail.com</p>
+          </div>
+          <div class="footer-social">
+
+            <a href="https://www.linkedin.com/in/kennedy-njeru-2004a7211/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:knjeru519@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+254794298696"><i class="fas fa-phone"></i></a>
+            <a href=" https://github.com/K-njeru" target="_blank"><i class="icon brands alt fab fa-github"></i></a>
+
+
+
+          </div>
         </div>
-        <!-- Footer End -->
+      </div>
+      <div class="container copyright">
+        <p>&copy; <a href="#">Kennedy Njeru</a>, All Right Reserved </p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
 
-        <script>
-          window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-        </script>
-        <script defer src="/_vercel/insights/script.js"></script>      
-  
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
   <script src="assets/js/jquery-3.5.1.min.js"></script>
-    
+
   <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
 
-   <script src="assets/js/bootstrap.bundle.min.js"></script>
-    
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
   <script src="assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-    
+
   <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
-    
+
   <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-    
+
   <script src="assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
 
   <script src="assets/vendor/wow/wow.min.js"></script>
@@ -759,14 +832,15 @@ document.querySelectorAll('.accordion-button').forEach(button => {
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
 
   <script src="assets/js/google-maps.js"></script>
-    
+
   <script src="assets/js/topbar-virtual.js"></script>
 
   <script src="assets/js/songs.js"></script>
 
-  
-     
-      
-  
+
+
+
+
 </body>
+
 </html>

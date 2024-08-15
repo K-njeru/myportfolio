@@ -113,6 +113,8 @@
     background: aliceblue;
     font-family: monospace;
     border-radius: 10px;
+    border: 1px solid darkblue;
+    height: 50px;
 }
 
 .accordion-button:not(.collapsed) {
@@ -130,6 +132,7 @@
 
 .accordion-title {
     margin-right: auto; /* Pushes the icon to the right */
+    font-size: 20px;
 }
 
 
@@ -142,7 +145,7 @@
 }
 
 .accordion-body {
-    background-color: #010323;
+    background-color: #b0b9c226;
     border-radius: 10px;
     padding: 20px;
     color: white;
@@ -150,17 +153,21 @@
     animation: fadeIn 0.5s ease-in-out;
     margin-bottom: 10px;
 }
+.accordion-body p{
+    font-family: math;
+}
 .what-title {
-    font-size: 10px;
-    font-weight: 1000;
+    font-size: 15px;
+    font-family: monospace;
     margin-bottom: 0;
+    color: darkblue;
 
 }
 .what-p{
     font-family: monospace;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     line-height: 2rem;
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 
@@ -174,11 +181,13 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+.tools span{
+    margin: 15px;
+}
 .tool-logo {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 3px;
     margin-bottom: 10px;
 }
 
