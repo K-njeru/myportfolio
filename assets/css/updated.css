@@ -153,14 +153,14 @@
 .what-title {
     font-size: 10px;
     font-weight: 1000;
-    color: cornflowerblue;
+    margin-bottom: 0;
 
 }
 .what-p{
-    font-size: 15px;
-    font-weight: bolder;
-    color: black;
     font-family: monospace;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
 }
 
 
