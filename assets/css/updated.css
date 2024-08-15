@@ -99,7 +99,7 @@
     background: white;
     border-radius: 20px;
     padding: 40px;
-    color: white;
+    color: #010323;
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
@@ -115,7 +115,7 @@
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #4ca1af;
+    background-color: cornflowerblue;
     color: #fff;
 }
 
@@ -135,11 +135,13 @@
 }
 
 .accordion-body {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #010323;
     border-radius: 10px;
     padding: 20px;
+    color: white;
     font-size: 1.2rem;
     animation: fadeIn 0.5s ease-in-out;
+    margin-bottom: 10px;
 }
 
 @keyframes fadeIn {
