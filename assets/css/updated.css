@@ -107,6 +107,8 @@
 @media (max-width:768px) {
     .stack .row{
         width: 100vw;
+        left: -25px;
+        position: relative;
     }
 }
 
