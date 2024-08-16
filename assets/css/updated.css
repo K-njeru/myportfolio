@@ -104,6 +104,12 @@
     position: relative;
 }
 
+@media (max-width:768px) {
+    .stack .row{
+        width: 100vw;
+    }
+}
+
 .accordion-button {
     color: #010323;
     position: relative;
