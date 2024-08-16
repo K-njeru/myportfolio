@@ -8,12 +8,13 @@
 }
 
 .about-paragraph {
-    font-size: 1.3rem;
-    color: #ffffff;
-    line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace;
+    font-size: 1.0rem;
+    line-height: 2rem;
+    font-weight: bolder;
+    color: black;
     padding: 20px;
-    background-color: #010323;
+    background-color: white;
     border-radius: 15px;
 }
 
