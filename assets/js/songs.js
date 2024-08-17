@@ -145,9 +145,9 @@ const projects = [
     }
 ];
 
-
 // Generate project cards
 const carousel = document.querySelector('.projects-carousel');
+let currentSlide = 0;
 
 projects.forEach((project, index) => {
     const card = document.createElement('div');
@@ -193,13 +193,11 @@ projects.forEach((project, index) => {
 // Carousel navigation
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
-let currentSlide = 0;
 
 function updateCarousel() {
     const cardWidth = document.querySelector('.project-card').offsetWidth + 20; // card width + margin
-    const carouselWidth = carousel.scrollWidth;
     const containerWidth = document.querySelector('.carousel-container').offsetWidth;
-    const maxSlide = Math.ceil((carouselWidth - containerWidth) / cardWidth);
+    const maxSlide = projects.length - Math.floor(containerWidth / cardWidth);
 
     if (currentSlide < 0) currentSlide = maxSlide;
     if (currentSlide > maxSlide) currentSlide = 0;
@@ -217,6 +215,16 @@ rightArrow.addEventListener('click', () => {
     updateCarousel();
 });
 
+function nextSlide() {
+    currentSlide++;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentSlide--;
+    updateCarousel();
+}
+
 // Touch and swipe functionality for mobile
 let startX = 0;
 let isDragging = false;
@@ -232,12 +240,10 @@ carousel.addEventListener('touchmove', (e) => {
     const diffX = startX - currentX;
 
     if (diffX > 50) {
-        currentSlide++;
-        updateCarousel();
+        nextSlide();
         isDragging = false;
     } else if (diffX < -50) {
-        currentSlide--;
-        updateCarousel();
+        prevSlide();
         isDragging = false;
     }
 });
@@ -246,3 +252,10 @@ carousel.addEventListener('touchend', () => {
     isDragging = false;
 });
 
+// Automatic slide with occasional animation
+setInterval(() => {
+    if (currentSlide === projects.length - 1) {
+        currentSlide = -1; // To trigger animation on the first slide
+    }
+    nextSlide();
+}, 10000); // every 10 seconds

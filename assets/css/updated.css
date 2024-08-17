@@ -286,24 +286,24 @@ p {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden; /* Ensure no overflow */
 }
 
 .projects-carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    will-change: transform;
 }
 
 .project-card {
-    position: relative;
-    width: 300px;
-    height: 400px;
+    flex: 0 0 100%; /* One card per view */
+    max-width: 100%;
     margin: 0 10px;
+    position: relative;
+    cursor: pointer;
     border-radius: 15px;
     overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    flex-shrink: 0;
-    background-color: #1e1e1e;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card-background {
@@ -328,6 +328,7 @@ p {
     font-size: 1.5rem;
     margin: 0 0 10px 0;
     text-align: left;
+    color: #fff;
 }
 
 .stack-logos {
@@ -377,9 +378,8 @@ p {
     }
 
     .project-card {
-        width: 250px;
-        height: 350px;
-        margin: 0 5px;
+        flex: 0 0 80%; /* Show most of the card but allow for partial visibility of next */
+        max-width: 80%;
     }
 }
 
@@ -390,5 +390,10 @@ p {
 
     .projects-carousel {
         overflow: hidden;
+    }
+
+    .project-card {
+        flex: 0 0 100%; /* Only one card fully visible on mobile */
+        max-width: 100%;
     }
 }
