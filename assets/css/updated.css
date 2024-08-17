@@ -249,7 +249,7 @@ p {
 }
 
 
-/* PROJECTS */
+/* PROJECTS 
 
 .projects-section {
     padding: 60px 20px;
@@ -286,7 +286,7 @@ p {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* Ensure no overflow */
+    overflow: hidden;  Ensure no overflow 
 }
 
 .projects-carousel {
@@ -296,7 +296,7 @@ p {
 }
 
 .project-card {
-    flex: 0 0 100%; /* One card per view */
+    flex: 0 0 100%;  One card per view 
     max-width: 100%;
     margin: 0 10px;
     position: relative;
@@ -371,14 +371,14 @@ p {
     right: 10px;
 }
 
-/* Responsive Styles */
+ Responsive Styles 
 @media (max-width: 992px) {
     .projects-carousel {
         justify-content: center;
     }
 
     .project-card {
-        flex: 0 0 80%; /* Show most of the card but allow for partial visibility of next */
+        flex: 0 0 80%;  Show most of the card but allow for partial visibility of next 
         max-width: 80%;
     }
 }
@@ -393,7 +393,8 @@ p {
     }
 
     .project-card {
-        flex: 0 0 100%; /* Only one card fully visible on mobile */
+        flex: 0 0 100%;  Only one card fully visible on mobile *
         max-width: 100%;
     }
 }
+*/

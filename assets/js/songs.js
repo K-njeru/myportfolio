@@ -84,7 +84,7 @@ audioCloseButton.onclick = function() {
     audioElement.currentTime = 0;
     playPauseButton.querySelector('i').classList.remove('fa-pause');
     playPauseButton.querySelector('i').classList.add('fa-play');
-}; */
+}; 
 
 const projects = [
     {
@@ -259,3 +259,4 @@ setInterval(() => {
     }
     nextSlide();
 }, 10000); // every 10 seconds
+*/
