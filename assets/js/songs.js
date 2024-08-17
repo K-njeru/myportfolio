@@ -90,9 +90,9 @@ const projects = [
     {
         title: "Hotel Reservation System",
         images: [
-            "https://source.unsplash.com/featured/?hotel",
-            "https://source.unsplash.com/featured/?resort",
-            "https://source.unsplash.com/featured/?reception"
+            "https://picsum.photos/id/1018/300/350",
+            "https://picsum.photos/id/1016/300/350",
+            "https://picsum.photos/id/1025/300/350"
         ],
         stackLogos: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -104,9 +104,9 @@ const projects = [
     {
         title: "E-commerce Platform",
         images: [
-            "https://source.unsplash.com/featured/?ecommerce",
-            "https://source.unsplash.com/featured/?shopping",
-            "https://source.unsplash.com/featured/?online-store"
+            "https://picsum.photos/id/1020/300/350",
+            "https://picsum.photos/id/1024/300/350",
+            "https://picsum.photos/id/1027/300/350"
         ],
         stackLogos: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
@@ -118,9 +118,9 @@ const projects = [
     {
         title: "Weather Forecast App",
         images: [
-            "https://source.unsplash.com/featured/?weather",
-            "https://source.unsplash.com/featured/?forecast",
-            "https://source.unsplash.com/featured/?climate"
+            "https://picsum.photos/id/1028/300/350",
+            "https://picsum.photos/id/1029/300/350",
+            "https://picsum.photos/id/1030/300/350"
         ],
         stackLogos: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -132,9 +132,9 @@ const projects = [
     {
         title: "Social Media Dashboard",
         images: [
-            "https://source.unsplash.com/featured/?social-media",
-            "https://source.unsplash.com/featured/?dashboard",
-            "https://source.unsplash.com/featured/?analytics"
+            "https://picsum.photos/id/1031/300/350",
+            "https://picsum.photos/id/1032/300/350",
+            "https://picsum.photos/id/1033/300/350"
         ],
         stackLogos: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
@@ -144,6 +144,7 @@ const projects = [
         url: "https://example.com/social-dashboard"
     }
 ];
+
 
 // Generate project cards
 const carousel = document.querySelector('.projects-carousel');
