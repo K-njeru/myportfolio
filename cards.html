@@ -1,360 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Carousel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Responsive Carousel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        .carousel-inner {
+            position: relative;
+            overflow: hidden;
+        }
         .carousel-item {
             display: flex;
-            flex-wrap: nowrap;
-            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel-card {
             width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            background: #f8f9fa;
         }
-
-        .carousel-item .col-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-
-        .carousel-item .col-3 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-
-        .carousel-item .col-12 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-
-        .project-card {
-            display: block;
+        .carousel-card .background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
             background-size: cover;
             background-position: center;
-            height: 200px;
-            /* Adjust height as needed */
-            color: #fff;
-            text-decoration: none;
+            z-index: -1;
+        }
+        .carousel-card h5 {
+            margin: 10px 0;
             position: relative;
-            border-radius: 8px;
-            overflow: hidden;
+            z-index: 1;
         }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border-top: 2px solid #fff;
-        }
-
-        .project-title {
-            margin: 0;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        /* Large Screens */
-        @media (min-width: 992px) {
+        @media (max-width: 991px) {
             .carousel-item {
-                display: none;
-            }
-
-            .carousel-item.active {
-                display: flex;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                display: block;
+                flex: 1 0 50%;
             }
         }
-
-        /* Medium Screens */
-        @media (min-width: 768px) and (max-width: 991px) {
-            .carousel-item {
-                display: none;
-            }
-
-            .carousel-item.active {
-                display: flex;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                display: block;
-            }
-        }
-
-        /* Small Screens */
         @media (max-width: 767px) {
-            .carousel-inner {
-                display: flex;
-                overflow: hidden;
-                position: relative;
-            }
-
             .carousel-item {
                 flex: 1 0 100%;
-                max-width: 100%;
-                display: flex;
-                animation: slide 10s linear infinite;
             }
-
-            @keyframes slide {
-                0% {
-                    transform: translateX(0);
-                }
-
-                50% {
-                    transform: translateX(-3%);
-                }
-
-                100% {
-                    transform: translateX(0);
-                }
+            .carousel-inner {
+                animation: slide 5s ease-in-out infinite;
             }
-
-            .carousel-control-prev,
-            .carousel-control-next {
+            .carousel-control-prev, .carousel-control-next {
                 display: none;
             }
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-5%); }
+            100% { transform: translateX(0); }
         }
     </style>
 </head>
-
 <body>
-    <section id="projects" class="container my-5">
-        <!-- Large Screens -->
-        <div id="projectsCarouselLarge" class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-3">
-                            <a href="https://example.com/portfolio" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Portfolio Website</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="https://example.com/time-management" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Time Management App</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="https://example.com/e-commerce" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">E-Commerce Platform</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="https://example.com/blog" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Blog Website</h3>
-                                </div>
-                            </a>
-                        </div>
+
+<div id="carouselLarge" class="carousel slide d-none d-md-block">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                <!-- Large screens: 4 cards per carousel -->
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg", "https://images.pexels.com/photos/1396135/pexels-photo-1396135.jpeg", "https://images.pexels.com/photos/1194775/pexels-photo-1194775.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project1" target="_blank">Project 1</a></h5>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-3">
-                            <a href="https://example.com/project5" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/247931/pexels-photo-247931.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Project 5</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="https://example.com/project6" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/3137812/pexels-photo-3137812.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Project 6</h3>
-                                </div>
-                            </a>
-                        </div>
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1170981/pexels-photo-1170981.jpeg", "https://images.pexels.com/photos/1467951/pexels-photo-1467951.jpeg", "https://images.pexels.com/photos/1481781/pexels-photo-1481781.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project2" target="_blank">Project 2</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/280204/pexels-photo-280204.jpeg", "https://images.pexels.com/photos/1205047/pexels-photo-1205047.jpeg", "https://images.pexels.com/photos/1031813/pexels-photo-1031813.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project3" target="_blank">Project 3</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/3785748/pexels-photo-3785748.jpeg", "https://images.pexels.com/photos/3124167/pexels-photo-3124167.jpeg", "https://images.pexels.com/photos/3610792/pexels-photo-3610792.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project4" target="_blank">Project 4</a></h5>
                     </div>
                 </div>
             </div>
-            <!-- Controls for Large Screens -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarouselLarge"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarouselLarge"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-
-        <!-- Medium Screens -->
-        <div id="projectsCarouselMedium" class="carousel slide d-none d-lg-none d-md-block" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-6">
-                            <a href="https://example.com/portfolio" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Portfolio Website</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="https://example.com/time-management" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Time Management App</h3>
-                                </div>
-                            </a>
-                        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <!-- Large screens: 4 cards per carousel -->
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg", "https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project5" target="_blank">Project 5</a></h5>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-6">
-                            <a href="https://example.com/e-commerce" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">E-Commerce Platform</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="https://example.com/blog" class="project-card"
-                                style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
-                                <div class="card-content">
-                                    <h3 class="project-title">Blog Website</h3>
-                                </div>
-                            </a>
-                        </div>
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project6" target="_blank">Project 6</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project7" target="_blank">Project 7</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project8" target="_blank">Project 8</a></h5>
                     </div>
                 </div>
             </div>
-            <!-- Controls for Medium Screens -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarouselMedium"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarouselMedium"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselLarge" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselLarge" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
-        <!-- Small Screens -->
-        <div id="projectsCarouselSmall" class="carousel slide d-md-none" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="https://example.com/portfolio" class="project-card"
-                        style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
-                        <div class="card-content">
-                            <h3 class="project-title">Portfolio Website</h3>
-                        </div>
-                    </a>
+<div id="carouselMedium" class="carousel slide d-none d-md-block d-sm-none">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                <!-- Medium screens: 2 cards per carousel -->
+                <div class="col-md-6">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project1" target="_blank">Project 1</a></h5>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <a href="https://example.com/time-management" class="project-card"
-                        style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
-                        <div class="card-content">
-                            <h3 class="project-title">Time Management App</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="https://example.com/e-commerce" class="project-card"
-                        style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
-                        <div class="card-content">
-                            <h3 class="project-title">E-Commerce Platform</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="https://example.com/blog" class="project-card"
-                        style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
-                        <div class="card-content">
-                            <h3 class="project-title">Blog Website</h3>
-                        </div>
-                    </a>
+                <div class="col-md-6">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project2" target="_blank">Project 2</a></h5>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="carousel-item">
+            <div class="row">
+                <!-- Medium screens: 2 cards per carousel -->
+                <div class="col-md-6">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project3" target="_blank">Project 3</a></h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
+                        <div class="background"></div>
+                        <h5><a href="https://example.com/project4" target="_blank">Project 4</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselMedium" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselMedium" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script>
-        // JavaScript for handling active carousel visibility
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            const bsCarousel = new bootstrap.Carousel(carousel, {
-                interval: false,
-                wrap: false
-            });
+<div id="carouselSmall" class="carousel slide d-sm-block d-md-none">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <!-- Small screens: 1 card per carousel -->
+            <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
+                <div class="background"></div>
+                <h5><a href="https://example.com/project1" target="_blank">Project 1</a></h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-card" data-images='["https://images.pexels.com/photos/1170981/pexels-photo-1170981.jpeg", "https://images.pexels.com/photos/1396135/pexels-photo-1396135.jpeg", "https://images.pexels.com/photos/1194775/pexels-photo-1194775.jpeg"]'>
+                <div class="background"></div>
+                <h5><a href="https://example.com/project2" target="_blank">Project 2</a></h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-card" data-images='["https://images.pexels.com/photos/280204/pexels-photo-280204.jpeg", "https://images.pexels.com/photos/1205047/pexels-photo-1205047.jpeg", "https://images.pexels.com/photos/1031813/pexels-photo-1031813.jpeg"]'>
+                <div class="background"></div>
+                <h5><a href="https://example.com/project3" target="_blank">Project 3</a></h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-card" data-images='["https://images.pexels.com/photos/3785748/pexels-photo-3785748.jpeg", "https://images.pexels.com/photos/3124167/pexels-photo-3124167.jpeg", "https://images.pexels.com/photos/3610792/pexels-photo-3610792.jpeg"]'>
+                <div class="background"></div>
+                <h5><a href="https://example.com/project4" target="_blank">Project 4</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
 
-            carousel.querySelectorAll('.carousel-control-prev').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    bsCarousel.prev();
-                });
-            });
-
-            carousel.querySelectorAll('.carousel-control-next').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    bsCarousel.next();
-                });
-            });
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // JavaScript for carousel swiping
+    const carousels = document.querySelectorAll('.carousel');
+    
+    carousels.forEach(carousel => {
+        const carouselElement = carousel;
+        const bsCarousel = new bootstrap.Carousel(carouselElement, {
+            interval: false
         });
-
-        // For small screens, handle swiping
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            if (window.innerWidth <= 767) {
-                carousel.querySelector('.carousel-inner').addEventListener('touchstart', handleSwipeStart);
-                carousel.querySelector('.carousel-inner').addEventListener('touchend', handleSwipeEnd);
-            }
-        });
-
+        
         let touchstartX = 0;
         let touchendX = 0;
 
-        function handleSwipeStart(event) {
-            touchstartX = event.changedTouches[0].screenX;
-        }
+        carouselElement.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        });
 
-        function handleSwipeEnd(event) {
-            touchendX = event.changedTouches[0].screenX;
+        carouselElement.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
             handleSwipe();
-        }
+        });
 
         function handleSwipe() {
             if (touchendX < touchstartX) {
-                document.querySelector('.carousel').carousel('next');
+                bsCarousel.next();
             }
+
             if (touchendX > touchstartX) {
-                document.querySelector('.carousel').carousel('prev');
+                bsCarousel.prev();
             }
         }
-    </script>
-</body>
+    });
 
+    // Set up alternating backgrounds for each card
+    document.querySelectorAll('.carousel-card').forEach(card => {
+        const backgrounds = JSON.parse(card.getAttribute('data-images'));
+        let currentBackground = 0;
+
+        function changeBackground() {
+            card.querySelector('.background').style.backgroundImage = `url(${backgrounds[currentBackground]})`;
+            currentBackground = (currentBackground + 1) % backgrounds.length;
+        }
+
+        setInterval(changeBackground, 3000); // Change background every 3 seconds
+    });
+</script>
+
+</body>
 </html>
