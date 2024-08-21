@@ -14,6 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         .carousel-card {
             width: 100%;
@@ -23,6 +24,7 @@
             text-align: center;
             position: relative;
             background: #f8f9fa;
+            padding: 15px;
         }
         .carousel-card .background {
             width: 100%;
@@ -38,6 +40,27 @@
             margin: 10px 0;
             position: relative;
             z-index: 1;
+        }
+        .carousel-card .stacks {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .carousel-card .stack {
+            margin: 2px 5px;
+            padding: 2px 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            background: #e9ecef;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        .carousel-card .stack img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
         }
         @media (max-width: 991px) {
             .carousel-item {
@@ -60,207 +83,235 @@
             50% { transform: translateX(-5%); }
             100% { transform: translateX(0); }
         }
+        .carousel {
+            display: none;
+        }
+        .carousel.active {
+            display: block;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+            height: 100%;
+        }
+        .carousel-control-prev {
+            left: 0;
+        }
+        .carousel-control-next {
+            right: 0;
+        }
     </style>
 </head>
 <body>
 
-<div id="carouselLarge" class="carousel slide d-none d-md-block">
+<div id="carouselLarge" class="carousel active">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="row">
                 <!-- Large screens: 4 cards per carousel -->
                 <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg", "https://images.pexels.com/photos/1396135/pexels-photo-1396135.jpeg", "https://images.pexels.com/photos/1194775/pexels-photo-1194775.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project1" target="_blank">Project 1</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project1-background.jpg');"></div>
+                        <h5><a href="https://example.com/project1" target="_blank">Personal Portfolio</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML"/> HTML</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS"/> CSS</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1170981/pexels-photo-1170981.jpeg", "https://images.pexels.com/photos/1467951/pexels-photo-1467951.jpeg", "https://images.pexels.com/photos/1481781/pexels-photo-1481781.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project2" target="_blank">Project 2</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project2-background.jpg');"></div>
+                        <h5><a href="https://example.com/project2" target="_blank">Task Manager App</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/express.png" alt="Express"/> Express</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/280204/pexels-photo-280204.jpeg", "https://images.pexels.com/photos/1205047/pexels-photo-1205047.jpeg", "https://images.pexels.com/photos/1031813/pexels-photo-1031813.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project3" target="_blank">Project 3</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project3-background.jpg');"></div>
+                        <h5><a href="https://example.com/project3" target="_blank">E-Commerce Site</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/php.png" alt="PHP"/> PHP</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/mysql-logo.png" alt="MySQL"/> MySQL</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/bootstrap.png" alt="Bootstrap"/> Bootstrap</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/3785748/pexels-photo-3785748.jpeg", "https://images.pexels.com/photos/3124167/pexels-photo-3124167.jpeg", "https://images.pexels.com/photos/3610792/pexels-photo-3610792.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project4" target="_blank">Project 4</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project4-background.jpg');"></div>
+                        <h5><a href="https://example.com/project4" target="_blank">Blog Platform</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/wordpress.png" alt="WordPress"/> WordPress</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/php.png" alt="PHP"/> PHP</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="row">
-                <!-- Large screens: 4 cards per carousel -->
+                <!-- Additional carousels with 4 cards each for large screens -->
                 <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg", "https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project5" target="_blank">Project 5</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project5-background.jpg');"></div>
+                        <h5><a href="https://example.com/project5" target="_blank">Chat Application</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project6" target="_blank">Project 6</a></h5>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project7" target="_blank">Project 7</a></h5>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project8" target="_blank">Project 8</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project6-background.jpg');"></div>
+                        <h5><a href="https://example.com/project6" target="_blank">Weather App</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/openweather.png" alt="OpenWeather"/> OpenWeather API</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselLarge" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselLarge" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
 
-<div id="carouselMedium" class="carousel slide d-none d-md-block d-sm-none">
+<div id="carouselMedium" class="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="row">
                 <!-- Medium screens: 2 cards per carousel -->
                 <div class="col-md-6">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project1" target="_blank">Project 1</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project1-background.jpg');"></div>
+                        <h5><a href="https://example.com/project1" target="_blank">Personal Portfolio</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML"/> HTML</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS"/> CSS</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project2" target="_blank">Project 2</a></h5>
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project2-background.jpg');"></div>
+                        <h5><a href="https://example.com/project2" target="_blank">Task Manager App</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/express.png" alt="Express"/> Express</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <div class="row">
-                <!-- Medium screens: 2 cards per carousel -->
-                <div class="col-md-6">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg", "https://images.pexels.com/photos/1575688/pexels-photo-1575688.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project3" target="_blank">Project 3</a></h5>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
-                        <div class="background"></div>
-                        <h5><a href="https://example.com/project4" target="_blank">Project 4</a></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Additional carousel items for medium screens if needed -->
     </div>
-    <a class="carousel-control-prev" href="#carouselMedium" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselMedium" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
 
-<div id="carouselSmall" class="carousel slide d-sm-block d-md-none">
+<div id="carouselSmall" class="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <!-- Small screens: 1 card per carousel -->
-            <div class="carousel-card" data-images='["https://images.pexels.com/photos/462238/pexels-photo-462238.jpeg", "https://images.pexels.com/photos/1247681/pexels-photo-1247681.jpeg", "https://images.pexels.com/photos/226870/pexels-photo-226870.jpeg"]'>
-                <div class="background"></div>
-                <h5><a href="https://example.com/project1" target="_blank">Project 1</a></h5>
+            <div class="row">
+                <!-- Small screens: 1 card per carousel -->
+                <div class="col-12">
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project1-background.jpg');"></div>
+                        <h5><a href="https://example.com/project1" target="_blank">Personal Portfolio</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML"/> HTML</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS"/> CSS</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <div class="carousel-card" data-images='["https://images.pexels.com/photos/1170981/pexels-photo-1170981.jpeg", "https://images.pexels.com/photos/1396135/pexels-photo-1396135.jpeg", "https://images.pexels.com/photos/1194775/pexels-photo-1194775.jpeg"]'>
-                <div class="background"></div>
-                <h5><a href="https://example.com/project2" target="_blank">Project 2</a></h5>
+        <!-- Additional carousel items for small screens if needed -->
+        <div class="carousel-item active">
+            <div class="row">
+                <!-- Small screens: 1 card per carousel -->
+                <div class="col-12">
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project2-background.jpg');"></div>
+                        <h5><a href="https://example.com/project2" target="_blank">Task Manager App</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/express.png" alt="Express"/> Express</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <div class="carousel-card" data-images='["https://images.pexels.com/photos/280204/pexels-photo-280204.jpeg", "https://images.pexels.com/photos/1205047/pexels-photo-1205047.jpeg", "https://images.pexels.com/photos/1031813/pexels-photo-1031813.jpeg"]'>
-                <div class="background"></div>
-                <h5><a href="https://example.com/project3" target="_blank">Project 3</a></h5>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="carousel-card" data-images='["https://images.pexels.com/photos/3785748/pexels-photo-3785748.jpeg", "https://images.pexels.com/photos/3124167/pexels-photo-3124167.jpeg", "https://images.pexels.com/photos/3610792/pexels-photo-3610792.jpeg"]'>
-                <div class="background"></div>
-                <h5><a href="https://example.com/project4" target="_blank">Project 4</a></h5>
+          <!-- Additional carousel items for small screens if needed -->
+          <div class="carousel-item active">
+            <div class="row">
+                <!-- Small screens: 1 card per carousel -->
+                <div class="col-12">
+                    <div class="carousel-card">
+                        <div class="background" style="background-image: url('https://example.com/project6-background.jpg');"></div>
+                        <h5><a href="https://example.com/project6" target="_blank">Weather App</a></h5>
+                        <div class="stacks">
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
+                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/openweather.png" alt="OpenWeather"/> OpenWeather API</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    // JavaScript for carousel swiping
-    const carousels = document.querySelectorAll('.carousel');
-    
-    carousels.forEach(carousel => {
-        const carouselElement = carousel;
-        const bsCarousel = new bootstrap.Carousel(carouselElement, {
-            interval: false
-        });
-        
-        let touchstartX = 0;
-        let touchendX = 0;
+    $(document).ready(function() {
+        // Function to handle carousel navigation
+        function navigateCarousel(direction) {
+            var activeCarousel = $('.carousel.active');
+            var nextCarousel = direction === 'next' ? activeCarousel.next('.carousel') : activeCarousel.prev('.carousel');
 
-        carouselElement.addEventListener('touchstart', e => {
-            touchstartX = e.changedTouches[0].screenX;
-        });
-
-        carouselElement.addEventListener('touchend', e => {
-            touchendX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            if (touchendX < touchstartX) {
-                bsCarousel.next();
+            if (nextCarousel.length === 0) {
+                nextCarousel = direction === 'next' ? $('.carousel').first() : $('.carousel').last();
             }
 
-            if (touchendX > touchstartX) {
-                bsCarousel.prev();
+            activeCarousel.removeClass('active');
+            nextCarousel.addClass('active');
+        }
+
+        // Handle next and previous button clicks
+        $('.carousel-control-next').on('click', function() {
+            navigateCarousel('next');
+        });
+
+        $('.carousel-control-prev').on('click', function() {
+            navigateCarousel('prev');
+        });
+
+        // Swipe handling for small screens
+        let startX = 0;
+        let endX = 0;
+
+        $('#carouselSmall').on('touchstart', function(e) {
+            startX = e.originalEvent.touches[0].pageX;
+        });
+
+        $('#carouselSmall').on('touchend', function(e) {
+            endX = e.originalEvent.changedTouches[0].pageX;
+            if (startX - endX > 50) {
+                navigateCarousel('next');
+            } else if (endX - startX > 50) {
+                navigateCarousel('prev');
             }
-        }
-    });
-
-    // Set up alternating backgrounds for each card
-    document.querySelectorAll('.carousel-card').forEach(card => {
-        const backgrounds = JSON.parse(card.getAttribute('data-images'));
-        let currentBackground = 0;
-
-        function changeBackground() {
-            card.querySelector('.background').style.backgroundImage = `url(${backgrounds[currentBackground]})`;
-            currentBackground = (currentBackground + 1) % backgrounds.length;
-        }
-
-        setInterval(changeBackground, 3000); // Change background every 3 seconds
+        });
     });
 </script>
-
 </body>
 </html>
