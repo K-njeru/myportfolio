@@ -1,197 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Carousel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .carousel-item {
-            transition: transform 0.5s ease-in-out;
+        .projects-section {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            position: relative;
+            color: #ff6f61;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 10px #ff6f61;
+            }
+
+            50% {
+                text-shadow: 0 0 20px #ff6f61;
+            }
+
+            100% {
+                text-shadow: 0 0 10px #ff6f61;
+            }
         }
 
         .project-card {
-            background-size: cover;
-            background-position: center;
-            height: 350px;
-            color: #fff;
             position: relative;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
 
-        .project-card:hover {
-            transform: scale(1.05);
+        .card-background {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+            filter: brightness(0.7);
         }
 
         .card-content {
             position: absolute;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
             width: 100%;
-            padding: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
         }
 
         .project-title {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            text-align: left;
         }
 
         .stack-logos img {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
+            margin-right: 5px;
         }
 
-        /* Swipe hint animation for mobile */
-        @keyframes swipeHint {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(-10px); }
-        }
+        @media (max-width: 576px) {
+            .carousel-item {
+                animation: swipeHint 2s infinite;
+            }
 
-        .swipe-hint {
-            animation: swipeHint 1s ease-in-out infinite;
-        }
+            @keyframes swipeHint {
 
-        @media (max-width: 768px) {
-            .carousel-item.active .project-card {
-                animation: swipeHint 2s ease-in-out infinite;
+                0%,
+                100% {
+                    transform: translateX(0);
+                }
+
+                50% {
+                    transform: translateX(-10px);
+                }
             }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container my-5">
-    <h2 class="text-center mb-4">My Projects</h2>
-    <div id="projectsCarousel" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-inner">
-            <!-- Project cards will be inserted here via JavaScript -->
+    <section class="projects-section">
+        <h2 class="section-title">Creative Projects</h2>
+        <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="project-card">
+                                <div class="card-background"
+                                    style="background-image: url('https://picsum.photos/id/1018/300/350');"></div>
+                                <div class="card-content">
+                                    <h3 class="project-title">Hotel Reservation System</h3>
+                                    <div class="stack-logos">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                            alt="JS">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            alt="React">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                            alt="Node.js">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="project-card">
+                                <div class="card-background"
+                                    style="background-image: url('https://picsum.photos/id/1021/300/350');"></div>
+                                <div class="card-content">
+                                    <h3 class="project-title">E-commerce Platform</h3>
+                                    <div class="stack-logos">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                            alt="PHP">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+                                            alt="Laravel">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                            alt="MySQL">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="project-card">
+                                <div class="card-background"
+                                    style="background-image: url('https://picsum.photos/id/1032/300/350');"></div>
+                                <div class="card-content">
+                                    <h3 class="project-title">Social Media App</h3>
+                                    <div class="stack-logos">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                                            alt="Android">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                            alt="Java">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                            alt="Firebase">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="project-card">
+                                <div class="card-background"
+                                    style="background-image: url('https://picsum.photos/id/1050/300/350');"></div>
+                                <div class="card-content">
+                                    <h3 class="project-title">Blogging Platform</h3>
+                                    <div class="stack-logos">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg"
+                                            alt="Ruby">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
+                                            alt="Rails">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                            alt="PostgreSQL">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="project-card">
+                                <div class="card-background"
+                                    style="background-image: url('https://picsum.photos/id/1060/300/350');"></div>
+                                <div class="card-content">
+                                    <h3 class="project-title">Online Learning Platform</h3>
+                                    <div class="stack-logos">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            alt="Python">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                                            alt="Django">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                            alt="PostgreSQL">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel-item divs for other project sets if needed -->
+            </div>
+            <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#projectsCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
         </div>
-        <!-- Arrows for large and medium screens -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
+    </section>
 
-<script>
-    const projects = [
-        {
-            title: "Hotel Reservation System",
-            images: [
-                "https://picsum.photos/id/1018/300/350",
-                "https://picsum.photos/id/1016/300/350",
-                "https://picsum.photos/id/1025/300/350"
-            ],
-            stackLogos: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            ],
-            url: "https://example.com/hotel-reservation"
-        },
-        {
-            title: "E-commerce Platform",
-            images: [
-                "https://picsum.photos/id/1020/300/350",
-                "https://picsum.photos/id/1024/300/350",
-                "https://picsum.photos/id/1027/300/350"
-            ],
-            stackLogos: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-            ],
-            url: "https://example.com/e-commerce"
-        },
-        {
-            title: "Weather Forecast App",
-            images: [
-                "https://picsum.photos/id/1028/300/350",
-                "https://picsum.photos/id/1029/300/350",
-                "https://picsum.photos/id/1030/300/350"
-            ],
-            stackLogos: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            ],
-            url: "https://example.com/weather-app"
-        },
-        {
-            title: "Social Media Dashboard",
-            images: [
-                "https://picsum.photos/id/1031/300/350",
-                "https://picsum.photos/id/1032/300/350",
-                "https://picsum.photos/id/1033/300/350"
-            ],
-            stackLogos: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-            ],
-            url: "https://example.com/social-dashboard"
-        }
-    ];
 
-    const carouselInner = document.querySelector('.carousel-inner');
+    <script>
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+            let currentImageIndex = 0;
+            let images;
 
-    projects.forEach((project, index) => {
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('carousel-item');
-        if (index === 0) {
-            itemDiv.classList.add('active');
-        }
+            // Assign unique images for each card
+            switch (index) {
+                case 0:
+                    images = [
+                        'https://picsum.photos/id/1018/300/350',
+                        'https://picsum.photos/id/1015/300/350',
+                        'https://picsum.photos/id/1016/300/350'
+                    ];
+                    break;
+                case 1:
+                    images = [
+                        'https://picsum.photos/id/1021/300/350',
+                        'https://picsum.photos/id/1022/300/350',
+                        'https://picsum.photos/id/1023/300/350'
+                    ];
+                    break;
+                case 2:
+                    images = [
+                        'https://picsum.photos/id/1032/300/350',
+                        'https://picsum.photos/id/1033/300/350',
+                        'https://picsum.photos/id/1034/300/350'
+                    ];
+                    break;
+                case 3:
+                    images = [
+                        'https://picsum.photos/id/1050/300/350',
+                        'https://picsum.photos/id/1051/300/350',
+                        'https://picsum.photos/id/1052/300/350'
+                    ];
+                    break;
+                case 4:
+                    images = [
+                        'https://picsum.photos/id/1060/300/350',
+                        'https://picsum.photos/id/1061/300/350',
+                        'https://picsum.photos/id/1062/300/350'
+                    ];
+                    break;
+                default:
+                    images = [
+                        'https://picsum.photos/id/1018/300/350',
+                        'https://picsum.photos/id/1015/300/350',
+                        'https://picsum.photos/id/1016/300/350'
+                    ];
+                    break;
+            }
 
-        const cardDiv = document.createElement('div');
-        cardDiv.classList.add('project-card');
-        cardDiv.style.backgroundImage = `url(${project.images[0]})`;
+            const cardBackground = card.querySelector('.card-background');
 
-        cardDiv.addEventListener('click', () => {
-            window.open(project.url, '_blank');
+            setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                cardBackground.style.backgroundImage = `url(${images[currentImageIndex]})`;
+            }, 5000);
         });
 
-        const contentDiv = document.createElement('div');
-        contentDiv.classList.add('card-content');
+    </script>
 
-        const title = document.createElement('h3');
-        title.classList.add('project-title');
-        title.textContent = project.title;
-
-        const stackDiv = document.createElement('div');
-        stackDiv.classList.add('stack-logos');
-
-        project.stackLogos.forEach(logo => {
-            const img = document.createElement('img');
-            img.src = logo;
-            stackDiv.appendChild(img);
-        });
-
-        contentDiv.appendChild(title);
-        contentDiv.appendChild(stackDiv);
-        cardDiv.appendChild(contentDiv);
-        itemDiv.appendChild(cardDiv);
-        carouselInner.appendChild(itemDiv);
-    });
-
-    const projectCards = document.querySelectorAll('.project-card');
-    let currentImageIndex = 0;
-    setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % projects[0].images.length;
-        projectCards.forEach((card, index) => {
-            card.style.backgroundImage = `url(${projects[index].images[currentImageIndex]})`;
-        });
-    }, 5000);
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
