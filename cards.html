@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* PROJECTS SECTION */
+        .projects-section {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .projects-section .section-title {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #ff6f61;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
+            }
+            50% {
+                text-shadow: 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61;
+            }
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card-background {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+            filter: brightness(0.7);
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            text-align: left;
+            color: #fff;
+        }
+
+        .stack-logos {
+            display: flex;
+            gap: 10px;
+        }
+
+        .stack-logos img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: #ff6f61;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+
+        /* New keyframe animation for hinting swipe */
+        @keyframes swipeHint {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-20px);
+            }
+        }
+
+        /* Apply swipe hint animation on small screens */
+        @media (max-width: 768px) {
+            .carousel-inner {
+                display: block;
+            }
+
+            .left-arrow, .right-arrow {
+                display: none;
+            }
+
+            .carousel-item.active {
+                animation: swipeHint 2s ease-in-out infinite;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .carousel-inner {
+                display: flex;
+            }
+
+            .carousel-item {
+                flex: 0 0 25%; /* 4 cards in a row on large screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+
+    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="carousel-inner">
+            <!-- Project Cards will be injected here by JavaScript -->
+        </div>
+
+        <div class="left-arrow arrow" data-bs-target="#projectsCarousel" data-bs-slide="prev">&#8249;</div>
+        <div class="right-arrow arrow" data-bs-target="#projectsCarousel" data-bs-slide="next">&#8250;</div>
+    </div>
+</div>
+
+<script>
+    const projects = [
+        {
+            title: "Hotel Reservation System",
+            images: [
+                "https://picsum.photos/id/1018/600/350",
+                "https://picsum.photos/id/1016/600/350",
+                "https://picsum.photos/id/1025/600/350"
+            ],
+            stackLogos: [
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            ],
+            url: "https://example.com/hotel-reservation"
+        },
+        {
+            title: "E-commerce Platform",
+            images: [
+                "https://picsum.photos/id/1020/600/350",
+                "https://picsum.photos/id/1024/600/350",
+                "https://picsum.photos/id/1027/600/350"
+            ],
+            stackLogos: [
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            ],
+            url: "https://example.com/e-commerce"
+        },
+        {
+            title: "Weather Forecast App",
+            images: [
+                "https://picsum.photos/id/1028/600/350",
+                "https://picsum.photos/id/1029/600/350",
+                "https://picsum.photos/id/1030/600/350"
+            ],
+            stackLogos: [
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            ],
+            url: "https://example.com/weather-app"
+        },
+        {
+            title: "Social Media Dashboard",
+            images: [
+                "https://picsum.photos/id/1031/600/350",
+                "https://picsum.photos/id/1032/600/350",
+                "https://picsum.photos/id/1033/600/350"
+            ],
+            stackLogos: [
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            ],
+            url: "https://example.com/social-dashboard"
+        }
+    ];
+
+    const carouselInner = document.querySelector('.carousel-inner');
+
+    projects.forEach((project, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('carousel-item');
+        if (index === 0) itemDiv.classList.add('active');
+
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('project-card');
+        cardDiv.style.backgroundImage = `url(${project.images[0]})`;
+        cardDiv.onclick = () => {
+            window.open(project.url, '_blank');
+        };
+
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('card-content');
+
+        const title = document.createElement('h3');
+        title.classList.add('project-title');
+        title.textContent = project.title;
+
+        const stackDiv = document.createElement('div');
+        stackDiv.classList.add('stack-logos');
+
+        project.stackLogos.forEach(logo => {
+            const img = document.createElement('img');
+            img.src = logo;
+            stackDiv.appendChild(img);
+        });
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(stackDiv);
+        cardDiv.appendChild(contentDiv);
+        itemDiv.appendChild(cardDiv);
+        carouselInner.appendChild(itemDiv);
+    });
+
+    const projectCards = document.querySelectorAll('.project-card');
+    let currentImageIndex = 0;
+    setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % projects[0].images.length;
+        projectCards.forEach((card, index) => {
+            card.style.backgroundImage = `url(${projects[index].images[currentImageIndex]})`;
+        });
+    }, 5000);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
