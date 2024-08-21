@@ -87,15 +87,21 @@
                 display: none;
             }
             .carousel-item {
-                animation: swipeHint 2s infinite;
+                animation: swipeHint 5s infinite;
             }
             
             @keyframes swipeHint {
                 0%, 100% {
                     transform: translateX(0);
                 }
+                25% {
+                    transform: translateX(-100%);
+                }
                 50% {
-                    transform: translateX(-10px);
+                    transform: translateX(-200%);
+                }
+                75% {
+                    transform: translateX(-300%);
                 }
             }
         }
@@ -111,7 +117,7 @@
                 <!-- Carousel 1: 4 Cards -->
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-center">
-                        <div class="project-card" data-images='["https://source.unsplash.com/600x400/?nature,landscape", "https://source.unsplash.com/600x400/?technology", "https://source.unsplash.com/600x400/?programming"]'>
+                        <a href="https://example.com/portfolio" class="project-card" data-images='["https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg", "https://images.pexels.com/photos/3408746/pexels-photo-3408746.jpeg", "https://images.pexels.com/photos/3408745/pexels-photo-3408745.jpeg"]'>
                             <div class="card-content">
                                 <h3 class="project-title">Portfolio Website</h3>
                                 <div class="stack-logos">
@@ -120,8 +126,8 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-card" data-images='["https://source.unsplash.com/600x400/?management,time", "https://source.unsplash.com/600x400/?clock", "https://source.unsplash.com/600x400/?schedule"]'>
+                        </a>
+                        <a href="https://example.com/time-management" class="project-card" data-images='["https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg", "https://images.pexels.com/photos/248832/pexels-photo-248832.jpeg", "https://images.pexels.com/photos/460614/pexels-photo-460614.jpeg"]'>
                             <div class="card-content">
                                 <h3 class="project-title">Time Management App</h3>
                                 <div class="stack-logos">
@@ -130,8 +136,8 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-card" data-images='["https://source.unsplash.com/600x400/?ecommerce,shopping", "https://source.unsplash.com/600x400/?store", "https://source.unsplash.com/600x400/?product"]'>
+                        </a>
+                        <a href="https://example.com/e-commerce" class="project-card" data-images='["https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg", "https://images.pexels.com/photos/404178/pexels-photo-404178.jpeg", "https://images.pexels.com/photos/237900/pexels-photo-237900.jpeg"]'>
                             <div class="card-content">
                                 <h3 class="project-title">E-Commerce Platform</h3>
                                 <div class="stack-logos">
@@ -139,8 +145,8 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-card" data-images='["https://source.unsplash.com/600x400/?blog,website", "https://source.unsplash.com/600x400/?writing", "https://source.unsplash.com/600x400/?content"]'>
+                        </a>
+                        <a href="https://example.com/blog" class="project-card" data-images='["https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg", "https://images.pexels.com/photos/262045/pexels-photo-262045.jpeg", "https://images.pexels.com/photos/284587/pexels-photo-284587.jpeg"]'>
                             <div class="card-content">
                                 <h3 class="project-title">Blog Website</h3>
                                 <div class="stack-logos">
@@ -148,13 +154,13 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Carousel 2: 2 Cards -->
                 <div class="carousel-item">
                     <div class="d-flex justify-content-center">
-                        <div class="project-card" data-images='["https://source.unsplash.com/600x400/?fitness,exercise", "https://source.unsplash.com/600x400/?health", "https://source.unsplash.com/600x400/?workout"]'>
+                        <a href="https://example.com/fitness-tracker" class="project-card" data-images='["https://images.pexels.com/photos/758434/pexels-photo-758434.jpeg", "https://images.pexels.com/photos/1616502/pexels-photo-1616502.jpeg", "https://images.pexels.com/photos/3408749/pexels-photo-3408749.jpeg"]'>
                             <div class="card-content">
                                 <h3 class="project-title">Fitness Tracker App</h3>
                                 <div class="stack-logos">
@@ -162,8 +168,8 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-card" data-images='["https://source.unsplash.com/600x400/?recipe,food", "https://source.unsplash.com/600x400/?cooking", "https://source.unsplash.com/600x400/?kitchen"]'>
+                        </a>
+                        <a href="https://example.com/recipe-finder" class="project-card" data-images='["https://images.pexels.com/photos/1654397/pexels-photo-1654397.jpeg", "https://images.pexels.com/photos/318429/pexels-photo-318429.jpeg", "https://images.pexels.com/photos/1239297/pexels-photo-1239297.jpeg"]'>
                             <div class="card-content">
                                 <h3 class="project-title">Recipe Finder App</h3>
                                 <div class="stack-logos">
@@ -171,18 +177,10 @@
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-original.svg" alt="Axios">
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#projectsCarouselLarge" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#projectsCarouselLarge" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
         </div>
 
         <!-- Medium Screens -->
@@ -191,7 +189,7 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-6">
-                            <div class="project-card" data-images='["https://source.unsplash.com/600x400/?nature,landscape", "https://source.unsplash.com/600x400/?technology", "https://source.unsplash.com/600x400/?programming"]'>
+                            <a href="https://example.com/portfolio" class="project-card" data-images='["https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg", "https://images.pexels.com/photos/3408746/pexels-photo-3408746.jpeg", "https://images.pexels.com/photos/3408745/pexels-photo-3408745.jpeg"]'>
                                 <div class="card-content">
                                     <h3 class="project-title">Portfolio Website</h3>
                                     <div class="stack-logos">
@@ -200,10 +198,10 @@
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-6">
-                            <div class="project-card" data-images='["https://source.unsplash.com/600x400/?management,time", "https://source.unsplash.com/600x400/?clock", "https://source.unsplash.com/600x400/?schedule"]'>
+                            <a href="https://example.com/time-management" class="project-card" data-images='["https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg", "https://images.pexels.com/photos/248832/pexels-photo-248832.jpeg", "https://images.pexels.com/photos/460614/pexels-photo-460614.jpeg"]'>
                                 <div class="card-content">
                                     <h3 class="project-title">Time Management App</h3>
                                     <div class="stack-logos">
@@ -212,14 +210,14 @@
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-6">
-                            <div class="project-card" data-images='["https://source.unsplash.com/600x400/?ecommerce,shopping", "https://source.unsplash.com/600x400/?store", "https://source.unsplash.com/600x400/?product"]'>
+                            <a href="https://example.com/e-commerce" class="project-card" data-images='["https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg", "https://images.pexels.com/photos/404178/pexels-photo-404178.jpeg", "https://images.pexels.com/photos/237900/pexels-photo-237900.jpeg"]'>
                                 <div class="card-content">
                                     <h3 class="project-title">E-Commerce Platform</h3>
                                     <div class="stack-logos">
@@ -227,10 +225,10 @@
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-6">
-                            <div class="project-card" data-images='["https://source.unsplash.com/600x400/?blog,website", "https://source.unsplash.com/600x400/?writing", "https://source.unsplash.com/600x400/?content"]'>
+                            <a href="https://example.com/blog" class="project-card" data-images='["https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg", "https://images.pexels.com/photos/262045/pexels-photo-262045.jpeg", "https://images.pexels.com/photos/284587/pexels-photo-284587.jpeg"]'>
                                 <div class="card-content">
                                     <h3 class="project-title">Blog Website</h3>
                                     <div class="stack-logos">
@@ -238,26 +236,18 @@
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#projectsCarouselMedium" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#projectsCarouselMedium" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
         </div>
 
         <!-- Small Screens -->
-        <div id="projectsCarouselSmall" class="carousel slide d-md-none" data-bs-ride="carousel">
+        <div id="projectsCarouselSmall" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="project-card" data-images='["https://source.unsplash.com/600x400/?nature,landscape", "https://source.unsplash.com/600x400/?technology", "https://source.unsplash.com/600x400/?programming"]'>
+                    <a href="https://example.com/portfolio" class="project-card" data-images='["https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg", "https://images.pexels.com/photos/3408746/pexels-photo-3408746.jpeg", "https://images.pexels.com/photos/3408745/pexels-photo-3408745.jpeg"]'>
                         <div class="card-content">
                             <h3 class="project-title">Portfolio Website</h3>
                             <div class="stack-logos">
@@ -266,10 +256,10 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <div class="project-card" data-images='["https://source.unsplash.com/600x400/?management,time", "https://source.unsplash.com/600x400/?clock", "https://source.unsplash.com/600x400/?schedule"]'>
+                    <a href="https://example.com/time-management" class="project-card" data-images='["https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg", "https://images.pexels.com/photos/248832/pexels-photo-248832.jpeg", "https://images.pexels.com/photos/460614/pexels-photo-460614.jpeg"]'>
                         <div class="card-content">
                             <h3 class="project-title">Time Management App</h3>
                             <div class="stack-logos">
@@ -278,10 +268,10 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <div class="project-card" data-images='["https://source.unsplash.com/600x400/?ecommerce,shopping", "https://source.unsplash.com/600x400/?store", "https://source.unsplash.com/600x400/?product"]'>
+                    <a href="https://example.com/e-commerce" class="project-card" data-images='["https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg", "https://images.pexels.com/photos/404178/pexels-photo-404178.jpeg", "https://images.pexels.com/photos/237900/pexels-photo-237900.jpeg"]'>
                         <div class="card-content">
                             <h3 class="project-title">E-Commerce Platform</h3>
                             <div class="stack-logos">
@@ -289,10 +279,10 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <div class="project-card" data-images='["https://source.unsplash.com/600x400/?blog,website", "https://source.unsplash.com/600x400/?writing", "https://source.unsplash.com/600x400/?content"]'>
+                    <a href="https://example.com/blog" class="project-card" data-images='["https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg", "https://images.pexels.com/photos/262045/pexels-photo-262045.jpeg", "https://images.pexels.com/photos/284587/pexels-photo-284587.jpeg"]'>
                         <div class="card-content">
                             <h3 class="project-title">Blog Website</h3>
                             <div class="stack-logos">
@@ -300,7 +290,7 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -308,25 +298,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var projectCards = document.querySelectorAll('.project-card');
-            projectCards.forEach(function (card) {
-                var images = JSON.parse(card.getAttribute('data-images'));
-                var currentImage = 0;
-                setInterval(function () {
-                    card.style.backgroundImage = 'url(' + images[currentImage] + ')';
-                    currentImage = (currentImage + 1) % images.length;
-                }, 3000);
-            });
-
-            // Disable automatic sliding for all carousels
-            var carousels = document.querySelectorAll('.carousel');
-            carousels.forEach(function (carousel) {
-                var carouselInstance = new bootstrap.Carousel(carousel, {
-                    interval: false, // Disable automatic sliding
-                    ride: false // Ensure ride doesn't automatically activate
-                });
-            });
+        // JavaScript for periodic background image changes (Large and Medium Screens)
+        document.querySelectorAll('.project-card').forEach(card => {
+            const images = JSON.parse(card.getAttribute('data-images'));
+            let index = 0;
+            setInterval(() => {
+                card.style.backgroundImage = `url(${images[index]})`;
+                index = (index + 1) % images.length;
+            }, 5000); // Change image every 5 seconds
         });
     </script>
 </body>
