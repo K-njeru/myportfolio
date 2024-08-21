@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,8 @@
             display: block;
             background-size: cover;
             background-position: center;
-            height: 200px; /* Adjust height as needed */
+            height: 200px;
+            /* Adjust height as needed */
             color: #fff;
             text-decoration: none;
             position: relative;
@@ -71,7 +73,8 @@
                 display: flex;
             }
 
-            .carousel-control-prev, .carousel-control-next {
+            .carousel-control-prev,
+            .carousel-control-next {
                 display: block;
             }
         }
@@ -86,7 +89,8 @@
                 display: flex;
             }
 
-            .carousel-control-prev, .carousel-control-next {
+            .carousel-control-prev,
+            .carousel-control-next {
                 display: block;
             }
         }
@@ -103,22 +107,31 @@
                 flex: 1 0 100%;
                 max-width: 100%;
                 display: flex;
-                animation: slide 10s linear infinite;
+                animation: slide 5s linear infinite;
             }
 
             @keyframes slide {
-                0% { transform: translateX(0); }
-                33.33% { transform: translateX(-100%); }
-                66.66% { transform: translateX(-200%); }
-                100% { transform: translateX(-300%); }
+                0% {
+                    transform: translateX(0);
+                }
+
+                50% {
+                    transform: translateX(-10%);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
             }
 
-            .carousel-control-prev, .carousel-control-next {
+            .carousel-control-prev,
+            .carousel-control-next {
                 display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <section id="projects" class="container my-5">
         <!-- Large Screens -->
@@ -127,28 +140,32 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-3">
-                            <a href="https://example.com/portfolio" class="project-card" style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
+                            <a href="https://example.com/portfolio" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Portfolio Website</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="https://example.com/time-management" class="project-card" style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
+                            <a href="https://example.com/time-management" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Time Management App</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="https://example.com/e-commerce" class="project-card" style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
+                            <a href="https://example.com/e-commerce" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">E-Commerce Platform</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="https://example.com/blog" class="project-card" style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
+                            <a href="https://example.com/blog" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Blog Website</h3>
                                 </div>
@@ -159,14 +176,16 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-3">
-                            <a href="https://example.com/project5" class="project-card" style="background-image: url('https://images.pexels.com/photos/247931/pexels-photo-247931.jpeg');">
+                            <a href="https://example.com/project5" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/247931/pexels-photo-247931.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Project 5</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-3">
-                            <a href="https://example.com/project6" class="project-card" style="background-image: url('https://images.pexels.com/photos/3137812/pexels-photo-3137812.jpeg');">
+                            <a href="https://example.com/project6" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/3137812/pexels-photo-3137812.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Project 6</h3>
                                 </div>
@@ -176,11 +195,13 @@
                 </div>
             </div>
             <!-- Controls for Large Screens -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarouselLarge" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarouselLarge"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarouselLarge" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarouselLarge"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -192,14 +213,16 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-6">
-                            <a href="https://example.com/portfolio" class="project-card" style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
+                            <a href="https://example.com/portfolio" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Portfolio Website</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a href="https://example.com/time-management" class="project-card" style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
+                            <a href="https://example.com/time-management" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Time Management App</h3>
                                 </div>
@@ -210,14 +233,16 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-6">
-                            <a href="https://example.com/e-commerce" class="project-card" style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
+                            <a href="https://example.com/e-commerce" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">E-Commerce Platform</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a href="https://example.com/blog" class="project-card" style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
+                            <a href="https://example.com/blog" class="project-card"
+                                style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
                                 <div class="card-content">
                                     <h3 class="project-title">Blog Website</h3>
                                 </div>
@@ -227,11 +252,13 @@
                 </div>
             </div>
             <!-- Controls for Medium Screens -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarouselMedium" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarouselMedium"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarouselMedium" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarouselMedium"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -241,28 +268,32 @@
         <div id="projectsCarouselSmall" class="carousel slide d-md-none" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="https://example.com/portfolio" class="project-card" style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
+                    <a href="https://example.com/portfolio" class="project-card"
+                        style="background-image: url('https://images.pexels.com/photos/3408747/pexels-photo-3408747.jpeg');">
                         <div class="card-content">
                             <h3 class="project-title">Portfolio Website</h3>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="https://example.com/time-management" class="project-card" style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
+                    <a href="https://example.com/time-management" class="project-card"
+                        style="background-image: url('https://images.pexels.com/photos/579556/pexels-photo-579556.jpeg');">
                         <div class="card-content">
                             <h3 class="project-title">Time Management App</h3>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="https://example.com/e-commerce" class="project-card" style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
+                    <a href="https://example.com/e-commerce" class="project-card"
+                        style="background-image: url('https://images.pexels.com/photos/1209645/pexels-photo-1209645.jpeg');">
                         <div class="card-content">
                             <h3 class="project-title">E-Commerce Platform</h3>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="https://example.com/blog" class="project-card" style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
+                    <a href="https://example.com/blog" class="project-card"
+                        style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg');">
                         <div class="card-content">
                             <h3 class="project-title">Blog Website</h3>
                         </div>
@@ -325,4 +356,5 @@
         }
     </script>
 </body>
+
 </html>
