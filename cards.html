@@ -8,7 +8,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        
+        .project-slide {
+    position: relative;
+    width: 80%; /* Occupies 80% of the section's width */
+    height: 60vh; /* 60% of the viewport height */
+    margin: 0 auto; /* Centers the slide horizontally */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content within the slide */
+    color: white;
+    padding: 20px;
+    border-radius: 15px; /* Optional: Adds a bit of rounded corners for aesthetic */
+}
+
+.project-description {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Centers the text within the description */
+}
+
+.stack-section {
+    margin-top: 15px;
+}
+
+.stack-section img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.owl-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide inactive carousel items */
+.owl-item {
+    display: none;
+}
+
+.owl-item.active {
+    display: flex; /* Changed to flex to ensure centering */
+    justify-content: center;
+}
+
+/* Media queries */
+@media (min-width: 992px) {
+    .project-slide {
+        height: 60vh; /* Ensures height remains consistent on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .owl-nav {
+        display: none;
+    }
+
+    .project-slide {
+        width: 90%; /* Slightly increase width on smaller screens */
+    }
+}
+
     </style>
 </head>
 <body>
