@@ -37,11 +37,19 @@ body { font-family: sans-serif; }
 }
 
 .carousel-content {
-  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    width: 60vw;
+    height: 100px;
+    bottom: 0;
+    justify-content: space-between;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
 }
 
 .carousel-content h3 {
@@ -54,11 +62,15 @@ body { font-family: sans-serif; }
 }
 
 .stack-logos {
+
   margin-top: 15px;
+    display: flex;
+}
 }
 
 .stack-logos img {
-  width: 40px; /* Adjust size as needed */
+  width: 40px;
+  height: 40px; /* Adjust size as needed */
   margin: 0 5px;
   transition: transform 0.3s ease;
 }
