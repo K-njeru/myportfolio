@@ -1,320 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Carousel</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .carousel-inner {
-            position: relative;
-            overflow: hidden;
-        }
-        .carousel-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .carousel-card {
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            text-align: center;
-            position: relative;
-            background: #f8f9fa;
-            padding: 15px;
-        }
-        .carousel-card .background {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-        .carousel-card h5 {
-            margin: 10px 0;
-            position: relative;
-            z-index: 1;
-        }
-        .carousel-card .stacks {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .carousel-card .stack {
-            margin: 2px 5px;
-            padding: 2px 5px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            background: #e9ecef;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-        }
-        .carousel-card .stack img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
-        @media (max-width: 991px) {
-            .carousel-item {
-                flex: 1 0 50%;
-            }
-        }
-        @media (max-width: 767px) {
-            #carouselLarge .carousel.active , #carouselMedium .carousel.active {
-                display: none;
-            }
-            .carousel-item {
-                flex: 1 0 100%;
-            }
-            .carousel-inner {
-                animation: slide 5s ease-in-out infinite;
-            }
-            .carousel-control-prev, .carousel-control-next {
-                display: none;
-            }
-        }
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(-5%); }
-            100% { transform: translateX(0); }
-        }
-        .carousel {
-            display: none;
-        }
-        .carousel.active {
-            display: block;
-        }
-        .carousel-control-prev, .carousel-control-next {
-            width: 5%;
-            height: 100%;
-        }
-        .carousel-control-prev {
-            left: 0;
-        }
-        .carousel-control-next {
-            right: 0;
-        }
-    </style>
-</head>
-<body>
 
-<div id="carouselLarge" class="carousel active">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="row">
-                <!-- Large screens: 4 cards per carousel -->
-                <div class="col-md-3">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project1-background.jpg');"></div>
-                        <h5><a href="https://example.com/project1" target="_blank">Personal Portfolio</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML"/> HTML</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS"/> CSS</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project2-background.jpg');"></div>
-                        <h5><a href="https://example.com/project2" target="_blank">Task Manager App</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/express.png" alt="Express"/> Express</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project3-background.jpg');"></div>
-                        <h5><a href="https://example.com/project3" target="_blank">E-Commerce Site</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/php.png" alt="PHP"/> PHP</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/mysql-logo.png" alt="MySQL"/> MySQL</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/bootstrap.png" alt="Bootstrap"/> Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project4-background.jpg');"></div>
-                        <h5><a href="https://example.com/project4" target="_blank">Blog Platform</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/wordpress.png" alt="WordPress"/> WordPress</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/php.png" alt="PHP"/> PHP</span>
-                        </div>
-                    </div>
-                </div>
+<style>
+    :root {
+  --main-white-color: white;
+  --main-black-color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.static {
+  position: static;
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-slide {
+  position: relative;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.owl-carousel .owl-slide-animated {
+  transform: translateX(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+  transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+  transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+  transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+  position: absolute;
+}
+
+.owl-carousel .owl-dots .owl-dot,
+.owl-carousel .owl-nav [class*="owl-"]:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid var(--main-black-color);
+  transition: all 0.2s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot:hover span,
+.owl-carousel .owl-dots .owl-dot.active span {
+  background: var(--main-black-color);
+}
+
+.owl-carousel .owl-nav {
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.owl-carousel .owl-nav svg {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+  opacity: 1;
+}
+
+.owl-carousel .owl-nav [class*="owl-"]:hover {
+  background: transparent;
+}
+
+section {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .owl-carousel .owl-nav {
+    top: 5%;
+  }
+  
+  .owl-carousel .owl-nav svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+</style>
+
+<div class="owl-carousel owl-theme">
+    <div class="owl-slide d-flex align-items-center cover" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/owlcarousel1.jpg);">
+      <div class="container">
+        <div class="row justify-content-center justify-content-md-start">
+          <div class="col-10 col-md-6 static">
+            <div class="owl-slide-text">
+              <h2 class="owl-slide-animated owl-slide-title">The bedding was hardly able to cover it</h2>
+              <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+              </div>
+              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="https://unsplash.com/photos/pgR4yBMjum8" target="_blank" role="button">See Original Image</a>
             </div>
+          </div>
         </div>
-        <div class="carousel-item">
-            <div class="row">
-                <!-- Additional carousels with 4 cards each for large screens -->
-                <div class="col-md-3">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project5-background.jpg');"></div>
-                        <h5><a href="https://example.com/project5" target="_blank">Chat Application</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project6-background.jpg');"></div>
-                        <h5><a href="https://example.com/project6" target="_blank">Weather App</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/openweather.png" alt="OpenWeather"/> OpenWeather API</span>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div><!--/owl-slide-->
+  
+    <div class="owl-slide d-flex align-items-center cover" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/owlcarousel2.jpg);">
+      <div class="container">
+        <div class="row justify-content-center justify-content-md-start">
+          <div class="col-10 col-md-6 static">
+            <div class="owl-slide-text">
+              <h2 class="owl-slide-animated owl-slide-title">Samsa was a travelling salesman.</h2>
+              <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.
+              </div>
+              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="https://unsplash.com/photos/Ijx8OxvKrgM" target="_blank" role="button">See Original Image</a>
             </div>
+          </div>
         </div>
+      </div>
+    </div><!--/owl-slide-->
+  
+    <div class="owl-slide d-flex align-items-center cover" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/owlcarousel3.jpg);">
+      <div class="container">
+        <div class="row justify-content-center justify-content-md-start">
+          <div class="col-10 col-md-6 static">
+            <div class="owl-slide-text">
+              <h2 class="owl-slide-animated owl-slide-title">A collection of textile samples.</h2>
+              <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                He lay on his armour-like back, and if he lifted his head a little he could see his brown belly.
+              </div>
+              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="https://unsplash.com/photos/7uwbhGSH5Fg" target="_blank" role="button">See Original Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/owl-slide-->
+  </div>
+  
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col p-5">
+          <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+          <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+          <a class="btn btn-primary owl-slide-cta" href="http://www.blindtextgenerator.com/lorem-ipsum" target="_blank" role="button">Get Dummy Text</a>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<div id="carouselMedium" class="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="row">
-                <!-- Medium screens: 2 cards per carousel -->
-                <div class="col-md-6">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project1-background.jpg');"></div>
-                        <h5><a href="https://example.com/project1" target="_blank">Personal Portfolio</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML"/> HTML</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS"/> CSS</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project2-background.jpg');"></div>
-                        <h5><a href="https://example.com/project2" target="_blank">Task Manager App</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/express.png" alt="Express"/> Express</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Additional carousel items for medium screens if needed -->
-    </div>
-</div>
+  <script>
+    /*JS way for setting height: 100vh to slides' height*/
+/*const $slides = $(".owl-carousel .owl-slide");
+$slides.css("height", $(window).height());
+$(window).resize(() => {
+  $slides.css("height", $(window).height());
+});*/
 
-<div id="carouselSmall" class="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="row">
-                <!-- Small screens: 1 card per carousel -->
-                <div class="col-12">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project1-background.jpg');"></div>
-                        <h5><a href="https://example.com/project1" target="_blank">Personal Portfolio</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/html-5.png" alt="HTML"/> HTML</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/css3.png" alt="CSS"/> CSS</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Additional carousel items for small screens if needed -->
-        <div class="carousel-item active">
-            <div class="row">
-                <!-- Small screens: 1 card per carousel -->
-                <div class="col-12">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project2-background.jpg');"></div>
-                        <h5><a href="https://example.com/project2" target="_blank">Task Manager App</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React"/> React</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/nodejs.png" alt="Node.js"/> Node.js</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/express.png" alt="Express"/> Express</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-          <!-- Additional carousel items for small screens if needed -->
-          <div class="carousel-item active">
-            <div class="row">
-                <!-- Small screens: 1 card per carousel -->
-                <div class="col-12">
-                    <div class="carousel-card">
-                        <div class="background" style="background-image: url('https://example.com/project6-background.jpg');"></div>
-                        <h5><a href="https://example.com/project6" target="_blank">Weather App</a></h5>
-                        <div class="stacks">
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/javascript.png" alt="JavaScript"/> JavaScript</span>
-                            <span class="stack"><img src="https://img.icons8.com/ios/50/000000/openweather.png" alt="OpenWeather"/> OpenWeather API</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+$(".owl-carousel").on("initialized.owl.carousel", () => {
+  setTimeout(() => {
+    $(".owl-item.active .owl-slide-animated").addClass("is-transitioned");
+    $("section").show();
+  }, 200);
+});
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // Function to handle carousel navigation
-        function navigateCarousel(direction) {
-            var activeCarousel = $('.carousel.active');
-            var nextCarousel = direction === 'next' ? activeCarousel.next('.carousel') : activeCarousel.prev('.carousel');
+const $owlCarousel = $(".owl-carousel").owlCarousel({
+  items: 1,
+  loop: true,
+  nav: true,
+  navText: [
+    '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
+    '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>' /* icons from https://iconmonstr.com */
+  ]
+});
 
-            if (nextCarousel.length === 0) {
-                nextCarousel = direction === 'next' ? $('.carousel').first() : $('.carousel').last();
-            }
+$owlCarousel.on("changed.owl.carousel", e => {
+  $(".owl-slide-animated").removeClass("is-transitioned");
 
-            activeCarousel.removeClass('active');
-            nextCarousel.addClass('active');
-        }
+  const $currentOwlItem = $(".owl-item").eq(e.item.index);
+  $currentOwlItem.find(".owl-slide-animated").addClass("is-transitioned");
 
-        // Handle next and previous button clicks
-        $('.carousel-control-next').on('click', function() {
-            navigateCarousel('next');
-        });
+  const $target = $currentOwlItem.find(".owl-slide-text");
+  doDotsCalculations($target);
+});
 
-        $('.carousel-control-prev').on('click', function() {
-            navigateCarousel('prev');
-        });
+$owlCarousel.on("resize.owl.carousel", () => {
+  setTimeout(() => {
+    setOwlDotsPosition();
+  }, 50);
+});
 
-        // Swipe handling for small screens
-        let startX = 0;
-        let endX = 0;
+/*if there isn't content underneath the carousel*/
+//$owlCarousel.trigger("refresh.owl.carousel");
 
-        $('#carouselSmall').on('touchstart', function(e) {
-            startX = e.originalEvent.touches[0].pageX;
-        });
+setOwlDotsPosition();
 
-        $('#carouselSmall').on('touchend', function(e) {
-            endX = e.originalEvent.changedTouches[0].pageX;
-            if (startX - endX > 50) {
-                navigateCarousel('next');
-            } else if (endX - startX > 50) {
-                navigateCarousel('prev');
-            }
-        });
-    });
-</script>
-</body>
-</html>
+function setOwlDotsPosition() {
+  const $target = $(".owl-item.active .owl-slide-text");
+  doDotsCalculations($target);
+}
+
+function doDotsCalculations(el) {
+  const height = el.height();
+  const {top, left} = el.position();
+  const res = height + top + 20;
+
+  $(".owl-carousel .owl-dots").css({
+    top: `${res}px`,
+    left: `${left}px`
+  });
+}
+
+  </script>
