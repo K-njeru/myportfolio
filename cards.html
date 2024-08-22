@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,170 +9,269 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .owl-theme {
-            height: 100vh;
-            width: 100vw;
+        :root {
+            --main-white-color: white;
+            --main-black-color: black;
         }
-        .project-slide {
-            position: relative;
-            width: 80%; /* Occupies 80% of the section's width */
-            height: 60vh; /* 60% of the viewport height */
-            margin: 0 auto; /* Centers the slide horizontally */
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .cover {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Centers content within the slide */
-            color: white;
-            padding: 20px;
-            border-radius: 15px; /* Optional: Adds a bit of rounded corners for aesthetic */
         }
 
-        .project-description {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center; /* Centers the text within the description */
+        .owl-carousel .owl-slide {
+            position: relative;
+            height: 100vh;
+            background-color: lightgray;
         }
 
-        .stack-section {
-            margin-top: 15px;
+        .owl-carousel .owl-slide-animated {
+            transform: translateX(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.05s;
         }
 
-        .stack-section img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
+        .owl-carousel .owl-slide-animated.is-transitioned {
+            transform: none;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s;
         }
 
-        .owl-carousel {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .owl-carousel .owl-slide-title.is-transitioned {
+            transition-delay: 0.2s;
         }
 
-        /* Hide inactive carousel items */
-        .owl-item {
+        .owl-carousel .owl-slide-subtitle.is-transitioned {
+            transition-delay: 0.35s;
+        }
+
+        .owl-carousel .owl-slide-cta.is-transitioned {
+            transition-delay: 0.5s;
+        }
+
+        .owl-carousel .owl-dots,
+        .owl-carousel .owl-nav {
+            position: absolute;
+        }
+
+        .owl-carousel .owl-dots .owl-dot,
+        .owl-carousel .owl-nav [class*="owl-"]:focus {
+            outline: none;
+        }
+
+        .owl-carousel .owl-dots .owl-dot span {
+            background: transparent;
+            border: 1px solid var(--main-black-color);
+            transition: all 0.2s ease;
+        }
+
+        .owl-carousel .owl-dots .owl-dot:hover span,
+        .owl-carousel .owl-dots .owl-dot.active span {
+            background: var(--main-black-color);
+        }
+
+        .owl-carousel .owl-nav {
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+
+        .owl-carousel .owl-nav svg {
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+
+        .owl-carousel .owl-nav button:hover svg {
+            opacity: 1;
+        }
+
+        .owl-carousel .owl-nav [class*="owl-"]:hover {
+            background: transparent;
+        }
+
+        section {
             display: none;
         }
 
-        .owl-item.active {
-            display: flex; /* Changed to flex to ensure centering */
-            justify-content: center;
-        }
-
-        /* Media queries */
-        @media (min-width: 992px) {
-            .project-slide {
-                height: 60vh; /* Ensures height remains consistent on larger screens */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .owl-nav {
-                display: none;
+        @media screen and (max-width: 575px) {
+            .owl-carousel .owl-nav {
+                top: 5%;
             }
 
-            .project-slide {
-                width: 90%; /* Slightly increase width on smaller screens */
+            .owl-carousel .owl-nav svg {
+                width: 24px;
+                height: 24px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="owl-carousel owl-theme">
-        <!-- Project 1 -->
-        <div class="project-slide" data-images='["https://via.placeholder.com/800x400/000000/FFFFFF?text=Portfolio+Website+1", "https://via.placeholder.com/800x400/000000/FFFFFF?text=Portfolio+Website+2", "https://via.placeholder.com/800x400/000000/FFFFFF?text=Portfolio+Website+3"]'>
-            <div class="project-description">
-                <h3>Portfolio Website</h3>
-                <p>A personal portfolio website to showcase projects, skills, and contact information.</p>
-                <a href="https://example.com/portfolio" class="btn btn-primary" target="_blank">View Project</a>
-                <div class="stack-section">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+        <div class="owl-slide d-flex align-items-center cover"
+            style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/owlcarousel1.jpg);">
+            <div class="container">
+                <div class="row justify-content-center justify-content-md-start">
+                    <div class="col-10 col-md-6 static">
+                        <div class="owl-slide-text">
+                            <h2 class="owl-slide-animated owl-slide-title">The bedding was hardly able to cover it</h2>
+                            <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed
+                                in his bed into a horrible vermin.
+                            </div>
+                            <a class="btn btn-primary owl-slide-animated owl-slide-cta"
+                                href="https://unsplash.com/photos/pgR4yBMjum8" target="_blank" role="button">See
+                                Original Image</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div><!--/owl-slide-->
 
-        <!-- Project 2 -->
-        <div class="project-slide" data-images='["https://via.placeholder.com/800x400/333333/FFFFFF?text=Time+Management+App+1", "https://via.placeholder.com/800x400/333333/FFFFFF?text=Time+Management+App+2", "https://via.placeholder.com/800x400/333333/FFFFFF?text=Time+Management+App+3"]'>
-            <div class="project-description">
-                <h3>Time Management App</h3>
-                <p>An app to help users manage their time efficiently by tracking tasks and deadlines.</p>
-                <a href="https://example.com/timemanagement" class="btn btn-primary" target="_blank">View Project</a>
-                <div class="stack-section">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg" alt="MySQL">
+        <div class="owl-slide d-flex align-items-center cover"
+            style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/owlcarousel2.jpg);">
+            <div class="container">
+                <div class="row justify-content-center justify-content-md-start">
+                    <div class="col-10 col-md-6 static">
+                        <div class="owl-slide-text">
+                            <h2 class="owl-slide-animated owl-slide-title">Samsa was a travelling salesman.</h2>
+                            <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                                It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy
+                                fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned
+                                to look out the window at the dull weather.
+                            </div>
+                            <a class="btn btn-primary owl-slide-animated owl-slide-cta"
+                                href="https://unsplash.com/photos/Ijx8OxvKrgM" target="_blank" role="button">See
+                                Original Image</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div><!--/owl-slide-->
 
-        <!-- Project 3 -->
-        <div class="project-slide" data-images='["https://via.placeholder.com/800x400/555555/FFFFFF?text=E-commerce+Website+1", "https://via.placeholder.com/800x400/555555/FFFFFF?text=E-commerce+Website+2", "https://via.placeholder.com/800x400/555555/FFFFFF?text=E-commerce+Website+3"]'>
-            <div class="project-description">
-                <h3>E-commerce Website</h3>
-                <p>An online store with a shopping cart, product listings, and a secure checkout process.</p>
-                <a href="https://example.com/ecommerce" class="btn btn-primary" target="_blank">View Project</a>
-                <div class="stack-section">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg" alt="MySQL">
+        <div class="owl-slide d-flex align-items-center cover"
+            style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/owlcarousel3.jpg);">
+            <div class="container">
+                <div class="row justify-content-center justify-content-md-start">
+                    <div class="col-10 col-md-6 static">
+                        <div class="owl-slide-text">
+                            <h2 class="owl-slide-animated owl-slide-title">A collection of textile samples.</h2>
+                            <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                                He lay on his armour-like back, and if he lifted his head a little he could see his
+                                brown belly.
+                            </div>
+                            <a class="btn btn-primary owl-slide-animated owl-slide-cta"
+                                href="https://unsplash.com/photos/7uwbhGSH5Fg" target="_blank" role="button">See
+                                Original Image</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Add more projects as needed -->
+        </div><!--/owl-slide-->
     </div>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col p-5">
+                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed
+                        into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he
+                        could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding
+                        was hardly able to cover it and seemed ready to slide off any moment.</p>
+                    <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
+                        as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human
+                        room although a little too small, lay peacefully between its four familiar walls. A collection
+                        of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it
+                        there hung a picture that he had recently cut out of an illustrated magazine and housed in a
+                        nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright,
+                        raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then
+                        turned to look out the window at the dull weather.</p>
+                    <a class="btn btn-primary owl-slide-cta" href="http://www.blindtextgenerator.com/lorem-ipsum"
+                        target="_blank" role="button">Get Dummy Text</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script>
-        $(document).ready(function() {
-            // Initialize the carousel
-            var owl = $(".owl-carousel").owlCarousel({
-                items: 1,
-                loop: true,
-                nav: true,
-                dots: false,
-                autoplay: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        autoWidth: true,
-                        loop: true
-                    },
-                    768: {
-                        items: 1,
-                        autoWidth: false
-                    }
-                }
-            });
+        /*JS way for setting height: 100vh to slides' height*/
+        /*const $slides = $(".owl-carousel .owl-slide");
+        $slides.css("height", $(window).height());
+        $(window).resize(() => {
+          $slides.css("height", $(window).height());
+        });*/
 
-            // Handle the background image rotation
-            owl.on("changed.owl.carousel", function(event) {
-                var $currentItem = $(event.target).find(".owl-item").eq(event.item.index);
-                var images = JSON.parse($currentItem.find(".project-slide").attr("data-images"));
-                var currentIndex = 0;
-
-                setInterval(function() {
-                    $currentItem.find(".project-slide").css("background-image", "url(" + images[currentIndex] + ")");
-                    currentIndex = (currentIndex + 1) % images.length;
-                }, 5000);
-            });
-
-            // Trigger the initial change event
-            owl.trigger("changed.owl.carousel");
+        $(".owl-carousel").on("initialized.owl.carousel", () => {
+            setTimeout(() => {
+                $(".owl-item.active .owl-slide-animated").addClass("is-transitioned");
+                $("section").show();
+            }, 200);
         });
+
+        const $owlCarousel = $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            navText: [
+                '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>',
+                '<svg width="50" height="50" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>' /* icons from https://iconmonstr.com */
+            ]
+        });
+
+        $owlCarousel.on("changed.owl.carousel", e => {
+            $(".owl-slide-animated").removeClass("is-transitioned");
+
+            const $currentOwlItem = $(".owl-item").eq(e.item.index);
+            $currentOwlItem.find(".owl-slide-animated").addClass("is-transitioned");
+
+            const $target = $currentOwlItem.find(".owl-slide-text");
+            doDotsCalculations($target);
+        });
+
+        $owlCarousel.on("resize.owl.carousel", () => {
+            setTimeout(() => {
+                setOwlDotsPosition();
+            }, 50);
+        });
+
+        /*if there isn't content underneath the carousel*/
+        //$owlCarousel.trigger("refresh.owl.carousel");
+
+        setOwlDotsPosition();
+
+        function setOwlDotsPosition() {
+            const $target = $(".owl-item.active .owl-slide-text");
+            doDotsCalculations($target);
+        }
+
+        function doDotsCalculations(el) {
+            const height = el.height();
+            const { top, left } = el.position();
+            const res = height + top + 20;
+
+            $(".owl-carousel .owl-dots").css({
+                top: `${res}px`,
+                left: `${left}px`
+            });
+        }
+
     </script>
 </body>
+
 </html>
