@@ -25,18 +25,60 @@ body { font-family: sans-serif; }
     height: 400px;
   }
 }
+.carousel-cell {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-content {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.carousel-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+.stack-logos {
+  margin-top: 15px;
+}
+
+.stack-logos img {
+  width: 40px; /* Adjust size as needed */
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.stack-logos img:hover {
+  transform: scale(1.1);
+}
+
 </style>
 
 <h1>Flickity - images</h1>
 
 <!-- Flickity HTML init -->
+<!-- Flickity HTML init -->
 <div class="carousel"
   data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
   
   <!-- Portfolio Website -->
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
-    <div class="carousel-caption">
+  <div class="carousel-cell" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg');">
+    <div class="carousel-content">
       <h3>Portfolio Website</h3>
       <button class="btn btn-primary">View</button>
       <div class="stack-logos">
@@ -49,9 +91,8 @@ body { font-family: sans-serif; }
   </div>
 
   <!-- Another Project -->
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
-    <div class="carousel-caption">
+  <div class="carousel-cell" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg');">
+    <div class="carousel-content">
       <h3>Another Project</h3>
       <button class="btn btn-primary">View</button>
       <div class="stack-logos">
@@ -63,9 +104,8 @@ body { font-family: sans-serif; }
   </div>
 
   <!-- Additional Projects -->
-  <div class="carousel-cell">
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
-    <div class="carousel-caption">
+  <div class="carousel-cell" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg');">
+    <div class="carousel-content">
       <h3>Additional Project</h3>
       <button class="btn btn-primary">View</button>
       <div class="stack-logos">
@@ -77,5 +117,6 @@ body { font-family: sans-serif; }
   
   <!-- Add more projects as needed -->
 </div>
+
 
 
