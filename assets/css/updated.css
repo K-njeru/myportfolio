@@ -291,13 +291,33 @@ p {
 
 
 /* PROJECTS  */
+.fancy-title {
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.fancy-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
 
 .flickity-viewport {
     border-radius: 10px;
 }
 
-.carousel {
-    background: aliceblue;
+.flickity-page-dots .dot {
+    color: cornflowerblue;
 }
 
 .carousel-cell {
@@ -333,9 +353,11 @@ p {
     align-items: center;
 }
 
-.carousel-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.carousel-content a {
+    font-family: monospace;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bolder;
 }
 
 .carousel .stack-logos {
