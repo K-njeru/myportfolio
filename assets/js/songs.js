@@ -140,8 +140,8 @@ document.head.insertAdjacentHTML('beforeend', `
 
 const cellBackgrounds = {
     cell1: [
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg",
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg",
+        "assets/img/kevo1.png",
+        "assets/img/kevo.png",
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"
     ],
     cell2: [

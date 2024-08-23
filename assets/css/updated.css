@@ -293,7 +293,7 @@ p {
 /* PROJECTS  */
 .fancy-title {
     font-size: 2.5em;
-    color: #2c3e50;
+    color: cornflowerblue;
     text-align: center;
     font-weight: bold;
     margin-bottom: 40px;
@@ -317,7 +317,7 @@ p {
 }
 
 .flickity-page-dots .dot {
-    color: cornflowerblue;
+    color: cornflowerblue !important;
 }
 
 .carousel-cell {
