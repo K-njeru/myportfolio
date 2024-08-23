@@ -317,7 +317,7 @@ p {
 }
 
 .flickity-page-dots .dot {
-    color: cornflowerblue !important;
+    background: cornflowerblue !important;
 }
 
 .carousel-cell {
