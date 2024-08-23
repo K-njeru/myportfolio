@@ -7,117 +7,122 @@
 <style>
     /* external css: flickity.css */
 
-    * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-    body { font-family: sans-serif; }
-    .flickity-viewport {
-        border-radius: 10px;
-    }
+body { font-family: sans-serif; }
+.flickity-viewport {
+   
+    border-radius: 10px;
+   
+}
+.carousel {
+  background: aliceblue;
+}
 
-    .carousel {
-        background: aliceblue;
-    }
+.carousel-cell {
+  width: 80vw;
+  height: 500px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(840px) !important;
+  left: -92px !important;
+}
 
-    .carousel-cell {
-        width: 80vw;
-        height: 500px; /* Adjust height as needed */
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        left: -92px !important;
-        transform: translateX(840px) !important;
-    }
+.carousel-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    width: 60vw;
+    height: 100px;
+    bottom: 0;
+    justify-content: space-between;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+}
 
-    .carousel-content {
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        color: white;
-        display: flex;
-        width: 60vw;
-        height: 100px;
-        bottom: 0;
-        justify-content: space-between;
-        position: absolute;
-        flex-direction: row;
-        align-items: center;
-    }
+.carousel-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-    .carousel-content h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+.btn-primary {
+  margin-top: 10px;
+}
 
-    .btn-primary {
-        margin-top: 10px;
-    }
+.stack-logos {
 
-    .stack-logos {
-        margin-top: 15px;
-        display: flex;
-    }
+  margin-top: 15px;
+    display: flex;
+}
 
-    .stack-logos img {
-        width: 40px;
-        height: 40px; /* Adjust size as needed */
-        margin: 0 5px;
-        transition: transform 0.3s ease;
-    }
+.stack-logos img {
+  width: 40px;
+  height: 40px; /* Adjust size as needed */
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
 
-    .stack-logos img:hover {
-        transform: scale(1.1);
-    }
+.stack-logos img:hover {
+  transform: scale(1.1);
+}
 
 </style>
 
-<h1>Flickity - Images</h1>
+<h1>Flickity - images</h1>
 
 <!-- Flickity HTML init -->
-<div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+<!-- Flickity HTML init -->
+<div class="carousel"
+  data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
   
-    <!-- Portfolio Website -->
-    <div class="carousel-cell" id="cell1">
-        <div class="carousel-content">
-            <h3>Portfolio Website</h3>
-            <button class="btn btn-primary">View</button>
-            <div class="stack-logos">
-                <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5 Logo">
-                <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3 Logo">
-                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Logo">
-                <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Logo">
-            </div>
-        </div>
+  <!-- Portfolio Website -->
+  <div class="carousel-cell" id="cell1" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg');">
+    <div class="carousel-content">
+      <h3>Portfolio Website</h3>
+      <button class="btn btn-primary">View</button>
+      <div class="stack-logos">
+        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5 Logo">
+        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3 Logo">
+        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Logo">
+        <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Logo">
+      </div>
     </div>
+  </div>
 
-    <!-- Another Project -->
-    <div class="carousel-cell" id="cell2">
-        <div class="carousel-content">
-            <h3>Another Project</h3>
-            <button class="btn btn-primary">View</button>
-            <div class="stack-logos">
-                <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap Logo">
-                <img src="https://img.icons8.com/color/48/000000/php.png" alt="PHP Logo">
-                <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL Logo">
-            </div>
-        </div>
+  <!-- Another Project -->
+  <div class="carousel-cell" id="cell2" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg');">
+    <div class="carousel-content">
+      <h3>Another Project</h3>
+      <button class="btn btn-primary">View</button>
+      <div class="stack-logos">
+        <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap Logo">
+        <img src="https://img.icons8.com/color/48/000000/php.png" alt="PHP Logo">
+        <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL Logo">
+      </div>
     </div>
+  </div>
 
-    <!-- Additional Projects -->
-    <div class="carousel-cell" id="cell3">
-        <div class="carousel-content">
-            <h3>Additional Project</h3>
-            <button class="btn btn-primary">View</button>
-            <div class="stack-logos">
-                <img src="https://img.icons8.com/color/48/000000/android-os.png" alt="Android Studio Logo">
-                <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java Logo">
-            </div>
-        </div>
+  <!-- Additional Projects -->
+  <div class="carousel-cell" id="cell3" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg');">
+    <div class="carousel-content">
+      <h3>Additional Project</h3>
+      <button class="btn btn-primary">View</button>
+      <div class="stack-logos">
+        <img src="https://img.icons8.com/color/48/000000/android-os.png" alt="Android Studio Logo">
+        <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java Logo">
+      </div>
     </div>
+  </div>
   
-    <!-- Add more projects as needed -->
+  <!-- Add more projects as needed -->
 </div>
 
 <script>
@@ -153,3 +158,5 @@
     changeBackground('cell3', cellBackgrounds.cell3);
 
 </script>
+
+
