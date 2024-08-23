@@ -1,11 +1,11 @@
 // Modal functionality
-window.onload = function() {
-    setTimeout(function() {
+window.onload = function () {
+    setTimeout(function () {
         document.getElementById('myModal').style.display = 'block';
     }, 10000); // 10 seconds delay
 };
 
-document.querySelector('.close').onclick = function() {
+document.querySelector('.close').onclick = function () {
     document.getElementById('myModal').style.display = 'none';
 };
 
@@ -25,7 +25,7 @@ let currentSongIndex = 0;
 // Initialize audio player with the first song
 audioElement.src = songs[currentSongIndex];
 
-playButton.onclick = function() {
+playButton.onclick = function () {
     console.log('Play button clicked'); // Debugging
     document.getElementById('myModal').style.display = 'none';
     audioPlayer.style.display = 'flex';
@@ -34,7 +34,7 @@ playButton.onclick = function() {
     audioElement.play();
 };
 
-playPauseButton.onclick = function() {
+playPauseButton.onclick = function () {
     console.log('Play/Pause button clicked'); // Debugging
     if (audioElement.paused) {
         audioElement.play();
@@ -47,7 +47,7 @@ playPauseButton.onclick = function() {
     }
 };
 
-nextButton.onclick = function() {
+nextButton.onclick = function () {
     console.log('Next button clicked'); // Debugging
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     audioElement.src = songs[currentSongIndex];
@@ -56,7 +56,7 @@ nextButton.onclick = function() {
     playPauseButton.querySelector('i').classList.add('fa-pause');
 };
 
-prevButton.onclick = function() {
+prevButton.onclick = function () {
     console.log('Previous button clicked'); // Debugging
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
     audioElement.src = songs[currentSongIndex];
@@ -65,13 +65,13 @@ prevButton.onclick = function() {
     playPauseButton.querySelector('i').classList.add('fa-pause');
 };
 
-audioElement.onended = function() {
+audioElement.onended = function () {
     console.log('Audio ended'); // Debugging
     playPauseButton.querySelector('i').classList.remove('fa-pause');
     playPauseButton.querySelector('i').classList.add('fa-play');
 };
 
-audioCloseButton.onclick = function() {
+audioCloseButton.onclick = function () {
     console.log('Audio close button clicked'); // Debugging
     audioPlayer.style.display = 'none';
     audioElement.pause();
@@ -85,178 +85,93 @@ audioCloseButton.onclick = function() {
     playPauseButton.querySelector('i').classList.remove('fa-pause');
     playPauseButton.querySelector('i').classList.add('fa-play');
 }; 
-
-const projects = [
-    {
-        title: "Hotel Reservation System",
-        images: [
-            "https://picsum.photos/id/1018/300/350",
-            "https://picsum.photos/id/1016/300/350",
-            "https://picsum.photos/id/1025/300/350"
-        ],
-        stackLogos: [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-        ],
-        url: "https://example.com/hotel-reservation"
-    },
-    {
-        title: "E-commerce Platform",
-        images: [
-            "https://picsum.photos/id/1020/300/350",
-            "https://picsum.photos/id/1024/300/350",
-            "https://picsum.photos/id/1027/300/350"
-        ],
-        stackLogos: [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-        ],
-        url: "https://example.com/e-commerce"
-    },
-    {
-        title: "Weather Forecast App",
-        images: [
-            "https://picsum.photos/id/1028/300/350",
-            "https://picsum.photos/id/1029/300/350",
-            "https://picsum.photos/id/1030/300/350"
-        ],
-        stackLogos: [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-        ],
-        url: "https://example.com/weather-app"
-    },
-    {
-        title: "Social Media Dashboard",
-        images: [
-            "https://picsum.photos/id/1031/300/350",
-            "https://picsum.photos/id/1032/300/350",
-            "https://picsum.photos/id/1033/300/350"
-        ],
-        stackLogos: [
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-        ],
-        url: "https://example.com/social-dashboard"
-    }
-];
-
-// Generate project cards
-const carousel = document.querySelector('.projects-carousel');
-let currentSlide = 0;
-
-projects.forEach((project, index) => {
-    const card = document.createElement('div');
-    card.classList.add('project-card');
-    card.addEventListener('click', () => {
-        window.open(project.url, '_blank');
-    });
-
-    const background = document.createElement('div');
-    background.classList.add('card-background');
-    background.style.backgroundImage = `url(${project.images[0]})`;
-
-    const content = document.createElement('div');
-    content.classList.add('card-content');
-
-    const title = document.createElement('h3');
-    title.classList.add('project-title');
-    title.textContent = project.title;
-
-    const stackContainer = document.createElement('div');
-    stackContainer.classList.add('stack-logos');
-
-    project.stackLogos.forEach(logo => {
-        const img = document.createElement('img');
-        img.src = logo;
-        stackContainer.appendChild(img);
-    });
-
-    content.appendChild(title);
-    content.appendChild(stackContainer);
-    card.appendChild(background);
-    card.appendChild(content);
-    carousel.appendChild(card);
-
-    // Background image rotation
-    let imageIndex = 0;
-    setInterval(() => {
-        imageIndex = (imageIndex + 1) % project.images.length;
-        background.style.backgroundImage = `url(${project.images[imageIndex]})`;
-    }, 5000);
-});
-
-// Carousel navigation
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-
-function updateCarousel() {
-    const cardWidth = document.querySelector('.project-card').offsetWidth + 20; // card width + margin
-    const containerWidth = document.querySelector('.carousel-container').offsetWidth;
-    const maxSlide = projects.length - Math.floor(containerWidth / cardWidth);
-
-    if (currentSlide < 0) currentSlide = maxSlide;
-    if (currentSlide > maxSlide) currentSlide = 0;
-
-    carousel.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-}
-
-leftArrow.addEventListener('click', () => {
-    currentSlide--;
-    updateCarousel();
-});
-
-rightArrow.addEventListener('click', () => {
-    currentSlide++;
-    updateCarousel();
-});
-
-function nextSlide() {
-    currentSlide++;
-    updateCarousel();
-}
-
-function prevSlide() {
-    currentSlide--;
-    updateCarousel();
-}
-
-// Touch and swipe functionality for mobile
-let startX = 0;
-let isDragging = false;
-
-carousel.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-});
-
-carousel.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const currentX = e.touches[0].clientX;
-    const diffX = startX - currentX;
-
-    if (diffX > 50) {
-        nextSlide();
-        isDragging = false;
-    } else if (diffX < -50) {
-        prevSlide();
-        isDragging = false;
-    }
-});
-
-carousel.addEventListener('touchend', () => {
-    isDragging = false;
-});
-
-// Automatic slide with occasional animation
-setInterval(() => {
-    if (currentSlide === projects.length - 1) {
-        currentSlide = -1; // To trigger animation on the first slide
-    }
-    nextSlide();
-}, 10000); // every 10 seconds
 */
+
+/* ABOUT ACCORDIONS */
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionItem = button.closest('.accordion-item');
+        const accordion = accordionItem.querySelector('.accordion-collapse');
+        const icon = button.querySelector('.accordion-icon');
+        const isOpen = accordion.classList.contains('show');
+
+        // Close all other accordions
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            const collapse = item.querySelector('.accordion-collapse');
+            const btn = item.querySelector('.accordion-button');
+            const btnIcon = btn.querySelector('.accordion-icon');
+
+            if (collapse !== accordion) {
+                collapse.classList.remove('show', 'fade-in');
+                btn.classList.add('collapsed');
+                btnIcon.textContent = '+';
+            }
+        });
+
+        // Toggle the current accordion's content visibility and icon
+        if (!isOpen) {
+            accordion.classList.add('show', 'fade-in');
+            button.classList.remove('collapsed');
+            icon.textContent = '×';
+        } else {
+            accordion.classList.remove('show', 'fade-in');
+            button.classList.add('collapsed');
+            icon.textContent = '+';
+        }
+    });
+});
+
+// CSS for fade-in animation
+document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+`);
+
+
+/* PORTFOLIO PROJECTS */
+
+const cellBackgrounds = {
+    cell1: [
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"
+    ],
+    cell2: [
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"
+    ],
+    cell3: [
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"
+    ]
+};
+
+function changeBackground(cellId, backgrounds, direction, interval) {
+    let index = 0;
+    setInterval(() => {
+        const cell = document.getElementById(cellId);
+        cell.style.backgroundImage = `url('${backgrounds[index]}')`;
+        cell.classList.remove('fade-left', 'fade-right');
+        cell.offsetWidth; // Trigger reflow to restart the animation
+        cell.classList.add(direction);
+
+        index = (index + 1) % backgrounds.length;
+    }, interval);
+}
+
+// Start rotating backgrounds with different intervals and directions
+changeBackground('cell1', cellBackgrounds.cell1, 'fade-left', 8000); // 8 seconds
+changeBackground('cell2', cellBackgrounds.cell2, 'fade-right', 15000); // 15 seconds
+changeBackground('cell3', cellBackgrounds.cell3, 'fade-left', 10000); // 10 seconds
+
+

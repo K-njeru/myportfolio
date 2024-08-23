@@ -1,5 +1,5 @@
 .about-section {
-   background: linear-gradient(to right, aliceblue, #dae1e2);
+    background: linear-gradient(to right, aliceblue, #dae1e2);
     border-radius: 20px;
     padding: 40px;
     position: relative;
@@ -34,8 +34,9 @@
 .grid-square {
     position: absolute;
     border: 3px solid darkgray;
-   background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
-    background-size: 600px 600px; /* Ensures the image covers all squares without replication */
+    background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
+    background-size: 600px 600px;
+    /* Ensures the image covers all squares without replication */
     background-repeat: no-repeat;
     width: 50%;
     height: 50%;
@@ -71,8 +72,13 @@
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .about-section::before {
@@ -89,8 +95,17 @@
 }
 
 @keyframes pulsate {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 0.8; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
 }
 
 
@@ -106,7 +121,7 @@
 }
 
 @media (max-width:768px) {
-    .stack .row{
+    .stack .row {
         width: 98vw;
         left: -15px;
         position: relative;
@@ -140,7 +155,8 @@
 }
 
 .accordion-title {
-    margin-right: auto; /* Pushes the icon to the right */
+    margin-right: auto;
+    /* Pushes the icon to the right */
     font-size: 20px;
 }
 
@@ -171,7 +187,8 @@
     color: darkblue;
 
 }
-.what-p{
+
+.what-p {
     font-family: monospace;
     font-size: 1.0rem;
     line-height: 2rem;
@@ -180,8 +197,15 @@
 
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tools {
@@ -189,9 +213,11 @@
     display: flex;
     flex-wrap: wrap;
 }
-.tools span{
+
+.tools span {
     margin-right: 30px;
 }
+
 .tool-logo {
     width: 30px;
     height: 30px;
@@ -225,9 +251,19 @@ p {
 }
 
 @keyframes pulsate {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 0.8; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
 }
+
 .accordion-collapse {
     display: none;
     opacity: 0;
@@ -244,157 +280,105 @@ p {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-
-/* PROJECTS 
-
-.projects-section {
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.projects-section .section-title {
-    font-size: 3rem;
-    margin-bottom: 50px;
-    position: relative;
-    display: inline-block;
-    color: #ff6f61;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
     0% {
-        text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
+        opacity: 0;
     }
-    50% {
-        text-shadow: 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61;
-    }
+
     100% {
-        text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
+        opacity: 1;
     }
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;  Ensure no overflow 
+
+/* PROJECTS  */
+
+.flickity-viewport {
+    border-radius: 10px;
 }
 
-.projects-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
+.carousel {
+    background: aliceblue;
 }
 
-.project-card {
-    flex: 0 0 100%;  One card per view 
-    max-width: 100%;
-    margin: 0 10px;
-    position: relative;
-    cursor: pointer;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card-background {
-    width: 100%;
-    height: 100%;
+.carousel-cell {
+    width: 80vw;
+    height: 500px;
+    /* Adjust height as needed */
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out;
-    filter: brightness(0.7);
-}
-
-.card-content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-}
-
-.project-title {
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-    text-align: left;
-    color: #fff;
-}
-
-.stack-logos {
+    position: relative;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 1.5s ease-in-out;
+    left: -92px !important;
+    margin-right: 20px;
 }
 
-.stack-logos img {
-    width: 30px;
-    height: 30px;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    color: #ff6f61;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+.carousel-content {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
-    transition: background-color 0.3s;
+    color: cornflowerblue;
+    display: flex;
+    font-size: 20px;
+    font-family: monospace;
+    width: 60vw;
+    height: fit-content;
+    bottom: 0;
+    justify-content: space-between;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
 }
 
-.arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.carousel-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.left-arrow {
-    left: 10px;
+.carousel .stack-logos {
+    margin-top: 15px;
+    display: flex;
 }
 
-.right-arrow {
-    right: 10px;
+.carousel .stack-logos img {
+    width: 40px;
+    height: 40px;
+    /* Adjust size as needed */
+    margin: 0 5px;
+    transition: transform 0.3s ease;
 }
 
- Responsive Styles 
-@media (max-width: 992px) {
-    .projects-carousel {
-        justify-content: center;
+.carousel .stack-logos img:hover {
+    transform: scale(1.1);
+}
+
+.carousel .fade-left {
+    animation: fadeLeft 1.5s ease-in-out forwards;
+}
+
+.carousel .fade-right {
+    animation: fadeRight 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeLeft {
+    from {
+        background-position: 100% 50%;
     }
 
-    .project-card {
-        flex: 0 0 80%;  Show most of the card but allow for partial visibility of next 
-        max-width: 80%;
+    to {
+        background-position: 0% 50%;
     }
 }
 
-@media (max-width: 768px) {
-    .arrow {
-        display: none;
+@keyframes fadeRight {
+    from {
+        background-position: 0% 50%;
     }
 
-    .projects-carousel {
-        overflow: hidden;
-    }
-
-    .project-card {
-        flex: 0 0 100%;  Only one card fully visible on mobile *
-        max-width: 100%;
+    to {
+        background-position: 100% 50%;
     }
 }
-*/
