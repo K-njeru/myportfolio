@@ -319,12 +319,7 @@ p {
 .flickity-page-dots .dot {
     color: cornflowerblue !important;
 }
-@media (max-width:768px) {
-    .carousel-cell {
-        width: 90vw !important;
-        left: -40px !important;
-    }
-}
+
 .carousel-cell {
     width: 80vw;
     height: 500px;
@@ -338,6 +333,12 @@ p {
     transition: background-image 1.5s ease-in-out;
     left: -92px !important;
     margin-right: 20px;
+}
+@media (max-width:768px) {
+    .carousel-cell {
+        width: 90vw !important;
+        left: -40px !important;
+    }
 }
 
 .carousel-content {
