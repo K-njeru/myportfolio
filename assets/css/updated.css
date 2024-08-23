@@ -336,8 +336,9 @@ p {
 }
 @media (max-width:768px) {
     .carousel-cell {
-        width: 90vw !important;
-        left: -40px !important;
+        width: 94vw !important;
+        left: -39px !important;
+        margin-right: 10px !important;
     }
 }
 
