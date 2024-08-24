@@ -139,6 +139,11 @@ document.head.insertAdjacentHTML('beforeend', `
 /* PORTFOLIO PROJECTS */
 
 const cellBackgrounds = {
+    cell0: [
+        "/assets/img/AM.png",
+        "/assets/img/AM1.png",
+        "/assets/img/AM2.png"
+    ],
     cell1: [
         "/assets/img/kevo1.jpg",
         "/assets/img/kevo.jpg",
