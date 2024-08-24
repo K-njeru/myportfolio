@@ -175,8 +175,9 @@ function changeBackground(cellId, backgrounds, direction, interval) {
 }
 
 // Start rotating backgrounds with different intervals and directions
-changeBackground('cell1', cellBackgrounds.cell1, 'fade-left', 8000); // 8 seconds
-changeBackground('cell2', cellBackgrounds.cell2, 'fade-right', 15000); // 15 seconds
-changeBackground('cell3', cellBackgrounds.cell3, 'fade-left', 10000); // 10 seconds
+changeBackground('cell0', cellBackgrounds.cell0, 'fade-right', 10000); // 10 seconds
+changeBackground('cell1', cellBackgrounds.cell1, 'fade-left', 7000); // 7 seconds
+changeBackground('cell2', cellBackgrounds.cell2, 'fade-right', 13000); // 13 seconds
+changeBackground('cell3', cellBackgrounds.cell3, 'fade-left', 17000); // 17 seconds
 
 
