@@ -63,11 +63,20 @@
 .modal-content {
     background-color: aliceblue;
     margin: 15% auto;
-    padding: 20px;
+    padding: 40px;
     top: 30%;
-    border: 1px solid #888;
+    border-radius: 10px;
+    border: 1px solid red;
     width: 50%;
 } 
+@media (max-width:768px) {
+    .modal-content {
+        width: 80%;
+    }
+    #playButton {
+        font-size: 40px;
+    }
+}
 .modal-content p {
     margin-bottom: 40px;
     font-family: monospace;
