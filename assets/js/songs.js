@@ -140,19 +140,19 @@ document.head.insertAdjacentHTML('beforeend', `
 
 const cellBackgrounds = {
     cell1: [
-        "img/kevo1.jpg",
+        "/assets/img/kevo1.jpg",
         "/assets/img/kevo.jpg",
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"
+        "/assets/img/kevo3.png"
     ],
     cell2: [
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg",
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg",
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"
+        "assets/img/green1.png",
+        "assets/img/green2.png",
+        "assets/img/green.png"
     ],
     cell3: [
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg",
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg",
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"
+        "assets/img/prof1.png",
+        "assets/img/prof2.png",
+        "assets/img/prof.png"
     ]
 };
 
