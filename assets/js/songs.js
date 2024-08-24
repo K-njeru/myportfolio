@@ -19,7 +19,7 @@ const prevButton = document.getElementById('prevButton');
 const audioPlayer = document.getElementById('audioPlayer');
 const audioCloseButton = document.getElementById('audioClose');
 
-const songs = ['songs/song1.mp3', 'songs/song2.mp3', 'songs/song3.mp3']; // Update with your song files
+const songs = ['songs/mrpoilitician.mp3', 'songs/love&reggae.mp3', 'songs/skylarking.mp3']; // Update with your song files
 let currentSongIndex = 0;
 
 // Initialize audio player with the first song
