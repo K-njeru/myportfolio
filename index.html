@@ -48,7 +48,35 @@
 </head>
 
 <body>
+<!-- Background Section -->
+<section class="background-section position-fixed w-100" style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,70,252,1) 20%, rgba(0,0,0,1) 60%); color: white; height: 300px; z-index: -1; top: 0;">
+    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+        <h2 class="mb-4">Our Journey Has Just Begun!</h2>
+        <p class="mb-5">The adventure ends here, but ours is just beginning! 🌟<br>Let's connect</p>
+        <a href="your-scheduling-link" class="btn btn-outline-light btn-lg d-flex align-items-center justify-content-center">
+            Schedule Time with Me 
+            <span class="arrow-circle ms-2 d-flex align-items-center justify-content-center">
+                <i class="fas fa-arrow-right"></i>
+            </span>
+        </a>
+    </div>
+</section>
+<style>
+    .arrow-circle {
+        background-color: #3f5efb; /* Blue background */
+        border-radius: 50%; /* Makes the span a circle */
+        width: 30px; /* Adjust size as needed */
+        height: 30px; /* Adjust size as needed */
+    }
 
+    .arrow-circle i {
+        color: black; /* Black arrow */
+        font-size: 16px; /* Adjust arrow size as needed */
+    }
+</style>
+  
+  <!-- Main Content Body -->
+<main class="body-content p-5" style="position: relative; z-index: 1; margin-top: 300px;">
   <!-- Back to top button -->
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
@@ -857,6 +885,7 @@
     </div>
   </div>
   <!-- Footer End -->
+  </main>
 
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
