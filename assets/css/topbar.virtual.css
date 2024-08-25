@@ -571,6 +571,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
   width: 100%;
   margin: 45px 0;
   background: cornflowerblue;
+  margin-top: 300px !important;
   
 }
 
