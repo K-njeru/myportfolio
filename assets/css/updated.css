@@ -110,6 +110,13 @@
     }
 }
 
+.flickity-page-dots {
+    background: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* STACK */
 .what-I {
@@ -120,6 +127,7 @@
     width: 104vw;
     margin-bottom: 0px !important;
 }
+
 .stack {
     /* background: linear-gradient(to right, #2c3e50, #4ca1af); */
     background: white;
@@ -129,12 +137,14 @@
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
+
 @media (min-width:768px) {
     .stack {
         width: 80vw;
         left: 10vw;
-     }
+    }
 }
+
 @media (max-width:768px) {
     .stack .row {
         width: 98vw;
@@ -349,6 +359,7 @@ p {
     left: -92px !important;
     margin-right: 20px;
 }
+
 @media (max-width:768px) {
     .carousel-cell {
         width: 94vw !important;
