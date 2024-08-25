@@ -62,14 +62,11 @@
         color: black; /* Black arrow */
         font-size: 16px; /* Adjust arrow size as needed */
     }
-    .Schedule-time {
-      height: 320px;
-      z-index: -2;
-    }
+  
 </style>
   
   <!-- Main Content Body -->
-<main style="position: relative; background-color: white;">
+<main style=" background-color: white;">
   <!-- Back to top button -->
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
@@ -730,7 +727,7 @@
 <!-- PROJECTS -->
 <h1 class="fancy-title">🚀 My Creative Ventures</h1>
 
-<div class="carousel" id="portfolio" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+<div class="carousel" id="portfolio" style="position: relative; z-index: 1;" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
 
    <!-- AM Tech Website -->
     <div class="carousel-cell" id="cell0"  style="background-image: url('assets/img/AM4.png');">
@@ -789,9 +786,9 @@
     <!-- Add more projects as needed -->
 </div>
 
-<section class="Schedule-time">
+
 <!-- Background Section -->
-<section class="background-section position-fixed w-100" style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,70,252,1) 20%, rgba(0,0,0,1) 60%); color: white; height: 300px; z-index: -1; top: 0;">
+<section class="background-section position-fixed w-100" style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,70,252,1) 20%, rgba(0,0,0,1) 60%); color: white; height: 300px; z-index: -1; top: 50%; transform: translateY(-50%);">
   <div class="d-flex flex-column align-items-center justify-content-center h-100">
       <h2 class="mb-4">Our Journey Has Just Begun!</h2>
       <p class="mb-5">The adventure ends here, but ours is just beginning! 🌟<br>Let's connect</p>
@@ -803,12 +800,11 @@
       </a>
   </div>
 </section>
-</section>
 
 
   <!-- Contact Start -->
   <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact"
-    style="position: relative; width: 100%;  margin: 45px 0; background: #07ff07; margin-bottom: 0px;">
+    style="position: relative; width: 100%;  margin: 45px 0; background: #07ff07; margin-bottom: 0px; z-index: 1; ">
 
     <div class="container-fluid">
       <div class="container">
