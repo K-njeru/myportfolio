@@ -116,6 +116,8 @@
     position: relative;
     z-index: 2;
     border-radius: 20px;
+    width: 104vw;
+    margin-bottom: 0px !important;
 }
 .stack {
     /* background: linear-gradient(to right, #2c3e50, #4ca1af); */
@@ -126,7 +128,12 @@
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
-
+@media (min-width:768px) {
+    .stack {
+        width: 80vw;
+        left: 10vw;
+     }
+}
 @media (max-width:768px) {
     .stack .row {
         width: 98vw;

@@ -64,6 +64,8 @@ body {
     font-weight: 400;
     color: black;
     background: white;
+    overflow-x: hidden;
+    width: 103vw;
 }
 
 .fw-bold {
