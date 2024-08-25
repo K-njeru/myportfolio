@@ -3,6 +3,7 @@
     border-radius: 20px;
     padding: 40px;
     position: relative;
+    z-index: 2;
     top: -48px;
     overflow: hidden;
 }
@@ -118,6 +119,7 @@
     color: #010323;
     font-family: 'Roboto', sans-serif;
     position: relative;
+    z-index: 2;
 }
 
 @media (max-width:768px) {
