@@ -115,6 +115,7 @@
 .what-I {
     position: relative;
     z-index: 2;
+    background: white;
     border-radius: 20px;
     width: 104vw;
     margin-bottom: 0px !important;

@@ -658,7 +658,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
   bottom: auto;
   left: 0;
   width: 100%;
-  
+  z-index: 1;
   background: #010323;
 }
 
