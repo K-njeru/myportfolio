@@ -1,8 +1,9 @@
 .about-section {
     background: linear-gradient(to right, aliceblue, #dae1e2);
-    border-radius: 20px;
     padding: 40px;
     position: relative;
+    display: flex;
+    justify-content: center;
     z-index: 2;
     top: -48px;
     overflow: hidden;
@@ -19,7 +20,11 @@
     background-color: white;
     border-radius: 15px;
 }
-
+@media (max-width:768px) {
+    .about-paragraph {
+        width: 96vw;
+    }
+}
 @media (min-width: 768px) {
     .about-section .row {
         display: flex;
@@ -123,7 +128,6 @@
     position: relative;
     z-index: 2;
     background: white;
-    border-radius: 20px;
     width: 104vw;
     margin-bottom: 0px !important;
 }
@@ -444,8 +448,9 @@ p {
     color: white;
     height: 100vh;
     z-index: 1;
-    top: 5vh;
+    top: 50vh;
     transform: translateY(-50%);
+    font-family: monospace;
 }
 
 .arrow-circle {

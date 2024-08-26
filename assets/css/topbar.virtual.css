@@ -659,7 +659,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
   left: 0;
   width: 100%;
   z-index: 1;
-  background: white;
+  background: linear-gradient(to right, aliceblue, #dae1e2);
   color: black !important;
   margin-top: 400px;
 }
