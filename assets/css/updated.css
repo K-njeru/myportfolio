@@ -437,3 +437,31 @@ p {
         background-position: 100% 50%;
     }
 }
+
+/* Schedule time */
+.Schedule {
+    background: radial-gradient(circle, #01010ef5 0% -2%, #050720c7 31%, #010323 60%);
+    color: white;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.arrow-circle {
+    background-color: #3f5efb;
+    /* Blue background */
+    border-radius: 50%;
+    /* Makes the span a circle */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
+}
+
+.arrow-circle i {
+    color: black;
+    /* Black arrow */
+    font-size: 16px;
+    /* Adjust arrow size as needed */
+}
