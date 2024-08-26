@@ -444,7 +444,7 @@ p {
     color: white;
     height: 100vh;
     z-index: 1;
-    top: 0;
+    top: 5vh;
     transform: translateY(-50%);
 }
 
