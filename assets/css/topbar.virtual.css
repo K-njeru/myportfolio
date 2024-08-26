@@ -661,6 +661,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
   z-index: 1;
   background: white;
   color: black !important;
+  margin-top: 400px;
 }
 
 .footer .container-fluid {
@@ -699,7 +700,7 @@ scrollbar-color: cornflowerblue transparent; /* Color for the thumb */
   font-weight: 600;
   line-height: 20px;
   padding: 0 15px;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid black;
 }
 
 .footer .footer-menu p:last-child {
@@ -722,14 +723,14 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #f0e3f3;
+  color: black;
   outline: none;
   text-decoration: none;
 }
 .footer .footer-social a i {
   margin-right: 15px;
   font-size: 20px;
-  color: #ffffff;
+  color: black;
   transition: .3s;
 }
 
@@ -761,7 +762,7 @@ a:focus {
 
 .footer .copyright p {
   margin: 0;
-  color: #ffffff;
+  color: black;
 }
 
 .footer .copyright .col-md-6:last-child p {
@@ -769,7 +770,7 @@ a:focus {
 }
 
 .footer .copyright p a {
-  color: #ffffff;
+  color: black;
   font-weight: 600;
 }
 
