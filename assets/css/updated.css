@@ -423,7 +423,7 @@ p {
         transition: none;
     }
     #cell0 {
-        background-image: url('/assets/img/AM.png');
+        background-image: linear-gradient(#0237f9, #00000030), url('/assets/img/AM.png');
     }
     #cell1 {
         background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
