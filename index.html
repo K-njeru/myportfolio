@@ -706,7 +706,33 @@
     </div>
   </div>  End Portfolio page -->
 
+<style>
+  .clickable-link {
+    position: relative;
+    text-decoration: none;
+    color: #007bff;
+}
 
+.clickable-link::after {
+    content: "\f0a6"; /* Unicode for a hand pointer icon from FontAwesome */
+    font-family: "FontAwesome";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    opacity: 0;
+    animation: pulsate 3s infinite; /* Icon appears and disappears every 3 seconds */
+}
+
+/* Pulsating effect */
+@keyframes pulsate {
+    0% { opacity: 0; transform: scale(1) translateY(-50%); }
+    50% { opacity: 1; transform: scale(1.2) translateY(-50%); }
+    100% { opacity: 0; transform: scale(1) translateY(-50%); }
+}
+
+</style>
  
 
 <!-- PROJECTS -->
@@ -718,7 +744,7 @@
    <!-- AM Tech Website -->
     <div class="carousel-cell" id="cell0"  style="background-image: url('assets/img/AM4.png');">
         <div class="carousel-content">
-            <a href="https://k-njeru.github.io/am-tech/" target="_blank">AM Technolgies</a>
+          <a href="https://k-njeru.github.io/am-tech/" target="_blank" class="clickable-link">AM Technologies</a>
             <div class="stack-logos">
               <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo">
                 <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5 Logo">
