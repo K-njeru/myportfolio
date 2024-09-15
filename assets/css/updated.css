@@ -414,6 +414,30 @@ p {
     transform: scale(1.1);
 }
 
+/* For small screens, use one static background image */
+@media only screen and (max-width: 768px) {
+    #cell0, #cell1, #cell2, #cell3 {
+        background-size: cover;
+        background-position: center;
+        /* Disable transition effects on small screens */
+        transition: none;
+    }
+    #cell0 {
+        background-image: url('/assets/img/AM.png');
+    }
+    #cell1 {
+        background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc');
+    }
+    #cell2 {
+        background-image: url("/assets/img/green1.png");
+    }
+    #cell3 {
+        background-image: url("/assets/img/prof1.png");
+    }
+    
+    
+}
+
 .carousel .fade-left {
     animation: fadeLeft 1.5s ease-in-out forwards;
 }
@@ -441,6 +465,7 @@ p {
         background-position: 100% 50%;
     }
 }
+
 
 /* Schedule time */
 .Schedule {

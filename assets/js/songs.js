@@ -161,6 +161,45 @@ const cellBackgrounds = {
     ]
 };
 
+// Preload images to ensure faster background switching
+function preloadImages(imageArray) {
+    imageArray.forEach((image) => {
+        const img = new Image();
+        img.src = image;
+    });
+}
+
+// Preload all images
+Object.values(cellBackgrounds).forEach(preloadImages);
+
+function changeBackground(cellId, backgrounds, direction, interval) {
+    let index = 0;
+    setInterval(() => {
+        // Check if the screen is larger than 768px
+        if (window.innerWidth > 768) {
+            const cell = document.getElementById(cellId);
+            cell.style.backgroundImage = `url('${backgrounds[index]}')`;
+            cell.classList.remove('fade-left', 'fade-right');
+            cell.offsetWidth; // Trigger reflow to restart the animation
+            cell.classList.add(direction);
+
+            index = (index + 1) % backgrounds.length;
+        } else {
+            // If screen is small, use a static background (set via CSS)
+            const cell = document.getElementById(cellId);
+            cell.style.backgroundImage = ''; // Let CSS handle the static image
+        }
+    }, interval);
+}
+
+// Start rotating backgrounds with different intervals and directions
+changeBackground('cell0', cellBackgrounds.cell0, 'fade-right', 10000); // 10 seconds
+changeBackground('cell1', cellBackgrounds.cell1, 'fade-left', 7000);  // 7 seconds
+changeBackground('cell2', cellBackgrounds.cell2, 'fade-right', 13000); // 13 seconds
+changeBackground('cell3', cellBackgrounds.cell3, 'fade-left', 17000);  // 17 seconds
+
+
+/*
 function changeBackground(cellId, backgrounds, direction, interval) {
     let index = 0;
     setInterval(() => {
@@ -180,4 +219,4 @@ changeBackground('cell1', cellBackgrounds.cell1, 'fade-left', 7000); // 7 second
 changeBackground('cell2', cellBackgrounds.cell2, 'fade-right', 13000); // 13 seconds
 changeBackground('cell3', cellBackgrounds.cell3, 'fade-left', 17000); // 17 seconds
 
-
+*/
