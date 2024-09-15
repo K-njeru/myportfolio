@@ -714,8 +714,10 @@
   <style>
     .clickable-link {
       position: relative;
+      border: 1px solid orange;
       text-decoration: none;
-      color: #007bff;
+      padding: 10px;
+      color: darkblue;
     }
 
     .clickable-link::after {
@@ -725,12 +727,13 @@
       font-weight: 900;
       position: absolute;
       right: 80px;
-      color: cornflowerblue;
+      color: orange;
       top: 80%;
       transform: translateY(-50%);
       font-size: 28px;
       opacity: 0;
-      animation: pulsate 5s infinite; /* Icon appears and disappears every 3 seconds */
+      animation: pulsate 5s infinite;
+      /* Icon appears and disappears every 3 seconds */
     }
 
     /* Pulsating effect */
@@ -776,7 +779,8 @@
       <!-- Portfolio Website -->
       <div class="carousel-cell" id="cell1" style="background-image: url('assets/img/kevo3.png');">
         <div class="carousel-content">
-          <a href="https://kelvin-m-njoki.github.io/portfolio/" target="_blank" class="clickable-link">Portfolio Website</a>
+          <a href="https://kelvin-m-njoki.github.io/portfolio/" target="_blank" class="clickable-link">Portfolio
+            Website</a>
           <div class="stack-logos">
             <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5 Logo">
             <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3 Logo">
@@ -804,7 +808,7 @@
       <div class="carousel-cell" id="cell3"
         style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg');">
         <div class="carousel-content">
-          <a href="https://profitacademi.com/" target="_blank" class="clickable-link">Profit Academi</a>
+          <a href="http://profitacademy.free.nf/" target="_blank" class="clickable-link">Profit Academi</a>
           <div class="stack-logos">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
