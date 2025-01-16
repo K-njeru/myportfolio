@@ -140,21 +140,26 @@ document.head.insertAdjacentHTML('beforeend', `
 
 const cellBackgrounds = {
     cell0: [
+        "assets/img/crank.png",
+        "assets/img/",
+        "assets/img/"
+    ],
+    cell1: [
         "/assets/img/AM.png",
         "/assets/img/AM1.png",
         "/assets/img/AM2.png"
     ],
-    cell1: [
+    cell2: [
         "/assets/img/kevo1.jpg",
         "/assets/img/kevo.jpg",
         "/assets/img/kevo3.png"
     ],
-    cell2: [
+    cell3: [
         "assets/img/green1.png",
         "assets/img/green2.png",
         "assets/img/green.png"
     ],
-    cell3: [
+    cell4: [
         "assets/img/prof1.png",
         "assets/img/prof2.png",
         "assets/img/prof.png"
@@ -197,6 +202,7 @@ changeBackground('cell0', cellBackgrounds.cell0, 'fade-right', 10000); // 10 sec
 changeBackground('cell1', cellBackgrounds.cell1, 'fade-left', 7000);  // 7 seconds
 changeBackground('cell2', cellBackgrounds.cell2, 'fade-right', 13000); // 13 seconds
 changeBackground('cell3', cellBackgrounds.cell3, 'fade-left', 17000);  // 17 seconds
+changeBackground('cell4', cellBackgrounds.cell4, 'fade-right', 20000);
 
 
 /*
