@@ -140,9 +140,9 @@ document.head.insertAdjacentHTML('beforeend', `
 
 const cellBackgrounds = {
     cell0: [
-        "assets/img/crank.png",
-        "assets/img/",
-        "assets/img/"
+        "assets/img/crank1.png",
+        "assets/img/crank2.png",
+        "assets/img/crank3.png"
     ],
     cell1: [
         "/assets/img/AM.png",
